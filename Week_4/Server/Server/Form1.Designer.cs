@@ -64,6 +64,7 @@
             this.btnKhoiTao.TabIndex = 2;
             this.btnKhoiTao.Text = "Khởi tạo";
             this.btnKhoiTao.UseVisualStyleBackColor = true;
+            this.btnKhoiTao.Click += new System.EventHandler(this.btnKhoiTao_Click);
             // 
             // txtMessage
             // 

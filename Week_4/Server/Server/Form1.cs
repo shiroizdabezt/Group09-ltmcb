@@ -47,7 +47,6 @@ namespace Server
         }
         void AddMsg(string msg) 
         {
-            
         }
 
         byte[] Serialize(object obj)

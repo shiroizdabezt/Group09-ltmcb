@@ -34,8 +34,9 @@ namespace Server
 
         }
         //Hàm nhận tin nhắn 
-        void Receive(Socket client)
+        void Receive(object obj)
         {
+            Socket client = obj as Socket;
             try
             {
                 while(true)
@@ -47,12 +48,20 @@ namespace Server
 
                     string msg = (string)Deserialize(dt);
 
+                    foreach (Socket s in clientList)
+                    {
+                        if (s != null)
+                        {
+                            s.Send(Serialize(dt));
+                        }
+                    }
+
                     AddMsg(msg);
                 }    
             }
             catch 
             {
-                Close();
+                clientList.Remove(client);
             }
         }
         void AddMsg(string msg) 

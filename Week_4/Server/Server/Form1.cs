@@ -25,14 +25,14 @@ namespace Server
         public Form1()
         {
             InitializeComponent();
+            CheckForIllegalCrossThreadCalls = false;
         }
 
-
-
-        public void Send()
-        {
-
-        }
+        //public void Send(Socket client)
+        //{
+        //    if (listTinNhan.Text != String.Empty)
+        //        client.Send(Serialize(listTinNhan.Text));
+        //}
         //Hàm nhận tin nhắn 
         void Receive(object obj)
         {
@@ -43,19 +43,14 @@ namespace Server
                 {
                     byte[] dt = new byte[1024 * 8000];
                     client.Receive(dt);
-
-
-
                     string msg = (string)Deserialize(dt);
-
                     foreach (Socket s in clientList)
                     {
                         if (s != null)
                         {
-                            s.Send(Serialize(dt));
+                            s.Send(Serialize(msg));
                         }
                     }
-
                     AddMsg(msg);
                 }    
             }
@@ -64,8 +59,9 @@ namespace Server
                 clientList.Remove(client);
             }
         }
-        void AddMsg(string msg) 
+        void AddMsg(string msg)
         {
+            txtTinNhan.AppendText(msg);
         }
 
         void Connect()
@@ -93,7 +89,6 @@ namespace Server
                 {
                     IP = new IPEndPoint(IPAddress.Any, 0);
                     server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-
                 }
             });
             Listen.IsBackground = true;
@@ -104,10 +99,7 @@ namespace Server
         {
             MemoryStream stream = new MemoryStream();
             BinaryFormatter binaryFormatter = new BinaryFormatter();
-
-
             binaryFormatter.Serialize(stream, obj);
-
             return stream.ToArray();
         }
 
@@ -116,15 +108,32 @@ namespace Server
         {
             MemoryStream stream = new MemoryStream(data);
             BinaryFormatter binaryFormatter = new BinaryFormatter();
-
-
             return binaryFormatter.Deserialize(stream);
         }
 
         private void btnKhoiTao_Click(object sender, EventArgs e)
         {
-
+            IPAddress ip;
+            if (!IPAddress.TryParse(txtIPServer.Text, out ip))
+                MessageBox.Show("Hãy nhập một IP chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                if (Int32.Parse(txtPortServer.Text) < 1024 || Int32.Parse(txtPortServer.Text) > 65535)
+                    MessageBox.Show("Hãy chọn một Port trong khoảng (1024-65535)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    Socket socket;
+                    socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                    IPEndPoint IPendpoint = new IPEndPoint(IPAddress.Parse(txtIPServer.Text), Int32.Parse(txtPortServer.Text));
+                    //socket.Bind(IPendpoint);
+                    //Thread listen = new Thread(Receive);
+                    //listen.IsBackground = true;
+                    //listen.Start();
+                    Connect();
+                    MessageBox.Show("Tạo thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    AddMsg("Đang lắng nghe các Client....");
+                }
+            }
         }
-
     }
 }

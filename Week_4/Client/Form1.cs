@@ -32,14 +32,16 @@ namespace Client
 
         void Connection()
         {
-            IPAddress ip;
-            ip = Dns.GetHostEntry(Dns.GetHostName()).AddressList[0];
-            IP = new IPEndPoint(ip, 8080);
-            client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
+            //IPAddress ip;
+            //ip = Dns.GetHostEntry(Dns.GetHostName()).AddressList[0];
+            //IP = new IPEndPoint(ip, 8080);
+            IP = new IPEndPoint(IPAddress.Parse(txtServerIP.Text), 8080);
+            client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
             try
             {
                 client.Connect(IP);
+                MessageBox.Show("Kết nối thành công tới Server", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {

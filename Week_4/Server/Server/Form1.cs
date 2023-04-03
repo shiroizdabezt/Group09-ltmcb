@@ -22,6 +22,7 @@ namespace Server
         IPEndPoint IP;
         Socket server;
         List<Socket> clientList;
+        IPAddress ip;
         public Form1()
         {
             InitializeComponent();
@@ -46,7 +47,7 @@ namespace Server
                     string msg = (string)Deserialize(dt);
                     foreach (Socket s in clientList)
                     {
-                        if (s != null)
+                        if (s != null && s != client)
                         {
                             s.Send(Serialize(msg));
                         }
@@ -61,13 +62,13 @@ namespace Server
         }
         void AddMsg(string msg)
         {
-            txtTinNhan.AppendText(msg);
+            txtTinNhan.AppendText(msg+"\n");
         }
 
         void Connect()
         {
             clientList = new List<Socket>();
-            IP = new IPEndPoint(IPAddress.Any, 0);
+            IP = new IPEndPoint(IPAddress.Any, 8080);
             server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             server.Bind(IP);
             Thread Listen = new Thread(() =>
@@ -113,7 +114,6 @@ namespace Server
 
         private void btnKhoiTao_Click(object sender, EventArgs e)
         {
-            IPAddress ip;
             if (!IPAddress.TryParse(txtIPServer.Text, out ip))
                 MessageBox.Show("Hãy nhập một IP chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else

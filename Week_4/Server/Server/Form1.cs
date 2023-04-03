@@ -69,7 +69,7 @@ namespace Server
         void Connect()
         {
             clientList = new List<Socket>();
-            IP = new IPEndPoint(IPAddress.Any, 8080);
+            IP = new IPEndPoint(IPAddress.Parse(txtIPServer.Text), Int32.Parse(txtPortServer.Text));
             server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             server.Bind(IP);
             Thread Listen = new Thread(() =>
@@ -89,7 +89,7 @@ namespace Server
                 }
                 catch
                 {
-                    IP = new IPEndPoint(IPAddress.Any, 0);
+                    IP = new IPEndPoint(IPAddress.Parse(txtIPServer.Text), Int32.Parse(txtPortServer.Text));
                     server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 }
             });

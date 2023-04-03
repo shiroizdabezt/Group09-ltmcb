@@ -29,11 +29,6 @@ namespace Server
             CheckForIllegalCrossThreadCalls = false;
         }
 
-        //public void Send(Socket client)
-        //{
-        //    if (listTinNhan.Text != String.Empty)
-        //        client.Send(Serialize(listTinNhan.Text));
-        //}
         //Hàm nhận tin nhắn 
         void Receive(object obj)
         {
@@ -63,7 +58,6 @@ namespace Server
         void AddMsg(string msg)
         {
             lst_Chat.Items.Add(msg);
-            /*txtTinNhan.AppendText(msg);*/
         }
 
         void Connect()
@@ -126,10 +120,6 @@ namespace Server
                     Socket socket;
                     socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                     IPEndPoint IPendpoint = new IPEndPoint(IPAddress.Parse(txtIPServer.Text), Int32.Parse(txtPortServer.Text));
-                    //socket.Bind(IPendpoint);
-                    //Thread listen = new Thread(Receive);
-                    //listen.IsBackground = true;
-                    //listen.Start();
                     Connect();
                     MessageBox.Show("Tạo thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     AddMsg("Đang lắng nghe các Client....");

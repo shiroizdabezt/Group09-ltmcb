@@ -33,9 +33,6 @@ namespace Client
 
         void Connection()
         {
-            //IPAddress ip;
-            //ip = Dns.GetHostEntry(Dns.GetHostName()).AddressList[0];
-            //IP = new IPEndPoint(ip, 8080);
             IP = new IPEndPoint(IPAddress.Parse(txtServerIP.Text), Int32.Parse(txt_Port.Text));
             client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 

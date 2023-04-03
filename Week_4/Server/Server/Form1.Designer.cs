@@ -34,7 +34,7 @@
             this.txtPortServer = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtTinNhan = new System.Windows.Forms.TextBox();
+            this.lst_Chat = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,29 +99,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin Server";
             // 
-            // txtTinNhan
+            // lst_Chat
             // 
-            this.txtTinNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTinNhan.Location = new System.Drawing.Point(12, 129);
-            this.txtTinNhan.Multiline = true;
-            this.txtTinNhan.Name = "txtTinNhan";
-            this.txtTinNhan.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtTinNhan.Size = new System.Drawing.Size(381, 377);
-            this.txtTinNhan.TabIndex = 8;
+            this.lst_Chat.FormattingEnabled = true;
+            this.lst_Chat.Location = new System.Drawing.Point(12, 129);
+            this.lst_Chat.Name = "lst_Chat";
+            this.lst_Chat.Size = new System.Drawing.Size(381, 368);
+            this.lst_Chat.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 518);
-            this.Controls.Add(this.txtTinNhan);
+            this.ClientSize = new System.Drawing.Size(405, 513);
+            this.Controls.Add(this.lst_Chat);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Server";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -133,7 +130,7 @@
         private System.Windows.Forms.TextBox txtPortServer;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtTinNhan;
+        private System.Windows.Forms.ListBox lst_Chat;
     }
 }
 

@@ -20,3 +20,14 @@ D:\LapTrinhMang\Group9\Week_4\Client\obj\Debug\Client.csproj.GenerateResource.ca
 D:\LapTrinhMang\Group9\Week_4\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
 D:\LapTrinhMang\Group9\Week_4\Client\obj\Debug\Client.exe
 D:\LapTrinhMang\Group9\Week_4\Client\obj\Debug\Client.pdb
+D:\HOC\Code\ltmcb\Group9\Week_4\Client\bin\Debug\Client.exe.config
+D:\HOC\Code\ltmcb\Group9\Week_4\Client\bin\Debug\Client.exe
+D:\HOC\Code\ltmcb\Group9\Week_4\Client\bin\Debug\Client.pdb
+D:\HOC\Code\ltmcb\Group9\Week_4\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+D:\HOC\Code\ltmcb\Group9\Week_4\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+D:\HOC\Code\ltmcb\Group9\Week_4\Client\obj\Debug\Client.Client_Form.resources
+D:\HOC\Code\ltmcb\Group9\Week_4\Client\obj\Debug\Client.Properties.Resources.resources
+D:\HOC\Code\ltmcb\Group9\Week_4\Client\obj\Debug\Client.csproj.GenerateResource.cache
+D:\HOC\Code\ltmcb\Group9\Week_4\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+D:\HOC\Code\ltmcb\Group9\Week_4\Client\obj\Debug\Client.exe
+D:\HOC\Code\ltmcb\Group9\Week_4\Client\obj\Debug\Client.pdb

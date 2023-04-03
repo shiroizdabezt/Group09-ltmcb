@@ -62,7 +62,8 @@ namespace Server
         }
         void AddMsg(string msg)
         {
-            txtTinNhan.AppendText(msg+"\n");
+            lst_Chat.Items.Add(msg);
+            /*txtTinNhan.AppendText(msg);*/
         }
 
         void Connect()

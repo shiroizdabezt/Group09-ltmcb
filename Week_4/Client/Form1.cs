@@ -20,6 +20,7 @@ namespace Client
         public Client_Form()
         {
             InitializeComponent();
+            send.Enabled = false;
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace Client
             //IPAddress ip;
             //ip = Dns.GetHostEntry(Dns.GetHostName()).AddressList[0];
             //IP = new IPEndPoint(ip, 8080);
-            IP = new IPEndPoint(IPAddress.Parse(txtServerIP.Text), 8080);
+            IP = new IPEndPoint(IPAddress.Parse(txtServerIP.Text), Int32.Parse(txt_Port.Text));
             client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
             try
@@ -55,7 +56,13 @@ namespace Client
         void Send()
         {
             if (txtMess.Text != string.Empty)
-                client.Send(Serialize(txtMess.Text));
+            {
+                DateTime dtime = DateTime.Now;
+                client.Send(Serialize(txt_Username.Text + " [" + dtime.ToString() + "]: " + txtMess.Text));
+                lstReceived.Items.Add(txt_Username.Text + " [" + dtime.ToString() + "]: " + txtMess.Text);
+            }    
+                
+            txtMess.Clear();
         }
         void Receive()
         {
@@ -66,7 +73,7 @@ namespace Client
                     byte[] dt = new byte[1024 * 8000];
                     client.Receive(dt);
                     string message = (string)Deserialize(dt);
-                    lstReceived.Items.Insert(0, message);
+                    lstReceived.Items.Add(message);
                 }
             }
             catch
@@ -93,7 +100,8 @@ namespace Client
             if (client != null && client.Connected)
             {
                 client.Shutdown(SocketShutdown.Both);
-                client.Close();
+                MessageBox.Show("Ngắt kết nối thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                send.Enabled = false;
             }
         }
 
@@ -105,6 +113,7 @@ namespace Client
         private void connect_Click(object sender, EventArgs e)
         {
             Connection();
+            send.Enabled = true;
         }
 
         private void disconnect_Click(object sender, EventArgs e)

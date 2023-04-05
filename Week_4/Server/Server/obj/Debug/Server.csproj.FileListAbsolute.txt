@@ -20,3 +20,14 @@ D:\HOC\Code\ltmcb\Group9\Week_4\Server\Server\obj\Debug\Server.csproj.GenerateRe
 D:\HOC\Code\ltmcb\Group9\Week_4\Server\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
 D:\HOC\Code\ltmcb\Group9\Week_4\Server\Server\obj\Debug\Server.exe
 D:\HOC\Code\ltmcb\Group9\Week_4\Server\Server\obj\Debug\Server.pdb
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Server\Server\bin\Debug\Server.exe.config
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Server\Server\bin\Debug\Server.exe
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Server\Server\bin\Debug\Server.pdb
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Server\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Server\Server\obj\Debug\Server.csproj.SuggestedBindingRedirects.cache
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Server\Server\obj\Debug\Server.Form1.resources
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Server\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Server\Server\obj\Debug\Server.csproj.GenerateResource.cache
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Server\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Server\Server\obj\Debug\Server.exe
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Server\Server\obj\Debug\Server.pdb

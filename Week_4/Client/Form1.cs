@@ -39,11 +39,11 @@ namespace Client
             try
             {
                 client.Connect(IP);
-                MessageBox.Show("Kết nối thành công tới Server", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Tạo kết nối tới server thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show("Unable to connect to server", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Không thể kết nối tới server", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             Thread listen = new Thread(Receive);
@@ -97,7 +97,7 @@ namespace Client
             if (client != null && client.Connected)
             {
                 client.Shutdown(SocketShutdown.Both);
-                MessageBox.Show("Ngắt kết nối thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Ngắt kết nối", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 send.Enabled = false;
             }
         }

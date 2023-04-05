@@ -31,3 +31,14 @@ D:\HOC\Code\ltmcb\Group9\Week_4\Client\obj\Debug\Client.csproj.GenerateResource.
 D:\HOC\Code\ltmcb\Group9\Week_4\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
 D:\HOC\Code\ltmcb\Group9\Week_4\Client\obj\Debug\Client.exe
 D:\HOC\Code\ltmcb\Group9\Week_4\Client\obj\Debug\Client.pdb
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Client\bin\Debug\Client.exe.config
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Client\bin\Debug\Client.exe
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Client\bin\Debug\Client.pdb
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Client\obj\Debug\Client.csproj.AssemblyReference.cache
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Client\obj\Debug\Client.csproj.SuggestedBindingRedirects.cache
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Client\obj\Debug\Client.Client_Form.resources
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Client\obj\Debug\Client.exe
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\LyThuyet\Week4\Week_4\Client\obj\Debug\Client.pdb

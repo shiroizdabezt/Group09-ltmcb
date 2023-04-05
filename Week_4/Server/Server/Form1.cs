@@ -123,6 +123,7 @@ namespace Server
                     Connect();
                     MessageBox.Show("Tạo thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     AddMsg("Đang lắng nghe các Client....");
+                    btnKhoiTao.Enabled=false;
                 }
             }
         }

@@ -36,16 +36,31 @@ namespace Client
             IP = new IPEndPoint(IPAddress.Parse(txtServerIP.Text), Int32.Parse(txt_Port.Text));
             client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
 
-            try
+            if (txt_Username.Text == string.Empty)
             {
-                client.Connect(IP);
-                MessageBox.Show("Tạo kết nối tới server thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch
-            {
-                MessageBox.Show("Không thể kết nối tới server", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                MessageBox.Show("Không thể kết nối tới server vì chưa nhập username", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+
             }
+
+            else
+            {
+                try
+                {
+                    client.Connect(IP);
+                    MessageBox.Show("Tạo kết nối tới server thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    send.Enabled = true;
+                    client.Send(Serialize(txt_Username.Text + " vừa tham gia."));
+                }
+                catch
+                {
+                    MessageBox.Show("Không thể kết nối tới server", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }    
+
+            
             Thread listen = new Thread(Receive);
             listen.IsBackground = true;
             listen.Start();
@@ -96,9 +111,11 @@ namespace Client
         {
             if (client != null && client.Connected)
             {
+                client.Send(Serialize(txt_Username.Text + " đã thoát."));
                 client.Shutdown(SocketShutdown.Both);
                 MessageBox.Show("Ngắt kết nối", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 send.Enabled = false;
+                
             }
         }
 
@@ -110,7 +127,7 @@ namespace Client
         private void connect_Click(object sender, EventArgs e)
         {
             Connection();
-            send.Enabled = true;
+            
         }
 
         private void disconnect_Click(object sender, EventArgs e)

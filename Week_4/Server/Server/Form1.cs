@@ -75,7 +75,20 @@ namespace Server
                         server.Listen(100);
                         Socket client = server.Accept();
                         clientList.Add(client);
-
+                        /*while (true)
+                        {*/
+                            byte[] dt = new byte[1024 * 8000];
+                            client.Receive(dt);
+                            string msg = (string)Deserialize(dt);
+                            foreach (Socket s in clientList)
+                            {
+                                if (s != null && s != client)
+                                {
+                                    s.Send(Serialize(msg));
+                                }
+                            }
+                            AddMsg(msg);
+                        /*}*/
                         Thread receive = new Thread(Receive);
                         receive.IsBackground = true;
                         receive.Start(client);

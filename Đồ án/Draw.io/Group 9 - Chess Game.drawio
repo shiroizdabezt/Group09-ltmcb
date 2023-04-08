@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-08T14:21:24.714Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 OPR/96.0.0.0" etag="IGwvMbhTs1BKhT6PLVDX" version="21.1.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-04-08T14:35:09.190Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 OPR/96.0.0.0" etag="EZ9xJGTkIpo4e47RYe5X" version="21.1.5" type="github" pages="4">
   <diagram name="Page-1" id="paGQzFl_TgacfaXUngNB">
     <mxGraphModel dx="1393" dy="835" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -116,9 +116,6 @@
         <mxCell id="n8C_h9uNXEAuygrnXdcH-5" value="Xếp hạng" style="rounded=0;whiteSpace=wrap;html=1;direction=south;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="2085" y="1030" width="60" height="120" as="geometry" />
         </mxCell>
-        <mxCell id="YM0ZKSX0x_u6HVW8kFzE-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" source="n8C_h9uNXEAuygrnXdcH-6" target="YM0ZKSX0x_u6HVW8kFzE-22" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="n8C_h9uNXEAuygrnXdcH-6" value="Chơi với Máy" style="rounded=0;whiteSpace=wrap;html=1;direction=south;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="2085" y="1210" width="60" height="120" as="geometry" />
         </mxCell>
@@ -233,58 +230,6 @@
         </mxCell>
         <mxCell id="YM0ZKSX0x_u6HVW8kFzE-20" value="Xem bảng xếp hạng của các Player trong Server" style="rounded=0;whiteSpace=wrap;html=1;direction=south;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="2225" y="1015" width="55" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="YM0ZKSX0x_u6HVW8kFzE-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" source="YM0ZKSX0x_u6HVW8kFzE-22" target="YM0ZKSX0x_u6HVW8kFzE-29" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="YM0ZKSX0x_u6HVW8kFzE-22" value="Lựa chọn độ khó của Máy" style="rounded=0;whiteSpace=wrap;html=1;direction=south;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="2225" y="1210" width="60" height="120" as="geometry" />
-        </mxCell>
-        <mxCell id="YM0ZKSX0x_u6HVW8kFzE-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" source="YM0ZKSX0x_u6HVW8kFzE-26" target="YM0ZKSX0x_u6HVW8kFzE-37" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="YM0ZKSX0x_u6HVW8kFzE-26" value="Dễ" style="rounded=0;whiteSpace=wrap;html=1;direction=south;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="2455" y="1170" width="60" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="YM0ZKSX0x_u6HVW8kFzE-41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" source="YM0ZKSX0x_u6HVW8kFzE-29" target="YM0ZKSX0x_u6HVW8kFzE-40" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="YM0ZKSX0x_u6HVW8kFzE-29" value="Trung bình" style="rounded=0;whiteSpace=wrap;html=1;direction=south;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="2455" y="1245" width="60" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="YM0ZKSX0x_u6HVW8kFzE-43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" source="YM0ZKSX0x_u6HVW8kFzE-30" target="YM0ZKSX0x_u6HVW8kFzE-42" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="YM0ZKSX0x_u6HVW8kFzE-30" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Khó&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;direction=south;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="2455" y="1320" width="60" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="YM0ZKSX0x_u6HVW8kFzE-35" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" target="YM0ZKSX0x_u6HVW8kFzE-26" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="2405" y="1270" as="sourcePoint" />
-            <mxPoint x="2425" y="1170" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="2405" y="1220" />
-              <mxPoint x="2405" y="1195" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="YM0ZKSX0x_u6HVW8kFzE-36" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="2405" y="1270" as="sourcePoint" />
-            <mxPoint x="2455" y="1350" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="2405" y="1350" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="YM0ZKSX0x_u6HVW8kFzE-37" value="Easy AI(Di chuyển ngẫu nhiên)" style="whiteSpace=wrap;html=1;rounded=0;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="2565" y="1165" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="YM0ZKSX0x_u6HVW8kFzE-40" value="Medium AI(Ít ngẫu nhiên và có tính toán)" style="whiteSpace=wrap;html=1;rounded=0;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="2565" y="1240" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="YM0ZKSX0x_u6HVW8kFzE-42" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Dificult AI(Di chuyển có tính toán hoàn toàn)&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=0;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" vertex="1">
-          <mxGeometry x="2565" y="1315" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="YM0ZKSX0x_u6HVW8kFzE-44" value="Hạng cao nhất" style="shape=ext;double=1;rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontFamily=Times New Roman;fontStyle=1" parent="1" vertex="1">
           <mxGeometry x="2405" y="835" width="90" height="40" as="geometry" />

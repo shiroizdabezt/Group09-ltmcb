@@ -19,12 +19,11 @@ namespace Week6
         }
         public class TodoTask
         {
-            public int postID { get; set; }
+            public int userID { get; set; }
             public int id { get; set; }
-            public string name { get; set; }
-            public string email { get; set; }
-            public string body { get; set; }
-  
+            public string title { get; set; }
+            public bool completed { get; set; }
+           
         }
         public static HttpClient client = new HttpClient();
 
@@ -36,7 +35,7 @@ namespace Week6
         }
         private async void GetTasksAsync()
         {
-            HttpResponseMessage response = await client.GetAsync("https://jsonplaceholder.typicode.com/comments");
+            HttpResponseMessage response = await client.GetAsync("https://jsonplaceholder.typicode.com/todos");
 
             if (response.IsSuccessStatusCode)
             {

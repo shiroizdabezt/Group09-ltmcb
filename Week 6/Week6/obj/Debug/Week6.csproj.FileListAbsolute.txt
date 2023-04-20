@@ -1,0 +1,16 @@
+C:\Users\Crystal\Desktop\New folder (2)\Week6\bin\Debug\Week6.exe.config
+C:\Users\Crystal\Desktop\New folder (2)\Week6\bin\Debug\Week6.exe
+C:\Users\Crystal\Desktop\New folder (2)\Week6\bin\Debug\Week6.pdb
+C:\Users\Crystal\Desktop\New folder (2)\Week6\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Crystal\Desktop\New folder (2)\Week6\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Crystal\Desktop\New folder (2)\Week6\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Crystal\Desktop\New folder (2)\Week6\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Crystal\Desktop\New folder (2)\Week6\obj\Debug\Week6.csproj.AssemblyReference.cache
+C:\Users\Crystal\Desktop\New folder (2)\Week6\obj\Debug\Week6.csproj.SuggestedBindingRedirects.cache
+C:\Users\Crystal\Desktop\New folder (2)\Week6\obj\Debug\Week6.Form1.resources
+C:\Users\Crystal\Desktop\New folder (2)\Week6\obj\Debug\Week6.Properties.Resources.resources
+C:\Users\Crystal\Desktop\New folder (2)\Week6\obj\Debug\Week6.csproj.GenerateResource.cache
+C:\Users\Crystal\Desktop\New folder (2)\Week6\obj\Debug\Week6.csproj.CoreCompileInputs.cache
+C:\Users\Crystal\Desktop\New folder (2)\Week6\obj\Debug\Week6.csproj.CopyComplete
+C:\Users\Crystal\Desktop\New folder (2)\Week6\obj\Debug\Week6.exe
+C:\Users\Crystal\Desktop\New folder (2)\Week6\obj\Debug\Week6.pdb

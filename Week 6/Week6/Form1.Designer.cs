@@ -65,11 +65,14 @@
             this.cbbAPI.Items.AddRange(new object[] {
             "https://jsonplaceholder.typicode.com/todos",
             "https://jsonplaceholder.typicode.com/comments",
-            "https://jsonplaceholder.typicode.com/albums"});
+            "https://jsonplaceholder.typicode.com/albums",
+            "https://jsonplaceholder.typicode.com/posts",
+            "https://jsonplaceholder.typicode.com/users"});
             this.cbbAPI.Location = new System.Drawing.Point(148, 12);
             this.cbbAPI.Name = "cbbAPI";
             this.cbbAPI.Size = new System.Drawing.Size(603, 24);
             this.cbbAPI.TabIndex = 8;
+            this.cbbAPI.SelectedIndexChanged += new System.EventHandler(this.cbbAPI_SelectedIndexChanged);
             // 
             // label1
             // 

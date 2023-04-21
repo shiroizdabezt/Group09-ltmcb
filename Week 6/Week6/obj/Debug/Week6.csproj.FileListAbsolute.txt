@@ -14,3 +14,19 @@ C:\Users\Crystal\Desktop\New folder (2)\Week6\obj\Debug\Week6.csproj.CoreCompile
 C:\Users\Crystal\Desktop\New folder (2)\Week6\obj\Debug\Week6.csproj.CopyComplete
 C:\Users\Crystal\Desktop\New folder (2)\Week6\obj\Debug\Week6.exe
 C:\Users\Crystal\Desktop\New folder (2)\Week6\obj\Debug\Week6.pdb
+D:\LapTrinhMang\Group9\Week 6\Week6\bin\Debug\Week6.exe.config
+D:\LapTrinhMang\Group9\Week 6\Week6\bin\Debug\Week6.exe
+D:\LapTrinhMang\Group9\Week 6\Week6\bin\Debug\Week6.pdb
+D:\LapTrinhMang\Group9\Week 6\Week6\bin\Debug\Newtonsoft.Json.dll
+D:\LapTrinhMang\Group9\Week 6\Week6\bin\Debug\System.Net.Http.Formatting.dll
+D:\LapTrinhMang\Group9\Week 6\Week6\bin\Debug\Newtonsoft.Json.xml
+D:\LapTrinhMang\Group9\Week 6\Week6\bin\Debug\System.Net.Http.Formatting.xml
+D:\LapTrinhMang\Group9\Week 6\Week6\obj\Debug\Week6.csproj.AssemblyReference.cache
+D:\LapTrinhMang\Group9\Week 6\Week6\obj\Debug\Week6.csproj.SuggestedBindingRedirects.cache
+D:\LapTrinhMang\Group9\Week 6\Week6\obj\Debug\Week6.Form1.resources
+D:\LapTrinhMang\Group9\Week 6\Week6\obj\Debug\Week6.Properties.Resources.resources
+D:\LapTrinhMang\Group9\Week 6\Week6\obj\Debug\Week6.csproj.GenerateResource.cache
+D:\LapTrinhMang\Group9\Week 6\Week6\obj\Debug\Week6.csproj.CoreCompileInputs.cache
+D:\LapTrinhMang\Group9\Week 6\Week6\obj\Debug\Week6.csproj.CopyComplete
+D:\LapTrinhMang\Group9\Week 6\Week6\obj\Debug\Week6.exe
+D:\LapTrinhMang\Group9\Week 6\Week6\obj\Debug\Week6.pdb

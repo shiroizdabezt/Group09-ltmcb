@@ -17,26 +17,42 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Server
 {
-    public partial class TCPServer : Form
+    public partial class MulTCPServer : Form
     {
         IPEndPoint IP;
         Socket server;
+        List<Socket> clientList;
         IPAddress ip;
-        public TCPServer()
+        public MulTCPServer()
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
         }
 
+        //Hàm nhận tin nhắn 
         void Receive(object obj)
         {
             Socket client = obj as Socket;
-            while (true)
+            try
             {
-                byte[] dt = new byte[1024 * 8000];
-                client.Receive(dt);
-                string msg = (string)Deserialize(dt);
-                AddMsg(msg);
+                while (true)
+                {
+                    byte[] dt = new byte[1024 * 8000];
+                    client.Receive(dt);
+                    string msg = (string)Deserialize(dt);
+                    foreach (Socket s in clientList)
+                    {
+                        if (s != null && s != client)
+                        {
+                            s.Send(Serialize(msg));
+                        }
+                    }
+                    AddMsg(msg);
+                }
+            }
+            catch
+            {
+                clientList.Remove(client);
             }
         }
         void AddMsg(string msg)
@@ -46,25 +62,39 @@ namespace Server
 
         void Connect()
         {
+            clientList = new List<Socket>();
             IP = new IPEndPoint(IPAddress.Parse(txtIPServer.Text), Int32.Parse(txtPortServer.Text));
             server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             server.Bind(IP);
             Thread Listen = new Thread(() =>
             {
-                //try
-                //{
-                while (true)
+                try
                 {
-                    server.Listen(100);
-                    Socket client = server.Accept();
-                    byte[] dt = new byte[1024 * 8000];
-                    client.Receive(dt);
-                    string msg = (string)Deserialize(dt);
-                    client.Send(Serialize(msg));
-                    AddMsg(msg);
-                    Thread receive = new Thread(Receive);
-                    receive.IsBackground = true;
-                    receive.Start(client);
+                    while (true)
+                    {
+                        server.Listen(100);
+                        Socket client = server.Accept();
+                        clientList.Add(client);
+                        byte[] dt = new byte[1024 * 8000];
+                        client.Receive(dt);
+                        string msg = (string)Deserialize(dt);
+                        foreach (Socket s in clientList)
+                        {
+                            if (s != null && s != client)
+                            {
+                                s.Send(Serialize(msg));
+                            }
+                        }
+                        AddMsg(msg);
+                        Thread receive = new Thread(Receive);
+                        receive.IsBackground = true;
+                        receive.Start(client);
+                    }
+                }
+                catch
+                {
+                    IP = new IPEndPoint(IPAddress.Parse(txtIPServer.Text), Int32.Parse(txtPortServer.Text));
+                    server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 }
             });
             Listen.IsBackground = true;

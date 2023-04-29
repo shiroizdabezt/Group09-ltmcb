@@ -86,8 +86,9 @@
             btn_Bai4.TabIndex=4;
             btn_Bai4.Text="Bài 4";
             btn_Bai4.UseVisualStyleBackColor=true;
+            btn_Bai4.Click+=btn_Bai4_Click;
             // 
-            // Form1
+            // Lab3
             // 
             AutoScaleDimensions=new SizeF(7F, 15F);
             AutoScaleMode=AutoScaleMode.Font;
@@ -97,7 +98,7 @@
             Controls.Add(btn_Bai2);
             Controls.Add(btn_Bai1);
             Controls.Add(label1);
-            Name="Form1";
+            Name="Lab3";
             Text="Form1";
             ResumeLayout(false);
             PerformLayout();

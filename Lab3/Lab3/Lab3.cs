@@ -18,5 +18,11 @@ namespace Lab3
             Bai3 b3 = new Bai3();
             b3.ShowDialog();
         }
+
+        private void btn_Bai4_Click(object sender, EventArgs e)
+        {
+            Bai4 b4 = new Bai4();
+            b4.ShowDialog();
+        }
     }
 }

@@ -41,3 +41,6 @@ D:\LapTrinhMang\Group9\Lab3\Lab3\obj\Debug\net6.0-windows\Lab3.Bai3.resources
 D:\LapTrinhMang\Group9\Lab3\Lab3\obj\Debug\net6.0-windows\Lab3.Lab3.resources
 D:\LapTrinhMang\Group9\Lab3\Lab3\obj\Debug\net6.0-windows\Server.TCPServer.resources
 D:\LapTrinhMang\Group9\Lab3\Lab3\obj\Debug\net6.0-windows\Client.TCPClient.resources
+D:\LapTrinhMang\Group9\Lab3\Lab3\obj\Debug\net6.0-windows\Lab3.Bai4.resources
+D:\LapTrinhMang\Group9\Lab3\Lab3\obj\Debug\net6.0-windows\Client.MulTCPClient.resources
+D:\LapTrinhMang\Group9\Lab3\Lab3\obj\Debug\net6.0-windows\Server.MulTCPServer.resources

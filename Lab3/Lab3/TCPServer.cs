@@ -32,14 +32,14 @@ namespace Server
         void Receive(object obj)
         {
             Socket client = obj as Socket;
-                while(true)
-                {
-                    byte[] dt = new byte[1024 * 8000];
-                    client.Receive(dt);
-                    string msg = (string)Deserialize(dt);
-                    //client.Send(Serialize(msg));
-                    AddMsg(msg);
-                }    
+            while (true)
+            {
+                byte[] dt = new byte[1024 * 8000];
+                client.Receive(dt);
+                string msg = (string)Deserialize(dt);
+                //client.Send(Serialize(msg));
+                AddMsg(msg);
+            }
         }
         void AddMsg(string msg)
         {
@@ -96,19 +96,19 @@ namespace Server
             {
                 //try
                 //{
-                    while (true)
-                    {
-                        server.Listen(100);
-                        Socket client = server.Accept();
-                        byte[] dt = new byte[1024 * 8000];
-                        client.Receive(dt);
-                        string msg = (string)Deserialize(dt);
-                        client.Send(Serialize(msg));
-                        AddMsg(msg);
-                        Thread receive = new Thread(Receive);
-                        receive.IsBackground = true;
-                        receive.Start(client);
-                    }
+                while (true)
+                {
+                    server.Listen(100);
+                    Socket client = server.Accept();
+                    byte[] dt = new byte[1024 * 8000];
+                    client.Receive(dt);
+                    string msg = (string)Deserialize(dt);
+                    client.Send(Serialize(msg));
+                    AddMsg(msg);
+                    Thread receive = new Thread(Receive);
+                    receive.IsBackground = true;
+                    receive.Start(client);
+                }
                 //}
                 //catch
                 //{
@@ -155,6 +155,11 @@ namespace Server
                     btnKhoiTao.Enabled=false;
                 }
             }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

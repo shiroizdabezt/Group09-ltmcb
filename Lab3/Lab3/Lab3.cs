@@ -1,8 +1,8 @@
 namespace Lab3
 {
-    public partial class Form1 : Form
+    public partial class Lab3 : Form
     {
-        public Form1()
+        public Lab3()
         {
             InitializeComponent();
         }
@@ -11,6 +11,12 @@ namespace Lab3
         {
             Bai1 b1 = new Bai1();
             b1.ShowDialog();
+        }
+
+        private void btn_Bai3_Click(object sender, EventArgs e)
+        {
+            Bai3 b3 = new Bai3();
+            b3.ShowDialog();
         }
     }
 }

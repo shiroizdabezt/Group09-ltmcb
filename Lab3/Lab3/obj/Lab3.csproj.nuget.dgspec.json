@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LapTrinhMang\\Group9\\Lab3\\Lab3\\Lab3\\Lab3.csproj": {}
+    "D:\\LapTrinhMang\\Group9\\Lab3\\Lab3\\Lab3.csproj": {}
   },
   "projects": {
-    "D:\\LapTrinhMang\\Group9\\Lab3\\Lab3\\Lab3\\Lab3.csproj": {
+    "D:\\LapTrinhMang\\Group9\\Lab3\\Lab3\\Lab3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LapTrinhMang\\Group9\\Lab3\\Lab3\\Lab3\\Lab3.csproj",
+        "projectUniqueName": "D:\\LapTrinhMang\\Group9\\Lab3\\Lab3\\Lab3.csproj",
         "projectName": "Lab3",
-        "projectPath": "D:\\LapTrinhMang\\Group9\\Lab3\\Lab3\\Lab3\\Lab3.csproj",
+        "projectPath": "D:\\LapTrinhMang\\Group9\\Lab3\\Lab3\\Lab3.csproj",
         "packagesPath": "C:\\Users\\troil\\.nuget\\packages\\",
-        "outputPath": "D:\\LapTrinhMang\\Group9\\Lab3\\Lab3\\Lab3\\obj\\",
+        "outputPath": "D:\\LapTrinhMang\\Group9\\Lab3\\Lab3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\troil\\AppData\\Roaming\\NuGet\\NuGet.Config",

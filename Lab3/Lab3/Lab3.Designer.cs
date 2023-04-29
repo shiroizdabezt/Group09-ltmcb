@@ -1,6 +1,6 @@
 ﻿namespace Lab3
 {
-    partial class Form1
+    partial class Lab3
     {
         /// <summary>
         ///  Required designer variable.
@@ -75,6 +75,7 @@
             btn_Bai3.TabIndex=3;
             btn_Bai3.Text="Bài 3";
             btn_Bai3.UseVisualStyleBackColor=true;
+            btn_Bai3.Click+=btn_Bai3_Click;
             // 
             // btn_Bai4
             // 

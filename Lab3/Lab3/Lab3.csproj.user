@@ -4,13 +4,22 @@
     <Compile Update="Bai1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Bai3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TCPClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TCPServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UDPServer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UDPClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form1.cs">
+    <Compile Update="Lab3.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

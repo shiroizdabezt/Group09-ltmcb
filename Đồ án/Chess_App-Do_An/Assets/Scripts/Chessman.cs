@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Chessman : MonoBehaviour
 {
+    public bool hasMoved = false;
+
     //References to objects in our Unity Scene
     public GameObject controller;
     public GameObject movePlate;
@@ -146,9 +149,11 @@ public class Chessman : MonoBehaviour
                 break;
             case "black_pawn":
                 PawnMovePlate(xBoard, yBoard - 1);
+                if (!hasMoved) PawnMovePlate(xBoard, yBoard-2);
                 break;
             case "white_pawn":
                 PawnMovePlate(xBoard, yBoard + 1);
+                if (!hasMoved) PawnMovePlate(xBoard, yBoard+2);
                 break;
         }
     }
@@ -220,21 +225,37 @@ public class Chessman : MonoBehaviour
         Game sc = controller.GetComponent<Game>();
         if (sc.PositionOnBoard(x, y))
         {
-            if (sc.GetPosition(x, y) == null)
+            if (sc.GetPosition(x, y) == null )
             {
                 MovePlateSpawn(x, y);
             }
-
-            if (sc.PositionOnBoard(x + 1, y) && sc.GetPosition(x + 1, y) != null && sc.GetPosition(x + 1, y).GetComponent<Chessman>().player != player)
+            if (hasMoved == false)
             {
-                MovePlateAttackSpawn(x + 1, y);
-            }
+                if (player == "black") y = y+1;
+                else y = y-1;
+                if (sc.PositionOnBoard(x + 1, y) && sc.GetPosition(x + 1, y) != null && sc.GetPosition(x + 1, y - 1) != null && sc.GetPosition(x + 1, y).GetComponent<Chessman>().player != player)
+                {
+                    MovePlateAttackSpawn(x + 1, y);
+                }
 
-            if (sc.PositionOnBoard(x - 1, y) && sc.GetPosition(x - 1, y) != null && sc.GetPosition(x - 1, y).GetComponent<Chessman>().player != player)
-            {
-                MovePlateAttackSpawn(x - 1, y);
+                if (sc.PositionOnBoard(x - 1, y) && sc.GetPosition(x - 1, y) != null && sc.GetPosition(x - 1, y - 1) != null && sc.GetPosition(x - 1, y).GetComponent<Chessman>().player != player)
+                {
+                    MovePlateAttackSpawn(x - 1, y);
+                }
             }
-        }
+            else
+            {
+                if (sc.PositionOnBoard(x + 1, y) && sc.GetPosition(x + 1, y) != null && sc.GetPosition(x + 1, y).GetComponent<Chessman>().player != player)
+                {
+                    MovePlateAttackSpawn(x + 1, y);
+                }
+
+                if (sc.PositionOnBoard(x - 1, y) && sc.GetPosition(x - 1, y) != null && sc.GetPosition(x - 1, y).GetComponent<Chessman>().player != player)
+                {
+                    MovePlateAttackSpawn(x - 1, y);
+                }
+            }
+        } 
     }
 
     public void MovePlateSpawn(int matrixX, int matrixY)
@@ -306,6 +327,38 @@ public class Chessman : MonoBehaviour
 
                 }
                 break;
+            //case "black_king":
+            //    int x1 = xBoard;
+            //    int y1 = yBoard;
+                
+            //    if (hasMoved == false)
+            //    {
+            //        if (IsNullBetweenBlackRookAndKing(x1, y1))
+            //        {
+            //            PointMovePlate(x1 + 2, y1);
+            //        }    
+            //    }
+            //    break;
         }
     }
+    //public bool IsNullBetweenBlackRookAndKing(int x, int y)
+    //{
+    //    Game sc = controller.GetComponent<Game>();
+    //    GameObject blackRook = GameObject.Find("black_rook");
+    //    Vector3 blr = blackRook.transform.position;
+    //    float x2 = blr.x;
+    //    float y2 = blr.y;
+    //    {
+    //        if (x2 < x)
+    //        {
+    //            int a = 0;
+    //            for (int i = (int)x2 +1; i< x; i++)
+    //            {
+    //                if (sc.GetPosition(i, yBoard) == null) a++;
+    //                if (a == (x- x2)) return true;
+    //            }
+    //        }
+    //    }
+    //    return false;
+    //}    
 }

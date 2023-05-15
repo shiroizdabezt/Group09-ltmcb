@@ -62,6 +62,7 @@ public class MovePlate : MonoBehaviour
 
         //Destroy the move plates including self
         reference.GetComponent<Chessman>().DestroyMovePlates();
+        reference.GetComponent<Chessman>().hasMoved = true;
     }
 
     public void SetCoords(int x, int y)

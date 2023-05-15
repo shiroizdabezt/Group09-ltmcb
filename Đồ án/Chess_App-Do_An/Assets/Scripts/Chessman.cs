@@ -257,12 +257,12 @@ public class Chessman : MonoBehaviour
                 
             }
 
-            if (sc.PositionOnBoard(x, y) && sc.GetPosition(x + 1, y + 1) != null && sc.GetPosition(x + 1, y + 1).GetComponent<Chessman>().player != player)
+            else if (sc.PositionOnBoard(x, y) && sc.GetPosition(x + 1, y + 1) != null && sc.GetPosition(x + 1, y) != null && sc.GetPosition(x + 1, y + 1).GetComponent<Chessman>().player != player)
             {
                 MovePlateAttackSpawn(x + 1, y + 1);
             }
 
-            if (sc.PositionOnBoard(x, y) && sc.GetPosition(x - 1, y + 1) != null && sc.GetPosition(x - 1, y + 1).GetComponent<Chessman>().player != player)
+            else if (sc.PositionOnBoard(x, y) && sc.GetPosition(x - 1, y + 1) != null && sc.GetPosition(x + 1, y) != null && sc.GetPosition(x - 1, y + 1).GetComponent<Chessman>().player != player)
             {
                 MovePlateAttackSpawn(x - 1, y + 1);
             }
@@ -279,12 +279,12 @@ public class Chessman : MonoBehaviour
 
             }
 
-            if (sc.PositionOnBoard(x, y) && sc.GetPosition(x + 1, y - 1) != null && sc.GetPosition(x + 1, y - 1).GetComponent<Chessman>().player != player)
+            else if (sc.PositionOnBoard(x, y) && sc.GetPosition(x + 1, y - 1) != null && sc.GetPosition(x + 1, y) != null && sc.GetPosition(x + 1, y - 1).GetComponent<Chessman>().player != player)
             {
                 MovePlateAttackSpawn(x + 1, y - 1);
             }
 
-            if (sc.PositionOnBoard(x, y) && sc.GetPosition(x - 1, y - 1) != null && sc.GetPosition(x - 1, y - 1).GetComponent<Chessman>().player != player)
+            else if (sc.PositionOnBoard(x, y) && sc.GetPosition(x - 1, y - 1) != null && sc.GetPosition(x - 1, y) != null && sc.GetPosition(x - 1, y - 1).GetComponent<Chessman>().player != player)
             {
                 MovePlateAttackSpawn(x - 1, y - 1);
             }
@@ -360,38 +360,6 @@ public class Chessman : MonoBehaviour
 
                 }
                 break;
-            //case "black_king":
-            //    int x1 = xBoard;
-            //    int y1 = yBoard;
-                
-            //    if (hasMoved == false)
-            //    {
-            //        if (IsNullBetweenBlackRookAndKing(x1, y1))
-            //        {
-            //            PointMovePlate(x1 + 2, y1);
-            //        }    
-            //    }
-            //    break;
         }
-    }
-    //public bool IsNullBetweenBlackRookAndKing(int x, int y)
-    //{
-    //    Game sc = controller.GetComponent<Game>();
-    //    GameObject blackRook = GameObject.Find("black_rook");
-    //    Vector3 blr = blackRook.transform.position;
-    //    float x2 = blr.x;
-    //    float y2 = blr.y;
-    //    {
-    //        if (x2 < x)
-    //        {
-    //            int a = 0;
-    //            for (int i = (int)x2 +1; i< x; i++)
-    //            {
-    //                if (sc.GetPosition(i, yBoard) == null) a++;
-    //                if (a == (x- x2)) return true;
-    //            }
-    //        }
-    //    }
-    //    return false;
-    //}    
+    }  
 }

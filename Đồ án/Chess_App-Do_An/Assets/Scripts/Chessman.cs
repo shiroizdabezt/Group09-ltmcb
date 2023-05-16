@@ -190,16 +190,102 @@ public class Chessman : MonoBehaviour
         PointMovePlate(xBoard - 2, yBoard - 1);
     }
 
+    //public void SurroundMovePlate()
+    //{
+    //    PointMovePlate(xBoard, yBoard + 1);
+    //    PointMovePlate(xBoard, yBoard - 1);
+    //    PointMovePlate(xBoard - 1, yBoard + 0);
+    //    PointMovePlate(xBoard - 1, yBoard - 1);
+    //    PointMovePlate(xBoard - 1, yBoard + 1);
+    //    PointMovePlate(xBoard + 1, yBoard + 0);
+    //    PointMovePlate(xBoard + 1, yBoard - 1);
+    //    PointMovePlate(xBoard + 1, yBoard + 1);
+    //}
+
     public void SurroundMovePlate()
     {
-        PointMovePlate(xBoard, yBoard + 1);
-        PointMovePlate(xBoard, yBoard - 1);
-        PointMovePlate(xBoard - 1, yBoard + 0);
-        PointMovePlate(xBoard - 1, yBoard - 1);
-        PointMovePlate(xBoard - 1, yBoard + 1);
-        PointMovePlate(xBoard + 1, yBoard + 0);
-        PointMovePlate(xBoard + 1, yBoard - 1);
-        PointMovePlate(xBoard + 1, yBoard + 1);
+        int xL = xBoard - 2, xR = xBoard + 2;
+        int yL = yBoard, yR = yBoard;
+        // Check for castling
+        if (!hasMoved)
+        {
+            // Check if the left rook is in place and has not moved
+            GameObject leftRook = controller.GetComponent<Game>().GetPosition(0, yBoard);
+            if (leftRook != null && !leftRook.GetComponent<Chessman>().hasMoved)
+            {
+                // Check if the path between king and rook is clear
+                bool isPathClear = true;
+                for (int i = 1; i < xBoard; i++)
+                {
+                    if (controller.GetComponent<Game>().GetPosition(i, yBoard) != null)
+                    {
+                        isPathClear = false;
+                        break;
+                    }
+                }
+
+                if (isPathClear)
+                {
+                    // Create move plate for castling to the left
+                    PointMovePlate(xBoard - 2, yBoard);
+                }
+            }
+
+            // Check if the right rook is in place and has not moved
+            GameObject rightRook = controller.GetComponent<Game>().GetPosition(7, yBoard);
+            if (rightRook != null && !rightRook.GetComponent<Chessman>().hasMoved)
+            {
+                // Check if the path between king and rook is clear
+                bool isPathClear = true;
+                for (int i = xBoard + 1; i < 7; i++)
+                {
+                    if (controller.GetComponent<Game>().GetPosition(i, yBoard) != null)
+                    {
+                        isPathClear = false;
+                        break;
+                    }
+                }
+
+                if (isPathClear)
+                {
+                    // Create move plate for castling to the right
+                    PointMovePlate(xBoard + 2, yBoard);
+                    //MoveKingRight(xBoard + 2, yBoard);
+                }
+            }
+        }
+        else MoveKingLeft(xL, yL);
+
+        // Create move plates for surrounding squares
+        for (int i = xBoard - 1; i <= xBoard + 1; i++)
+        {
+            for (int j = yBoard - 1; j <= yBoard + 1; j++)
+            {
+                // Make sure the square is within the board
+                if (i >= 0 && i < 8 && j >= 0 && j < 8)
+                {
+                    // Get the chessman on the square
+                    GameObject piece = controller.GetComponent<Game>().GetPosition(i, j);
+
+                    // If the square is empty or has an opponent's piece, create a move plate
+                    if (piece == null || piece.GetComponent<Chessman>().player != player)
+                    {
+                        PointMovePlate(i, j);
+                    }
+                }
+            }
+        }
+    }
+
+    public void MoveKingLeft(int x, int y)
+    {
+
+        if (controller.GetComponent<Game>().GetPosition(x, y) != null)
+        {
+            GameObject RookLeft = controller.GetComponent<Game>().GetPosition(0, y);
+            //RookLeft.transform.position = new Vector3(x + 3, y);
+            RookLeft.GetComponent<Chessman>().MovePlateSpawn(x + 3, y);
+        }
     }
 
     public void PointMovePlate(int x, int y)

@@ -127,5 +127,5 @@ public class Game : MonoBehaviour
 
         GameObject.FindGameObjectWithTag("RestartText").GetComponent<Text>().enabled = true;
         GameObject.FindGameObjectWithTag("RestartText").GetComponent<Text>().text = playerWinner + " +10 Scores\n" + loserPlayer + " -5 Scores\nTap to Restart" ;
-    }    
+    }
 }

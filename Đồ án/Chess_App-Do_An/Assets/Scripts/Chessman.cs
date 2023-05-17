@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class Chessman : MonoBehaviour
 {
     public bool hasMoved = false;
+    public bool flagCastle = false;
+    public int y;
 
     //References to objects in our Unity Scene
     public GameObject controller;
@@ -137,7 +139,13 @@ public class Chessman : MonoBehaviour
                 LineMovePlate(-1, -1);
                 break;
             case "black_king":
+                if (hasMoved == false)
+                    SurroundMoveCastling();
+                SurroundMovePlate();
+                break;
             case "white_king":
+                if (hasMoved == false)
+                    SurroundMoveCastling();
                 SurroundMovePlate();
                 break;
             case "black_rook":
@@ -149,11 +157,11 @@ public class Chessman : MonoBehaviour
                 break;
             case "black_pawn":
                 PawnMovePlate(xBoard, yBoard - 1);
-                if (!hasMoved) PawnMoveTwo(xBoard, yBoard-2);
+                if (!hasMoved) PawnMoveTwo(xBoard, yBoard - 2);
                 break;
             case "white_pawn":
                 PawnMovePlate(xBoard, yBoard + 1);
-                if (!hasMoved) PawnMoveTwo(xBoard, yBoard+2);
+                if (!hasMoved) PawnMoveTwo(xBoard, yBoard + 2);
                 break;
         }
     }
@@ -190,102 +198,77 @@ public class Chessman : MonoBehaviour
         PointMovePlate(xBoard - 2, yBoard - 1);
     }
 
-    //public void SurroundMovePlate()
-    //{
-    //    PointMovePlate(xBoard, yBoard + 1);
-    //    PointMovePlate(xBoard, yBoard - 1);
-    //    PointMovePlate(xBoard - 1, yBoard + 0);
-    //    PointMovePlate(xBoard - 1, yBoard - 1);
-    //    PointMovePlate(xBoard - 1, yBoard + 1);
-    //    PointMovePlate(xBoard + 1, yBoard + 0);
-    //    PointMovePlate(xBoard + 1, yBoard - 1);
-    //    PointMovePlate(xBoard + 1, yBoard + 1);
-    //}
-
     public void SurroundMovePlate()
     {
-        int xL = xBoard - 2, xR = xBoard + 2;
-        int yL = yBoard, yR = yBoard;
-        // Check for castling
-        if (!hasMoved)
-        {
-            // Check if the left rook is in place and has not moved
-            GameObject leftRook = controller.GetComponent<Game>().GetPosition(0, yBoard);
-            if (leftRook != null && !leftRook.GetComponent<Chessman>().hasMoved)
-            {
-                // Check if the path between king and rook is clear
-                bool isPathClear = true;
-                for (int i = 1; i < xBoard; i++)
-                {
-                    if (controller.GetComponent<Game>().GetPosition(i, yBoard) != null)
-                    {
-                        isPathClear = false;
-                        break;
-                    }
-                }
+        PointMovePlate(xBoard, yBoard + 1);
+        PointMovePlate(xBoard, yBoard - 1);
+        PointMovePlate(xBoard - 1, yBoard + 0);
+        PointMovePlate(xBoard - 1, yBoard - 1);
+        PointMovePlate(xBoard - 1, yBoard + 1);
+        PointMovePlate(xBoard + 1, yBoard + 0);
+        PointMovePlate(xBoard + 1, yBoard - 1);
+        PointMovePlate(xBoard + 1, yBoard + 1);
+    }
 
-                if (isPathClear)
+    public void SurroundMoveCastling()
+    {
+        y = yBoard;
+        PointMovePlate(xBoard, yBoard + 1);
+        PointMovePlate(xBoard, yBoard - 1);
+        PointMovePlate(xBoard - 1, yBoard + 0);
+        PointMovePlate(xBoard - 1, yBoard - 1);
+        PointMovePlate(xBoard - 1, yBoard + 1);
+        PointMovePlate(xBoard + 1, yBoard + 0);
+        PointMovePlate(xBoard + 1, yBoard - 1);
+        PointMovePlate(xBoard + 1, yBoard + 1);
+        GameObject leftRook = controller.GetComponent<Game>().GetPosition(0, yBoard);
+        if (leftRook != null && !leftRook.GetComponent<Chessman>().hasMoved)
+        {
+            // Check if the path between king and rook is clear
+            bool isPathClear = true;
+            for (int i = 1; i < xBoard; i++)
+            {
+                if (controller.GetComponent<Game>().GetPosition(i, yBoard) != null)
                 {
-                    // Create move plate for castling to the left
-                    PointMovePlate(xBoard - 2, yBoard);
+                    isPathClear = false;
+                    break;
                 }
             }
 
-            // Check if the right rook is in place and has not moved
-            GameObject rightRook = controller.GetComponent<Game>().GetPosition(7, yBoard);
-            if (rightRook != null && !rightRook.GetComponent<Chessman>().hasMoved)
+            if (isPathClear)
             {
-                // Check if the path between king and rook is clear
-                bool isPathClear = true;
-                for (int i = xBoard + 1; i < 7; i++)
-                {
-                    if (controller.GetComponent<Game>().GetPosition(i, yBoard) != null)
-                    {
-                        isPathClear = false;
-                        break;
-                    }
-                }
+                flagCastle = true;
+                // Create move plate for castling to the left
+                PointMovePlate(xBoard - 2, yBoard);
 
-                if (isPathClear)
-                {
-                    // Create move plate for castling to the right
-                    PointMovePlate(xBoard + 2, yBoard);
-                    //MoveKingRight(xBoard + 2, yBoard);
-                }
             }
         }
-        else MoveKingLeft(xL, yL);
 
-        // Create move plates for surrounding squares
-        for (int i = xBoard - 1; i <= xBoard + 1; i++)
+        GameObject rightRook = controller.GetComponent<Game>().GetPosition(7, yBoard);
+        if (rightRook != null && !rightRook.GetComponent<Chessman>().hasMoved)
         {
-            for (int j = yBoard - 1; j <= yBoard + 1; j++)
+            // Check if the path between king and rook is clear
+            bool isPathClear = true;
+            for (int i = xBoard + 1; i < 7; i++)
             {
-                // Make sure the square is within the board
-                if (i >= 0 && i < 8 && j >= 0 && j < 8)
+                if (controller.GetComponent<Game>().GetPosition(i, yBoard) != null)
                 {
-                    // Get the chessman on the square
-                    GameObject piece = controller.GetComponent<Game>().GetPosition(i, j);
-
-                    // If the square is empty or has an opponent's piece, create a move plate
-                    if (piece == null || piece.GetComponent<Chessman>().player != player)
-                    {
-                        PointMovePlate(i, j);
-                    }
+                    isPathClear = false;
+                    break;
                 }
+            }
+
+            if (isPathClear)
+            {
+                // Create move plate for castling to the right
+                PointMovePlate(xBoard + 2, yBoard);
+                //MoveKingRight(xBoard + 2, yBoard);
             }
         }
     }
 
     public void MoveKingLeft(int x, int y)
     {
-
-        if (controller.GetComponent<Game>().GetPosition(x, y) != null)
-        {
-            GameObject RookLeft = controller.GetComponent<Game>().GetPosition(0, y);
-            //RookLeft.transform.position = new Vector3(x + 3, y);
-            RookLeft.GetComponent<Chessman>().MovePlateSpawn(x + 3, y);
-        }
     }
 
     public void PointMovePlate(int x, int y)
@@ -328,7 +311,7 @@ public class Chessman : MonoBehaviour
         }
     }
 
-    public void PawnMoveTwo( int x, int y)
+    public void PawnMoveTwo(int x, int y)
     {
         Game sc = controller.GetComponent<Game>();
         if (player == "black")
@@ -340,7 +323,7 @@ public class Chessman : MonoBehaviour
 
             else if (sc.PositionOnBoard(x, y) && sc.GetPosition(x, y) == null && sc.GetPosition(x, y + 1) != null)
             {
-                
+
             }
 
             else if (sc.PositionOnBoard(x, y) && sc.GetPosition(x + 1, y + 1) != null && sc.GetPosition(x + 1, y) != null && sc.GetPosition(x + 1, y + 1).GetComponent<Chessman>().player != player)
@@ -374,7 +357,7 @@ public class Chessman : MonoBehaviour
             {
                 MovePlateAttackSpawn(x - 1, y - 1);
             }
-        }    
+        }
     }
 
     public void MovePlateSpawn(int matrixX, int matrixY)
@@ -447,5 +430,5 @@ public class Chessman : MonoBehaviour
                 }
                 break;
         }
-    }  
+    }
 }

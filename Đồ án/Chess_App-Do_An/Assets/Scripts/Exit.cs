@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Exit : MonoBehaviour
 {
-
-    public void button_exit()
+    // Start is called before the first frame update
+    public void Exit_quit()
     {
-
         Application.Quit();
-
+        Debug.Log("Exit");
     }
 }

@@ -32,13 +32,15 @@
             btnDownload=new Button();
             txtData=new RichTextBox();
             txtFilePath=new TextBox();
+            label1=new Label();
+            label2=new Label();
             SuspendLayout();
             // 
             // txtURL
             // 
-            txtURL.Location=new Point(24, 30);
+            txtURL.Location=new Point(77, 30);
             txtURL.Name="txtURL";
-            txtURL.Size=new Size(532, 23);
+            txtURL.Size=new Size(479, 23);
             txtURL.TabIndex=0;
             // 
             // btnDownload
@@ -62,16 +64,38 @@
             // 
             // txtFilePath
             // 
-            txtFilePath.Location=new Point(24, 59);
+            txtFilePath.Location=new Point(77, 59);
             txtFilePath.Name="txtFilePath";
-            txtFilePath.Size=new Size(532, 23);
+            txtFilePath.Size=new Size(479, 23);
             txtFilePath.TabIndex=4;
+            // 
+            // label1
+            // 
+            label1.AutoSize=true;
+            label1.Font=new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location=new Point(13, 31);
+            label1.Name="label1";
+            label1.Size=new Size(32, 17);
+            label1.TabIndex=5;
+            label1.Text="URL";
+            // 
+            // label2
+            // 
+            label2.AutoSize=true;
+            label2.Font=new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location=new Point(13, 60);
+            label2.Name="label2";
+            label2.Size=new Size(58, 17);
+            label2.TabIndex=6;
+            label2.Text="FilePath";
             // 
             // Bai2
             // 
             AutoScaleDimensions=new SizeF(7F, 15F);
             AutoScaleMode=AutoScaleMode.Font;
             ClientSize=new Size(697, 547);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(txtFilePath);
             Controls.Add(txtData);
             Controls.Add(btnDownload);
@@ -89,5 +113,7 @@
         private Button btnDownload;
         private RichTextBox txtData;
         private TextBox txtFilePath;
+        private Label label1;
+        private Label label2;
     }
 }

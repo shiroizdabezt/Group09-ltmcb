@@ -8,19 +8,19 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\troil\\.nuget\\packages\\": {}
+    "C:\\Users\\codyk\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LapTrinhMang\\Group9\\Lab4\\Lab4\\Lab4\\Lab4.csproj",
+      "projectUniqueName": "D:\\HOC\\Code\\ltmcb\\Group09\\Lab4\\Lab4\\Lab4\\Lab4.csproj",
       "projectName": "Lab4",
-      "projectPath": "D:\\LapTrinhMang\\Group9\\Lab4\\Lab4\\Lab4\\Lab4.csproj",
-      "packagesPath": "C:\\Users\\troil\\.nuget\\packages\\",
-      "outputPath": "D:\\LapTrinhMang\\Group9\\Lab4\\Lab4\\Lab4\\obj\\",
+      "projectPath": "D:\\HOC\\Code\\ltmcb\\Group09\\Lab4\\Lab4\\Lab4\\Lab4.csproj",
+      "packagesPath": "C:\\Users\\codyk\\.nuget\\packages\\",
+      "outputPath": "D:\\HOC\\Code\\ltmcb\\Group09\\Lab4\\Lab4\\Lab4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\troil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\codyk\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

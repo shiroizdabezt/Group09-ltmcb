@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\codyk\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\codyk\\.nuget\\packages"
+      "C:\\Users\\troil\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\troil\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

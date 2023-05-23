@@ -51,6 +51,24 @@ namespace Lab4
             picture.Location = new Point(panel1.Width - 120, lbTitle.Location.Y);
             picture.SizeMode = PictureBoxSizeMode.StretchImage;
 
+            //Xử lý sự kiện click vào một bài báo
+            lbTitle.Click += delegate (object sender, EventArgs e)
+            {
+                DisplayChosenNews(sender, e, news.Url);
+            };
+            lbDescription.Click += delegate (object sender, EventArgs e)
+            {
+                DisplayChosenNews(sender, e, news.Url);
+            };
+            picture.Click += delegate (object sender, EventArgs e)
+            {
+                DisplayChosenNews(sender, e, news.Url);
+            };
+
+            lbTitle.Cursor = Cursors.Hand;
+            lbDescription.Cursor = Cursors.Hand;
+            picture.Cursor = Cursors.Hand;
+
             //Hiển thị các thuộc tính được chọn của bài báo lên panel
             panel1.Controls.Add(picture);
             panel1.Controls.Add(lbDescription);
@@ -93,6 +111,33 @@ namespace Lab4
                     id++;
                 }
 
+            }
+        }
+
+        private void DisplayChosenNews(object sender, EventArgs e, string url)
+        {
+            int i;
+            Bai6Show b6_show = new Bai6Show(url);
+            //tăng % của thanh progress bar
+            for (i = 0; i < 101; i++)
+                progressBar1.Increment(i);
+
+            //khi click vào một liên kết bài báo thì thanh progressbar sẽ chạy
+            if (progressBar1.Enabled == true)
+            {
+                progressBar1.Enabled = false;
+                timer1.Start();
+            }
+            else
+            {
+                progressBar1.Enabled = true;
+                timer1.Stop();
+            }
+
+            if (progressBar1.Value == progressBar1.Maximum)
+            {
+                timer1.Enabled = false;
+                b6_show.Show();
             }
         }
     }

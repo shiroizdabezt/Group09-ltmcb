@@ -110,7 +110,6 @@ namespace Lab4
 
                     id++;
                 }
-
             }
         }
 

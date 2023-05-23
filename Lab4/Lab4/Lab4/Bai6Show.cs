@@ -16,7 +16,6 @@ namespace Lab4
         public Bai6Show(string url)
         {
             InitializeComponent();
-            //webBrowser1.AllowWebBrowserDrop = false;
             webBrowser1.Url = new Uri(url);
             webBrowser1.ScriptErrorsSuppressed = true; //phớt lờ lỗi ScriptError
             webBrowser1.Width = 859;

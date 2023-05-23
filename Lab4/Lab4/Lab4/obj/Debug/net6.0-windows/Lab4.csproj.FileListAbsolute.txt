@@ -53,3 +53,6 @@ D:\HOC\Code\ltmcb\Group09\Lab4\Lab4\Lab4\obj\Debug\net6.0-windows\refint\Lab4.dl
 D:\HOC\Code\ltmcb\Group09\Lab4\Lab4\Lab4\obj\Debug\net6.0-windows\Lab4.pdb
 D:\HOC\Code\ltmcb\Group09\Lab4\Lab4\Lab4\obj\Debug\net6.0-windows\Lab4.genruntimeconfig.cache
 D:\HOC\Code\ltmcb\Group09\Lab4\Lab4\Lab4\obj\Debug\net6.0-windows\ref\Lab4.dll
+D:\HOC\Code\ltmcb\Group09\Lab4\Lab4\Lab4\bin\Debug\net6.0-windows\HtmlAgilityPack.dll
+D:\HOC\Code\ltmcb\Group09\Lab4\Lab4\Lab4\obj\Debug\net6.0-windows\Lab4.Bai6.resources
+D:\HOC\Code\ltmcb\Group09\Lab4\Lab4\Lab4\obj\Debug\net6.0-windows\Lab4.csproj.CopyComplete

@@ -108,6 +108,7 @@
             btnBai6.TabIndex = 6;
             btnBai6.Text = "Bài 6";
             btnBai6.UseVisualStyleBackColor = true;
+            btnBai6.Click += btnBai6_Click;
             // 
             // Lab4
             // 

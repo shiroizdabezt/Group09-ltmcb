@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "05CQSw2fo183iPVbKypdks9bzhpxa5vmORWQQH+873dJypAZGbh1q3CSmbpQPrRMlYN5iJqf18fNDBZcZBOpuA==",
+  "dgSpecHash": "usz/3EnbnV5QRI3x/mP6rD/ER3CK72lHSXFyZPZgoctwlZanfXv0QXUkSrZPSOAdnsJZq0EHge7oWCFDSquGcA==",
   "success": true,
   "projectFilePath": "D:\\HOC\\Code\\ltmcb\\Group09\\Lab4\\Lab4\\Lab4\\Lab4.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\codyk\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512"
+  ],
   "logs": []
 }

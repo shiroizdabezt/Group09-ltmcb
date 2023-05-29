@@ -28,154 +28,119 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.progressBar = new System.Windows.Forms.ProgressBar();
-            this.lbPage = new System.Windows.Forms.Label();
-            this.lbUser = new System.Windows.Forms.Label();
-            this.lbTotalPage = new System.Windows.Forms.Label();
-            this.lbTotalUsers = new System.Windows.Forms.Label();
-            this.btBack = new System.Windows.Forms.Button();
-            this.btNext = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btGet = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            txtUrl=new TextBox();
+            txtEmail=new TextBox();
+            txtPassword=new TextBox();
+            label1=new Label();
+            label2=new Label();
+            label3=new Label();
+            btnPost=new Button();
+            rtxtToken=new RichTextBox();
+            SuspendLayout();
             // 
-            // panel1
+            // txtUrl
             // 
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(12, 90);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(838, 509);
-            this.panel1.TabIndex = 1;
+            txtUrl.Location=new Point(119, 25);
+            txtUrl.Name="txtUrl";
+            txtUrl.Size=new Size(246, 23);
+            txtUrl.TabIndex=0;
+            txtUrl.Text="https://reqres.in/api/register";
             // 
-            // progressBar
+            // txtEmail
             // 
-            this.progressBar.Location = new System.Drawing.Point(12, 615);
-            this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(104, 26);
-            this.progressBar.TabIndex = 2;
+            txtEmail.Location=new Point(119, 56);
+            txtEmail.Name="txtEmail";
+            txtEmail.Size=new Size(141, 23);
+            txtEmail.TabIndex=1;
+            txtEmail.Text="eve.holt@reqres.in";
             // 
-            // lbPage
+            // txtPassword
             // 
-            this.lbPage.AutoSize = true;
-            this.lbPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPage.Location = new System.Drawing.Point(18, 22);
-            this.lbPage.Name = "lbPage";
-            this.lbPage.Size = new System.Drawing.Size(43, 16);
-            this.lbPage.TabIndex = 3;
-            this.lbPage.Text = "Page:";
-            this.lbPage.Click += new System.EventHandler(this.label1_Click);
+            txtPassword.Location=new Point(119, 92);
+            txtPassword.Name="txtPassword";
+            txtPassword.Size=new Size(141, 23);
+            txtPassword.TabIndex=2;
+            txtPassword.Text="pistol";
             // 
-            // lbUser
+            // label1
             // 
-            this.lbUser.AutoSize = true;
-            this.lbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUser.Location = new System.Drawing.Point(18, 61);
-            this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(79, 16);
-            this.lbUser.TabIndex = 4;
-            this.lbUser.Text = "User/Page: ";
+            label1.AutoSize=true;
+            label1.Font=new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location=new Point(33, 25);
+            label1.Name="label1";
+            label1.Size=new Size(32, 17);
+            label1.TabIndex=3;
+            label1.Text="URL";
             // 
-            // lbTotalPage
+            // label2
             // 
-            this.lbTotalPage.AutoSize = true;
-            this.lbTotalPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalPage.Location = new System.Drawing.Point(184, 22);
-            this.lbTotalPage.Name = "lbTotalPage";
-            this.lbTotalPage.Size = new System.Drawing.Size(77, 16);
-            this.lbTotalPage.TabIndex = 5;
-            this.lbTotalPage.Text = "Total Page:";
+            label2.AutoSize=true;
+            label2.Font=new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location=new Point(33, 56);
+            label2.Name="label2";
+            label2.Size=new Size(69, 17);
+            label2.TabIndex=4;
+            label2.Text="Username";
             // 
-            // lbTotalUsers
+            // label3
             // 
-            this.lbTotalUsers.AutoSize = true;
-            this.lbTotalUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotalUsers.Location = new System.Drawing.Point(184, 61);
-            this.lbTotalUsers.Name = "lbTotalUsers";
-            this.lbTotalUsers.Size = new System.Drawing.Size(80, 16);
-            this.lbTotalUsers.TabIndex = 6;
-            this.lbTotalUsers.Text = "Total Users:";
+            label3.AutoSize=true;
+            label3.Font=new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location=new Point(33, 92);
+            label3.Name="label3";
+            label3.Size=new Size(66, 17);
+            label3.TabIndex=5;
+            label3.Text="Password";
             // 
-            // btBack
+            // btnPost
             // 
-            this.btBack.Enabled = false;
-            this.btBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBack.Location = new System.Drawing.Point(393, 37);
-            this.btBack.Name = "btBack";
-            this.btBack.Size = new System.Drawing.Size(86, 23);
-            this.btBack.TabIndex = 7;
-            this.btBack.Text = "<<";
-            this.btBack.UseVisualStyleBackColor = true;
-            this.btBack.Click += new System.EventHandler(this.btBack_Click);
+            btnPost.Font=new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPost.Location=new Point(290, 57);
+            btnPost.Name="btnPost";
+            btnPost.Size=new Size(75, 58);
+            btnPost.TabIndex=6;
+            btnPost.Text="POST";
+            btnPost.UseVisualStyleBackColor=true;
+            btnPost.Click+=btnPost_Click;
+            btnPost.KeyDown+=btnPost_KeyDown;
             // 
-            // btNext
+            // rtxtToken
             // 
-            this.btNext.Enabled = false;
-            this.btNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btNext.Location = new System.Drawing.Point(612, 37);
-            this.btNext.Name = "btNext";
-            this.btNext.Size = new System.Drawing.Size(82, 22);
-            this.btNext.TabIndex = 8;
-            this.btNext.Text = ">>";
-            this.btNext.UseVisualStyleBackColor = true;
-            this.btNext.Click += new System.EventHandler(this.btNext_Click);
+            rtxtToken.Location=new Point(12, 130);
+            rtxtToken.Name="rtxtToken";
+            rtxtToken.Size=new Size(381, 201);
+            rtxtToken.TabIndex=7;
+            rtxtToken.Text="";
+            rtxtToken.TextChanged+=rtxtToken_TextChanged;
             // 
-            // label5
+            // Bai5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(503, 37);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 20);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "User List";
-            // 
-            // btGet
-            // 
-            this.btGet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGet.Location = new System.Drawing.Point(768, 36);
-            this.btGet.Name = "btGet";
-            this.btGet.Size = new System.Drawing.Size(82, 23);
-            this.btGet.TabIndex = 10;
-            this.btGet.Text = "GET";
-            this.btGet.UseVisualStyleBackColor = true;
-            this.btGet.Click += new System.EventHandler(this.btGet_Click);
-            // 
-            // Form5
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 653);
-            this.Controls.Add(this.btGet);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.btNext);
-            this.Controls.Add(this.btBack);
-            this.Controls.Add(this.lbTotalUsers);
-            this.Controls.Add(this.lbTotalPage);
-            this.Controls.Add(this.lbUser);
-            this.Controls.Add(this.lbPage);
-            this.Controls.Add(this.progressBar);
-            this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form5";
-            this.Text = "Bai5";
-            this.Load += new System.EventHandler(this.Form5_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions=new SizeF(7F, 15F);
+            AutoScaleMode=AutoScaleMode.Font;
+            ClientSize=new Size(405, 343);
+            Controls.Add(rtxtToken);
+            Controls.Add(btnPost);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(txtPassword);
+            Controls.Add(txtEmail);
+            Controls.Add(txtUrl);
+            Name="Bai5";
+            Text="Bai5";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ProgressBar progressBar;
-        private System.Windows.Forms.Label lbPage;
-        private System.Windows.Forms.Label lbUser;
-        private System.Windows.Forms.Label lbTotalPage;
-        private System.Windows.Forms.Label lbTotalUsers;
-        private System.Windows.Forms.Button btBack;
-        private System.Windows.Forms.Button btNext;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btGet;
+
+        private TextBox txtUrl;
+        private TextBox txtEmail;
+        private TextBox txtPassword;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Button btnPost;
+        private RichTextBox rtxtToken;
     }
 }

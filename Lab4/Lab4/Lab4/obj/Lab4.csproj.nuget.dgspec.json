@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HOC\\Code\\ltmcb\\Group09\\Lab4\\Lab4\\Lab4\\Lab4.csproj": {}
+    "D:\\LapTrinhMang\\Group9\\Lab4\\Lab4\\Lab4\\Lab4.csproj": {}
   },
   "projects": {
-    "D:\\HOC\\Code\\ltmcb\\Group09\\Lab4\\Lab4\\Lab4\\Lab4.csproj": {
+    "D:\\LapTrinhMang\\Group9\\Lab4\\Lab4\\Lab4\\Lab4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HOC\\Code\\ltmcb\\Group09\\Lab4\\Lab4\\Lab4\\Lab4.csproj",
+        "projectUniqueName": "D:\\LapTrinhMang\\Group9\\Lab4\\Lab4\\Lab4\\Lab4.csproj",
         "projectName": "Lab4",
-        "projectPath": "D:\\HOC\\Code\\ltmcb\\Group09\\Lab4\\Lab4\\Lab4\\Lab4.csproj",
-        "packagesPath": "C:\\Users\\codyk\\.nuget\\packages\\",
-        "outputPath": "D:\\HOC\\Code\\ltmcb\\Group09\\Lab4\\Lab4\\Lab4\\obj\\",
+        "projectPath": "D:\\LapTrinhMang\\Group9\\Lab4\\Lab4\\Lab4\\Lab4.csproj",
+        "packagesPath": "C:\\Users\\troil\\.nuget\\packages\\",
+        "outputPath": "D:\\LapTrinhMang\\Group9\\Lab4\\Lab4\\Lab4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\codyk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\troil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

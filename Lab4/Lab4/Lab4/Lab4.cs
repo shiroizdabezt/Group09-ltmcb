@@ -27,7 +27,8 @@ namespace Lab4
 
         private void btnBai3_Click(object sender, EventArgs e)
         {
-
+            Bai3 bai3 = new Bai3();
+            bai3.ShowDialog();
         }
 
         private void bntBai4_Click(object sender, EventArgs e)

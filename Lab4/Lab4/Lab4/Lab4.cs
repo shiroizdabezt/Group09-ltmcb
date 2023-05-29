@@ -24,5 +24,21 @@ namespace Lab4
             Bai6 bai6 = new Bai6();
             bai6.ShowDialog();
         }
+
+        private void btnBai3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bntBai4_Click(object sender, EventArgs e)
+        {
+            Bai4 bai4 = new Bai4();
+            bai4.ShowDialog();
+        }
+
+        private void btnBai5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

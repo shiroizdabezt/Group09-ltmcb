@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LapTrinhMang\\Group9\\Lab4\\Lab4\\Lab4\\Lab4.csproj": {}
+    "C:\\Users\\Crystal\\Downloads\\Group09-ltmcb-main\\Group09-ltmcb-main\\Lab4\\Lab4\\Lab4\\Lab4.csproj": {}
   },
   "projects": {
-    "D:\\LapTrinhMang\\Group9\\Lab4\\Lab4\\Lab4\\Lab4.csproj": {
+    "C:\\Users\\Crystal\\Downloads\\Group09-ltmcb-main\\Group09-ltmcb-main\\Lab4\\Lab4\\Lab4\\Lab4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LapTrinhMang\\Group9\\Lab4\\Lab4\\Lab4\\Lab4.csproj",
+        "projectUniqueName": "C:\\Users\\Crystal\\Downloads\\Group09-ltmcb-main\\Group09-ltmcb-main\\Lab4\\Lab4\\Lab4\\Lab4.csproj",
         "projectName": "Lab4",
-        "projectPath": "D:\\LapTrinhMang\\Group9\\Lab4\\Lab4\\Lab4\\Lab4.csproj",
-        "packagesPath": "C:\\Users\\troil\\.nuget\\packages\\",
-        "outputPath": "D:\\LapTrinhMang\\Group9\\Lab4\\Lab4\\Lab4\\obj\\",
+        "projectPath": "C:\\Users\\Crystal\\Downloads\\Group09-ltmcb-main\\Group09-ltmcb-main\\Lab4\\Lab4\\Lab4\\Lab4.csproj",
+        "packagesPath": "C:\\Users\\Crystal\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Crystal\\Downloads\\Group09-ltmcb-main\\Group09-ltmcb-main\\Lab4\\Lab4\\Lab4\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\troil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Crystal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +47,26 @@
             "HtmlAgilityPack": {
               "target": "Package",
               "version": "[1.11.46, )"
+            },
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.3, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
@@ -64,7 +88,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

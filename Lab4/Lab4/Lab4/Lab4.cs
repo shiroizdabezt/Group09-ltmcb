@@ -38,7 +38,8 @@ namespace Lab4
 
         private void btnBai5_Click(object sender, EventArgs e)
         {
-
+            Bai5 bai5 = new Bai5();
+            bai5.ShowDialog();
         }
     }
 }

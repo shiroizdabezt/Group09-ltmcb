@@ -73,5 +73,12 @@ namespace Group9
             signUpForm.Show();
             this.Hide();
         }
+
+        private void btnForgot_Click(object sender, EventArgs e)
+        {
+            ForgotPasswordForm forgotpass = new ForgotPasswordForm();
+            forgotpass.Show();
+            this.Hide();
+        }
     }
 }

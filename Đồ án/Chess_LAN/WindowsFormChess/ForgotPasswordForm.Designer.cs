@@ -37,6 +37,7 @@
             this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.cmbQuestion = new System.Windows.Forms.ComboBox();
             this.btnResetPassword = new System.Windows.Forms.Button();
+            this.btn_back = new Cocaro.CustomButton();
             this.SuspendLayout();
             // 
             // label1
@@ -122,6 +123,28 @@
             this.btnResetPassword.TabIndex = 9;
             this.btnResetPassword.Text = "Reset";
             this.btnResetPassword.UseVisualStyleBackColor = true;
+            this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
+            // 
+            // btn_back
+            // 
+            this.btn_back.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btn_back.BackColor = System.Drawing.Color.Red;
+            this.btn_back.BackgroundColor = System.Drawing.Color.Red;
+            this.btn_back.BorderColor = System.Drawing.Color.PaleTurquoise;
+            this.btn_back.BorderRadius = 30;
+            this.btn_back.BorderSize = 0;
+            this.btn_back.FlatAppearance.BorderSize = 0;
+            this.btn_back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_back.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_back.ForeColor = System.Drawing.Color.White;
+            this.btn_back.Location = new System.Drawing.Point(13, 13);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(71, 40);
+            this.btn_back.TabIndex = 10;
+            this.btn_back.Text = "<--";
+            this.btn_back.TextColor = System.Drawing.Color.White;
+            this.btn_back.UseVisualStyleBackColor = false;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
             // 
             // ForgotPasswordForm
             // 
@@ -129,6 +152,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Group9.Properties.Resources.Anhnen;
             this.ClientSize = new System.Drawing.Size(809, 620);
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btnResetPassword);
             this.Controls.Add(this.cmbQuestion);
             this.Controls.Add(this.txtNewPassword);
@@ -156,5 +180,6 @@
         private System.Windows.Forms.TextBox txtNewPassword;
         private System.Windows.Forms.ComboBox cmbQuestion;
         private System.Windows.Forms.Button btnResetPassword;
+        private Cocaro.CustomButton btn_back;
     }
 }

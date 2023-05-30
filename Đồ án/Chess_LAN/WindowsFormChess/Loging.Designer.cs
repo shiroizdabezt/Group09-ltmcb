@@ -90,6 +90,7 @@
             this.btnForgot.TabIndex = 6;
             this.btnForgot.Text = "Forgot";
             this.btnForgot.UseVisualStyleBackColor = true;
+            this.btnForgot.Click += new System.EventHandler(this.btnForgot_Click);
             // 
             // btnSignUp
             // 

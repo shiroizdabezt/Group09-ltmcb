@@ -12,9 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Crystal\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Crystal\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\codyk\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\codyk\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

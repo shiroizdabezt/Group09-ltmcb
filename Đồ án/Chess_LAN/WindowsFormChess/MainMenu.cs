@@ -33,5 +33,13 @@ namespace Group9
             this.Close();
 
         }
+
+        private void btn_thongtin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ChangePassForm change = new ChangePassForm();
+            change.ShowDialog();
+            this.Close();
+        }
     }
 }

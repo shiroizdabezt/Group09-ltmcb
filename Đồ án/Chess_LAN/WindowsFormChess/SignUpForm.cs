@@ -74,5 +74,10 @@ namespace Group9
             Loging lg = new Loging();
             lg.Show();
         }
+
+        private void SignUpForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

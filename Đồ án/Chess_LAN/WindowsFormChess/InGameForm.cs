@@ -798,7 +798,16 @@ namespace Group9
             MessageReceiver.WorkerSupportsCancellation = true;
             MessageReceiver.CancelAsync();
             if (server != null)
+            {
                 server.Stop();
+            }    
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MainMenu main = new MainMenu();
+            main.Show();
         }
     }
 }

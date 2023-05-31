@@ -36,5 +36,12 @@ namespace Group9
             Visible = true;
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenu main = new MainMenu();
+            main.ShowDialog();
+        }
     }
 }

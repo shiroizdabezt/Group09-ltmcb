@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,28 +36,7 @@ namespace Group9
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtPhoneNumber.Text == string.Empty || txtPassword.Text == string.Empty) MessageBox.Show("Vui lòng điền đầy đủ thông tin");
-            else
-            {
-                FirebaseResponse a = client.Get("UserInformation/" + txtPhoneNumber.Text);
-                SignUpInformation data = a.ResultAs<SignUpInformation>();
-                SignUpInformation curuser = new SignUpInformation()
-                {
-                    phonenumber = txtPhoneNumber.Text,
-                    password = txtPassword.Text,
-                };
-                if (SignUpInformation.IsEqual(data, curuser))
-                {
-                    MessageBox.Show("Đăng nhập thành công !!!");
-                    MainMenu mainMenu = new MainMenu();
-                    this.Hide();
-                    mainMenu.Show();
-                }
-                else
-                {
-                    SignUpInformation.ShowError();
-                }
-            }    
+             
         }
 
         private void Loging_Load(object sender, EventArgs e)
@@ -79,6 +59,42 @@ namespace Group9
             ForgotPasswordForm forgotpass = new ForgotPasswordForm();
             forgotpass.Show();
             this.Hide();
+        }
+
+        private void Loging_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult Q = MessageBox.Show("Bạn có chắc muốn thoát Game?", "Warning!", MessageBoxButtons.OKCancel);
+            if (Q == DialogResult.Cancel)
+            {
+                e.Cancel = true;
+            }
+            else System.Windows.Forms.Application.ExitThread();
+        }
+
+        private void btnLogin1_Click(object sender, EventArgs e)
+        {
+            if (txtPhoneNumber.Text == string.Empty || txtPassword.Text == string.Empty) MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+            else
+            {
+                FirebaseResponse a = client.Get("UserInformation/" + txtPhoneNumber.Text);
+                SignUpInformation data = a.ResultAs<SignUpInformation>();
+                SignUpInformation curuser = new SignUpInformation()
+                {
+                    phonenumber = txtPhoneNumber.Text,
+                    password = txtPassword.Text,
+                };
+                if (SignUpInformation.IsEqual(data, curuser))
+                {
+                    MessageBox.Show("Đăng nhập thành công !!!");
+                    MainMenu mainMenu = new MainMenu();
+                    this.Hide();
+                    mainMenu.Show();
+                }
+                else
+                {
+                    SignUpInformation.ShowError();
+                }
+            }
         }
     }
 }

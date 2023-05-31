@@ -32,12 +32,13 @@ namespace Group9
             this.Start_btn = new System.Windows.Forms.Button();
             this.Connection_btn = new System.Windows.Forms.Button();
             this.btn_thongtin = new System.Windows.Forms.Button();
+            this.btnLogout = new Cocaro.CustomButton();
             this.SuspendLayout();
             // 
             // Start_btn
             // 
-            this.Start_btn.Location = new System.Drawing.Point(288, 270);
-            this.Start_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Start_btn.Location = new System.Drawing.Point(288, 189);
+            this.Start_btn.Margin = new System.Windows.Forms.Padding(2);
             this.Start_btn.Name = "Start_btn";
             this.Start_btn.Size = new System.Drawing.Size(132, 54);
             this.Start_btn.TabIndex = 0;
@@ -47,8 +48,8 @@ namespace Group9
             // 
             // Connection_btn
             // 
-            this.Connection_btn.Location = new System.Drawing.Point(288, 392);
-            this.Connection_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Connection_btn.Location = new System.Drawing.Point(288, 305);
+            this.Connection_btn.Margin = new System.Windows.Forms.Padding(2);
             this.Connection_btn.Name = "Connection_btn";
             this.Connection_btn.Size = new System.Drawing.Size(132, 52);
             this.Connection_btn.TabIndex = 1;
@@ -58,7 +59,7 @@ namespace Group9
             // 
             // btn_thongtin
             // 
-            this.btn_thongtin.Location = new System.Drawing.Point(288, 147);
+            this.btn_thongtin.Location = new System.Drawing.Point(288, 75);
             this.btn_thongtin.Name = "btn_thongtin";
             this.btn_thongtin.Size = new System.Drawing.Size(132, 62);
             this.btn_thongtin.TabIndex = 2;
@@ -66,15 +67,37 @@ namespace Group9
             this.btn_thongtin.UseVisualStyleBackColor = true;
             this.btn_thongtin.Click += new System.EventHandler(this.btn_thongtin_Click);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.Red;
+            this.btnLogout.BackgroundColor = System.Drawing.Color.Red;
+            this.btnLogout.BorderColor = System.Drawing.Color.PaleTurquoise;
+            this.btnLogout.BorderRadius = 20;
+            this.btnLogout.BorderSize = 0;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(288, 386);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(132, 57);
+            this.btnLogout.TabIndex = 14;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.TextColor = System.Drawing.Color.White;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(746, 501);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btn_thongtin);
             this.Controls.Add(this.Connection_btn);
             this.Controls.Add(this.Start_btn);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainMenu";
             this.Text = "MainMenu";
             this.ResumeLayout(false);
@@ -86,5 +109,6 @@ namespace Group9
         private System.Windows.Forms.Button Start_btn;
         private System.Windows.Forms.Button Connection_btn;
         private System.Windows.Forms.Button btn_thongtin;
+        private Cocaro.CustomButton btnLogout;
     }
 }

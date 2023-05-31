@@ -152,6 +152,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Group9.Properties.Resources.Anhnen;
             this.ClientSize = new System.Drawing.Size(809, 620);
+            this.ControlBox = false;
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btnResetPassword);
             this.Controls.Add(this.cmbQuestion);

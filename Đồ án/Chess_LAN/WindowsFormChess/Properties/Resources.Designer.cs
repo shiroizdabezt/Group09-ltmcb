@@ -63,16 +63,6 @@ namespace Group9.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _848686 {
-            get {
-                object obj = ResourceManager.GetObject("848686", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Anhnen {
             get {
                 object obj = ResourceManager.GetObject("Anhnen", resourceCulture);
@@ -103,9 +93,9 @@ namespace Group9.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SotetBastya {
+        internal static System.Drawing.Bitmap BlackBishop {
             get {
-                object obj = ResourceManager.GetObject("SotetBastya", resourceCulture);
+                object obj = ResourceManager.GetObject("BlackBishop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +103,9 @@ namespace Group9.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SotetFuto {
+        internal static System.Drawing.Bitmap BlackKing {
             get {
-                object obj = ResourceManager.GetObject("SotetFuto", resourceCulture);
+                object obj = ResourceManager.GetObject("BlackKing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +113,9 @@ namespace Group9.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SotetHuszar {
+        internal static System.Drawing.Bitmap BlackKnight {
             get {
-                object obj = ResourceManager.GetObject("SotetHuszar", resourceCulture);
+                object obj = ResourceManager.GetObject("BlackKnight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +123,9 @@ namespace Group9.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SotetKiraly {
+        internal static System.Drawing.Bitmap BlackPawn {
             get {
-                object obj = ResourceManager.GetObject("SotetKiraly", resourceCulture);
+                object obj = ResourceManager.GetObject("BlackPawn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +133,9 @@ namespace Group9.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SotetKiralyno {
+        internal static System.Drawing.Bitmap BlackQueen {
             get {
-                object obj = ResourceManager.GetObject("SotetKiralyno", resourceCulture);
+                object obj = ResourceManager.GetObject("BlackQueen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +143,9 @@ namespace Group9.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SotetParaszt {
+        internal static System.Drawing.Bitmap BlackRook {
             get {
-                object obj = ResourceManager.GetObject("SotetParaszt", resourceCulture);
+                object obj = ResourceManager.GetObject("BlackRook", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +153,9 @@ namespace Group9.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap VilagosBastya {
+        internal static System.Drawing.Bitmap WhiteBishop {
             get {
-                object obj = ResourceManager.GetObject("VilagosBastya", resourceCulture);
+                object obj = ResourceManager.GetObject("WhiteBishop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +163,9 @@ namespace Group9.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap VilagosFuto {
+        internal static System.Drawing.Bitmap WhiteKing {
             get {
-                object obj = ResourceManager.GetObject("VilagosFuto", resourceCulture);
+                object obj = ResourceManager.GetObject("WhiteKing", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,9 +173,9 @@ namespace Group9.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap VilagosHuszar {
+        internal static System.Drawing.Bitmap WhiteKnight {
             get {
-                object obj = ResourceManager.GetObject("VilagosHuszar", resourceCulture);
+                object obj = ResourceManager.GetObject("WhiteKnight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,9 +183,9 @@ namespace Group9.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap VilagosKiraly {
+        internal static System.Drawing.Bitmap WhitePawn {
             get {
-                object obj = ResourceManager.GetObject("VilagosKiraly", resourceCulture);
+                object obj = ResourceManager.GetObject("WhitePawn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +193,9 @@ namespace Group9.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap VilagosKiralyno {
+        internal static System.Drawing.Bitmap WhiteQueen {
             get {
-                object obj = ResourceManager.GetObject("VilagosKiralyno", resourceCulture);
+                object obj = ResourceManager.GetObject("WhiteQueen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +203,9 @@ namespace Group9.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap VilagosParaszt {
+        internal static System.Drawing.Bitmap WhiteRook {
             get {
-                object obj = ResourceManager.GetObject("VilagosParaszt", resourceCulture);
+                object obj = ResourceManager.GetObject("WhiteRook", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

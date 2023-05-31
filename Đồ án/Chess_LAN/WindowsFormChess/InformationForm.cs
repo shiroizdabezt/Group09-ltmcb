@@ -19,7 +19,17 @@ namespace Group9
 
         private void btn_ChangePass_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            ChangePassForm change = new ChangePassForm();
+            change.ShowDialog();  
+            this.Close();
+        }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            MainMenu main = new MainMenu();
+            main.ShowDialog();
         }
     }
 }

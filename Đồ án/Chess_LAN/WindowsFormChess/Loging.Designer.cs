@@ -32,9 +32,9 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.btnForgot = new System.Windows.Forms.Button();
             this.btnSignUp = new System.Windows.Forms.Button();
+            this.btnLogin1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtPhoneNumber
@@ -72,16 +72,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Password";
             // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(484, 304);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 5;
-            this.btnLogin.Text = "Lủm";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnForgot
             // 
             this.btnForgot.Location = new System.Drawing.Point(242, 397);
@@ -102,22 +92,35 @@
             this.btnSignUp.UseVisualStyleBackColor = true;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
+            // btnLogin1
+            // 
+            this.btnLogin1.Location = new System.Drawing.Point(478, 311);
+            this.btnLogin1.Name = "btnLogin1";
+            this.btnLogin1.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin1.TabIndex = 8;
+            this.btnLogin1.Text = "Lủm";
+            this.btnLogin1.UseVisualStyleBackColor = true;
+            this.btnLogin1.Click += new System.EventHandler(this.btnLogin1_Click);
+            // 
             // Loging
             // 
+            this.AcceptButton = this.btnLogin1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Group9.Properties.Resources.Anhnen;
             this.ClientSize = new System.Drawing.Size(809, 620);
+            this.Controls.Add(this.btnLogin1);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnForgot);
-            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtPhoneNumber);
             this.Name = "Loging";
             this.Text = "Loging";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Loging_FormClosing);
             this.Load += new System.EventHandler(this.Loging_Load);
+            this.Enter += new System.EventHandler(this.btnLogin1_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,8 +131,8 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnForgot;
         private System.Windows.Forms.Button btnSignUp;
+        private System.Windows.Forms.Button btnLogin1;
     }
 }

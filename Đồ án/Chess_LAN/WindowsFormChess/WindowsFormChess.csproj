@@ -274,9 +274,6 @@
     <None Include="Resources\Anhnen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\848686.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\back.png" />
   </ItemGroup>
   <ItemGroup>

@@ -51,5 +51,17 @@ namespace Group9
                 MessageBox.Show("Mật khẩu cũ không trùng khớp.");
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            InformationForm inforform = new InformationForm();
+            inforform.Show();
+        }
+
+        private void ChangePassForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

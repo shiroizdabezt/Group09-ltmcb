@@ -9,27 +9,27 @@ namespace Group9
 {
     public class SignUpInformation
     {
-        public string name
+        public string? name
         {
             get; set;
-        }
-        public string phonenumber
+        } = null;
+        public string? phonenumber
         {
             get; set;
-        }
-        public string password
+        } = null;
+        public string? password
         {
             get; set;
-        }
-        public string securityquestion
+        } = null;
+        public string? securityquestion
         {
             get; set;
-        }
-        public string answer
+        } = null;
+        public string? answer
         {
             get; set;
-        }
-        private static string error = "Phone number doesn't exist!";
+        } = null;
+        private static string error = "Chưa tạo tk này mà đòi chơi cái con đĩ bò mày";
         public static void ShowError()
         {
             System.Windows.Forms.MessageBox.Show(error);

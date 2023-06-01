@@ -39,16 +39,22 @@ namespace Group9
             {
                 password = txtPassword.Text,
                 phonenumber = txtPhoneNumber.Text,
-            };  
-            if (data.phonenumber == curuser.phonenumber && data.password == curuser.password)
-            {
-                data.password = txtNewPassword.Text;
-                SetResponse newdata = client.Set("UserInformation/" + txtPhoneNumber.Text, data);
-                MessageBox.Show("Thay đổi mật khẩu mới thành công.");
-            }
+            };
+            if (data == null) 
+                MessageBox.Show("Tài khoản không tồn tại");
             else
             {
-                MessageBox.Show("Mật khẩu cũ không trùng khớp.");
+                if (data.phonenumber == curuser.phonenumber && data.password == curuser.password)
+                {
+                    data.password = txtNewPassword.Text;
+                    SetResponse newdata = client.Set("UserInformation/" + txtPhoneNumber.Text, data);
+                    MessageBox.Show("Thay đổi mật khẩu mới thành công.");
+                }
+                else
+                {
+                    if (data.password != curuser.password)
+                        MessageBox.Show("Mật khẩu cũ không trùng khớp.");
+                }
             }
         }
 

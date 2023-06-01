@@ -186,3 +186,14 @@ D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFor
 D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.CopyComplete
 D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.exe
 D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.pdb
+D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Extensions.dll
+D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Primitives.dll
+D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Extensions.xml
+D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Primitives.xml
+D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.App.config

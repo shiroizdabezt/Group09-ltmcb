@@ -101,6 +101,12 @@
     <Compile Include="ChangePassForm.Designer.cs">
       <DependentUpon>ChangePassForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChangeUserNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeUserNameForm.Designer.cs">
+      <DependentUpon>ChangeUserNameForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ChangePassForm.resx">
       <DependentUpon>ChangePassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeUserNameForm.resx">
+      <DependentUpon>ChangeUserNameForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClickUserClass.resx">
       <DependentUpon>ClickUserClass.cs</DependentUpon>

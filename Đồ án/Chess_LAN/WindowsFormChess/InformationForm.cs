@@ -15,6 +15,7 @@ namespace Group9
         public InformationForm()
         {
             InitializeComponent();
+            txtUsername.Text = Loging.name;
         }
 
         private void btn_ChangePass_Click(object sender, EventArgs e)
@@ -30,6 +31,18 @@ namespace Group9
             this.Close();
             MainMenu main = new MainMenu();
             main.ShowDialog();
+        }
+
+        private void btn_Changename_Click(object sender, EventArgs e)
+        {
+            ChangeUserNameForm change = new ChangeUserNameForm();
+            change.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

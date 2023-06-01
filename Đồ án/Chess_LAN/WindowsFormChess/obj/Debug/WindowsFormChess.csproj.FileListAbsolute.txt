@@ -197,3 +197,15 @@ D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.
 D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Extensions.xml
 D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Primitives.xml
 D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.App.config
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Extensions.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Primitives.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Extensions.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Primitives.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.App.config
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.ChangeUserNameForm.resources

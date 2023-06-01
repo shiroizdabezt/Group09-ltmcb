@@ -70,7 +70,6 @@ namespace Group9
         private string nameCompetitor;
         private byte[] byteName;
         private byte singleByteName;
-        byte[] buffer = new byte[9];
         public InGameForm()
         {
             nameCompetitor = Loging.name;
@@ -737,8 +736,10 @@ namespace Group9
         private void SendMove(int i, int j)
         {
             //we should send the moved piece, and its position, the new position, the checkmate counter and the value of castling, and promotionalue
-            byte[] datas = { (byte)LastMovedPiece, (byte)BeforeMove_I, (byte)BeforeMove_J, (byte)i, (byte)j, (byte)Moves, (byte)Castling, (byte)Promotionvalue, singleByteName };
+            byte[] datas = { (byte)LastMovedPiece, (byte)BeforeMove_I, (byte)BeforeMove_J, (byte)i, (byte)j, (byte)Moves, (byte)Castling, (byte)Promotionvalue, };
+            byte[] names = Encoding.UTF8.GetBytes(Loging.name);
             sock.Send(datas);
+            sock.Send(names);
             MessageReceiver.DoWork += MessageReceiver_DoWork;
             if (!MessageReceiver.IsBusy)
             {
@@ -749,8 +750,10 @@ namespace Group9
         //this is where the other player got datas
         public void ReceiveMove()
         {
-            byte[] buffer = new byte[9];
+            byte[] buffer = new byte[8];
+            byte[] buffer2 = new byte[10];
             sock.Receive(buffer);
+            sock.Receive(buffer2);
             //previously position have to be 0
             tableClass.Table[buffer[1], buffer[2]] = 0;
             //new position with the piece
@@ -758,12 +761,12 @@ namespace Group9
             //castling
             if (buffer[6] == 1)
             {
-                if (buffer[4] == 2)
+                if (buffer[4] == 2 && buffer[3] == 0)
                 {
                     tableClass.Table[0, 3] = 02;
                     tableClass.Table[0, 0] = 0;
                 }
-                if (buffer[4] == 6)
+                if (buffer[4] == 6 && buffer[3] == 0)
                 {
                     tableClass.Table[0, 5] = 02;
                     tableClass.Table[0, 7] = 0;
@@ -771,11 +774,11 @@ namespace Group9
             }
             if (buffer[6] == 2)
             {
-                if (buffer[4] == 2)
+                if (buffer[4] == 2 && buffer[3] == 7)
                 {
                     tableClass.Table[7, 3] = 12; tableClass.Table[7, 0] = 0;
                 }
-                if (buffer[4] == 6)
+                if (buffer[4] == 6 && buffer[3] == 7)
                 {
                     tableClass.Table[7, 5] = 12; tableClass.Table[7, 7] = 0;
                 }
@@ -785,7 +788,8 @@ namespace Group9
             {
                 tableClass.Table[buffer[3], buffer[4]] = buffer[7];
             }
-            string nameCompetitor = buffer[8].ToString();
+            /*string nameCompetitor = buffer[8].ToString();*/
+            string nameCompetitor = System.Text.Encoding.UTF8.GetString(buffer2);
             lbCompetitorName.Text = "Competitor: " + nameCompetitor;
             //toggle turn
             WhiteTurn = !WhiteTurn;

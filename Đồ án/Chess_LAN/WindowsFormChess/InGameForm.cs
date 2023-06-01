@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net.Sockets;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -66,10 +67,21 @@ namespace Group9
         TableClass tableClass = new TableClass();
         public int[,] WhiteStaleArray = new int[8, 8];
         public int[,] BlackStaleArray = new int[8, 8];
+        private string nameCompetitor;
+        private byte[] byteName;
+        private byte singleByteName;
+        byte[] buffer = new byte[9];
+        public InGameForm()
+        {
+            nameCompetitor = Loging.name;
+            byteName = Encoding.UTF8.GetBytes(nameCompetitor);
+            singleByteName = byteName[50];
+        }
 
         public InGameForm(bool SingleGame, bool isHost, string ip = null)
         {
             InitializeComponent();
+            lbName.Text += Loging.name;
             singleGame = SingleGame;
             //its need for the Lan games
             if (!SingleGame)
@@ -720,11 +732,12 @@ namespace Group9
         {
             ReceiveMove();
         }
+
         //and this is where we send datas using socket
         private void SendMove(int i, int j)
         {
             //we should send the moved piece, and its position, the new position, the checkmate counter and the value of castling, and promotionalue
-            byte[] datas = { (byte)LastMovedPiece, (byte)BeforeMove_I, (byte)BeforeMove_J, (byte)i, (byte)j, (byte)Moves, (byte)Castling, (byte)Promotionvalue };
+            byte[] datas = { (byte)LastMovedPiece, (byte)BeforeMove_I, (byte)BeforeMove_J, (byte)i, (byte)j, (byte)Moves, (byte)Castling, (byte)Promotionvalue, singleByteName };
             sock.Send(datas);
             MessageReceiver.DoWork += MessageReceiver_DoWork;
             if (!MessageReceiver.IsBusy)
@@ -734,9 +747,9 @@ namespace Group9
             OtherPlayerTurn = true;
         }
         //this is where the other player got datas
-        private void ReceiveMove()
+        public void ReceiveMove()
         {
-            byte[] buffer = new byte[8];
+            byte[] buffer = new byte[9];
             sock.Receive(buffer);
             //previously position have to be 0
             tableClass.Table[buffer[1], buffer[2]] = 0;
@@ -772,6 +785,8 @@ namespace Group9
             {
                 tableClass.Table[buffer[3], buffer[4]] = buffer[7];
             }
+            string nameCompetitor = buffer[8].ToString();
+            lbCompetitorName.Text = "Competitor: " + nameCompetitor;
             //toggle turn
             WhiteTurn = !WhiteTurn;
             //i think we know this
@@ -803,11 +818,18 @@ namespace Group9
             }    
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        public void btnBack_Click(object sender, EventArgs e)
         {
-            this.Close();
-            MainMenu main = new MainMenu();
-            main.Show();
+            if (singleGame)
+            {
+                this.Close();
+                MainMenu main = new MainMenu();
+                main.Show();
+            }
+            else 
+            {
+                this.Close();
+            }    
         }
     }
 }

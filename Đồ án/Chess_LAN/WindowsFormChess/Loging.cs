@@ -19,7 +19,7 @@ namespace Group9
 {
     public partial class Loging : Form
     {
-        public static string username;
+        public static string name;
         
         IFirebaseConfig config = new FirebaseConfig
         {
@@ -85,6 +85,7 @@ namespace Group9
                 };
                 if (SignUpInformation.IsEqual(data, curuser))
                 {
+                    Loging.name = data.name;
                     MessageBox.Show("Đăng nhập thành công !!!");
                     MainMenu mainMenu = new MainMenu();
                     this.Hide();

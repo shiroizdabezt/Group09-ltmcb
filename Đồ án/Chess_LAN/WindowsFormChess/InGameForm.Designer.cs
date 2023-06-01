@@ -29,8 +29,32 @@ namespace Group9
         /// </summary>
         private void InitializeComponent()
         {
+            this.lbName = new System.Windows.Forms.Label();
+            this.lbCompetitorName = new System.Windows.Forms.Label();
             this.btnBack = new Cocaro.CustomButton();
             this.SuspendLayout();
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.ForeColor = System.Drawing.Color.White;
+            this.lbName.Location = new System.Drawing.Point(299, 747);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(42, 16);
+            this.lbName.TabIndex = 17;
+            this.lbName.Text = "You: ";
+            // 
+            // lbCompetitorName
+            // 
+            this.lbCompetitorName.AutoSize = true;
+            this.lbCompetitorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCompetitorName.ForeColor = System.Drawing.Color.White;
+            this.lbCompetitorName.Location = new System.Drawing.Point(299, 24);
+            this.lbCompetitorName.Name = "lbCompetitorName";
+            this.lbCompetitorName.Size = new System.Drawing.Size(90, 16);
+            this.lbCompetitorName.TabIndex = 18;
+            this.lbCompetitorName.Text = "Competitor: ";
             // 
             // btnBack
             // 
@@ -59,18 +83,23 @@ namespace Group9
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(804, 781);
             this.ControlBox = false;
+            this.Controls.Add(this.lbCompetitorName);
+            this.Controls.Add(this.lbName);
             this.Controls.Add(this.btnBack);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InGameForm";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InGameForm_FormClosing);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Cocaro.CustomButton btnBack;
+        private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.Label lbCompetitorName;
     }
 }
 

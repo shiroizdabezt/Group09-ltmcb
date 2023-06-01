@@ -48,12 +48,13 @@ namespace Group9
             DialogResult res = MessageBox.Show("Bạn có thực sự muốn đăng xuất!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (res != DialogResult.OK)
             {
-                //e. = true;
+
             }
             else
             {
                 try
                 {
+                    this.Hide();
                     this.Close();
                     MessageBox.Show("Đăng xuất thành công.");
                     Loging lg = new Loging();

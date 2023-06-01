@@ -47,15 +47,20 @@ namespace Group9
                 securityquestion = cmbQuestion.Text,
                 answer = txtAnswer.Text,
             };
-            if(data.answer == curuser.answer && data.securityquestion == curuser.securityquestion) 
-            {
-                data.password = txtNewPassword.Text;
-                SetResponse newdata = client.Set("UserInformation/" + txtPhoneNumber.Text, data);
-                MessageBox.Show("Cập nhật mật khẩu mới thành công.");
-            }
+            if (data == null)
+                MessageBox.Show("Tài khoản không tồn tại !!!");
             else
             {
-                MessageBox.Show("Thông tin bảo mật không trùng khớp.");
+                if (data.answer == curuser.answer && data.securityquestion == curuser.securityquestion)
+                {
+                    data.password = txtNewPassword.Text;
+                    SetResponse newdata = client.Set("UserInformation/" + txtPhoneNumber.Text, data);
+                    MessageBox.Show("Cập nhật mật khẩu mới thành công.");
+                }
+                else
+                {
+                    MessageBox.Show("Thông tin bảo mật không trùng khớp.");
+                }
             }
         }
     }

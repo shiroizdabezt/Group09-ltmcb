@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FireSharp.Config;
+using FireSharp.Interfaces;
+using FireSharp.Response;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +17,14 @@ namespace Group9
 {
     public partial class InGameForm : Form
     {
+
+        IFirebaseClient clientfirebase;
+
+        IFirebaseConfig config = new FirebaseConfig
+        {
+            AuthSecret = "0LD4V9MeOsWxjFEQnVuVuzC6OwAHp1iy4aPrOaiR",
+            BasePath = "https://chess-18b37-default-rtdb.asia-southeast1.firebasedatabase.app/"
+        };
         #region Pieces
         BlackPawn blackPawn = new BlackPawn();
         BlackRook1 blackRook2 = new BlackRook1();
@@ -70,6 +81,7 @@ namespace Group9
         private string nameCompetitor;
         private byte[] byteName;
         private byte singleByteName;
+
         public InGameForm()
         {
             nameCompetitor = Loging.name;
@@ -82,6 +94,7 @@ namespace Group9
             InitializeComponent();
             lbName.Text += Loging.name;
             singleGame = SingleGame;
+
             //its need for the Lan games
             if (!SingleGame)
             {
@@ -723,7 +736,19 @@ namespace Group9
                 {
                     SendMove(a, b);
                 }
-                MessageBox.Show("You Win!");
+                MessageBox.Show("You Win!\nScore +10");
+                clientfirebase = new FireSharp.FirebaseClient(config);
+
+                if (clientfirebase != null) ;
+                FirebaseResponse user = clientfirebase.Get("UserInformation/" + Loging.phonenumber);
+                SignUpInformation data = user.ResultAs<SignUpInformation>();
+                data.score += 10;
+                SetResponse newdata = clientfirebase.Set("UserInformation/" + Loging.phonenumber, data);
+                DialogResult Q = MessageBox.Show("Bạn có chắc muốn rời trận?", "Warning!", MessageBoxButtons.OKCancel);
+                if (Q == DialogResult.OK)
+                {
+                    this.Close();
+                }
             }
         }
         //socket things
@@ -751,7 +776,7 @@ namespace Group9
         public void ReceiveMove()
         {
             byte[] buffer = new byte[8];
-            byte[] buffer2 = new byte[10];
+            byte[] buffer2 = new byte[50];
             sock.Receive(buffer);
             sock.Receive(buffer2);
             //previously position have to be 0
@@ -803,11 +828,23 @@ namespace Group9
             {
                 if (WhiteTurn)
                 {
-                    MessageBox.Show("You Lost!");
+                    MessageBox.Show("You Lost!\nScore -5");
                 }
                 else
                 {
-                    MessageBox.Show("You lost!");
+                    MessageBox.Show("You lost!\nScore -5");
+                }
+                clientfirebase = new FireSharp.FirebaseClient(config);
+
+                if (clientfirebase != null) ;
+                FirebaseResponse user = clientfirebase.Get("UserInformation/" + Loging.phonenumber);
+                SignUpInformation data = user.ResultAs<SignUpInformation>();
+                data.score -= 5;
+                SetResponse newdata = clientfirebase.Set("UserInformation/" + Loging.phonenumber, data);
+                DialogResult Q = MessageBox.Show("Bạn có chắc muốn rời trận?", "Warning!", MessageBoxButtons.OKCancel);
+                if (Q == DialogResult.OK)
+                {
+                    this.Close();
                 }
             }
         }

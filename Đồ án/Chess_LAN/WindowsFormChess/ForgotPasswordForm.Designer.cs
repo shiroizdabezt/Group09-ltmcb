@@ -150,7 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Group9.Properties.Resources.Anhnen;
+            this.BackgroundImage = global::Group9.Properties.Resources.mainmenu1;
             this.ClientSize = new System.Drawing.Size(809, 620);
             this.ControlBox = false;
             this.Controls.Add(this.btn_back);

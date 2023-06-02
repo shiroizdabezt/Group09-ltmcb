@@ -308,6 +308,42 @@
   <ItemGroup>
     <None Include="Resources\back1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ảnh login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anhnen1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anhnen2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loging.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loging1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainmenu1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logonhom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logonhom1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logonhom2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logonhom11.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">

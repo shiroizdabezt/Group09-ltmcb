@@ -47,17 +47,17 @@ namespace Group9
             else MessageBox.Show("Kết nối Firebase không thành công !!!");
         }
 
-        private void btnSignUp_Click(object sender, EventArgs e)
-        {
-            SignUpForm signUpForm = new SignUpForm();
-            signUpForm.Show();
-            this.Hide();
-        }
-
-        private void btnForgot_Click(object sender, EventArgs e)
+        private void btnForgot1_Click(object sender, EventArgs e)
         {
             ForgotPasswordForm forgotpass = new ForgotPasswordForm();
             forgotpass.Show();
+            this.Hide();
+        }
+
+        private void btnSignUp1_Click(object sender, EventArgs e)
+        {
+            SignUpForm signUpForm = new SignUpForm();
+            signUpForm.Show();
             this.Hide();
         }
 
@@ -71,7 +71,8 @@ namespace Group9
             else System.Windows.Forms.Application.ExitThread();
         }
 
-        private void btnLogin1_Click(object sender, EventArgs e)
+
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             if (txtPhoneNumber.Text == string.Empty || txtPassword.Text == string.Empty) MessageBox.Show("Vui lòng điền đầy đủ thông tin");
             else

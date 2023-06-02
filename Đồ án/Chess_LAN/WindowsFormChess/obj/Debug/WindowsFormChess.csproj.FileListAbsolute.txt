@@ -209,3 +209,4 @@ D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.N
 D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Primitives.xml
 D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.App.config
 D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.ChangeUserNameForm.resources
+D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.ChangeUserNameForm.resources

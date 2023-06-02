@@ -29,86 +29,148 @@ namespace Group9
         /// </summary>
         private void InitializeComponent()
         {
-            this.Start_btn = new System.Windows.Forms.Button();
-            this.Connection_btn = new System.Windows.Forms.Button();
-            this.btn_thongtin = new System.Windows.Forms.Button();
-            this.btnLogout = new Cocaro.CustomButton();
+            this.btnLogOut1 = new Cocaro.CustomButton();
+            this.btnLAN = new Cocaro.CustomButton();
+            this.btnSingle = new Cocaro.CustomButton();
+            this.btnInfor = new Cocaro.CustomButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // Start_btn
+            // btnLogOut1
             // 
-            this.Start_btn.Location = new System.Drawing.Point(288, 189);
-            this.Start_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.Start_btn.Name = "Start_btn";
-            this.Start_btn.Size = new System.Drawing.Size(132, 54);
-            this.Start_btn.TabIndex = 0;
-            this.Start_btn.Text = "Single Game";
-            this.Start_btn.UseVisualStyleBackColor = true;
-            this.Start_btn.Click += new System.EventHandler(this.Start_btn_Click);
+            this.btnLogOut1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnLogOut1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnLogOut1.BackgroundImage = global::Group9.Properties.Resources.btn;
+            this.btnLogOut1.BorderColor = System.Drawing.Color.Gold;
+            this.btnLogOut1.BorderRadius = 30;
+            this.btnLogOut1.BorderSize = 1;
+            this.btnLogOut1.FlatAppearance.BorderSize = 0;
+            this.btnLogOut1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut1.ForeColor = System.Drawing.Color.Black;
+            this.btnLogOut1.Location = new System.Drawing.Point(158, 472);
+            this.btnLogOut1.Name = "btnLogOut1";
+            this.btnLogOut1.Size = new System.Drawing.Size(192, 60);
+            this.btnLogOut1.TabIndex = 18;
+            this.btnLogOut1.Text = "Log Out";
+            this.btnLogOut1.TextColor = System.Drawing.Color.Black;
+            this.btnLogOut1.UseVisualStyleBackColor = false;
+            this.btnLogOut1.Click += new System.EventHandler(this.btnLogOut1_Click);
             // 
-            // Connection_btn
+            // btnLAN
             // 
-            this.Connection_btn.Location = new System.Drawing.Point(288, 305);
-            this.Connection_btn.Margin = new System.Windows.Forms.Padding(2);
-            this.Connection_btn.Name = "Connection_btn";
-            this.Connection_btn.Size = new System.Drawing.Size(132, 52);
-            this.Connection_btn.TabIndex = 1;
-            this.Connection_btn.Text = "Lan Game";
-            this.Connection_btn.UseVisualStyleBackColor = true;
-            this.Connection_btn.Click += new System.EventHandler(this.Connection_btn_Click);
+            this.btnLAN.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnLAN.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnLAN.BackgroundImage = global::Group9.Properties.Resources.btn;
+            this.btnLAN.BorderColor = System.Drawing.Color.Gold;
+            this.btnLAN.BorderRadius = 30;
+            this.btnLAN.BorderSize = 1;
+            this.btnLAN.FlatAppearance.BorderSize = 0;
+            this.btnLAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLAN.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLAN.ForeColor = System.Drawing.Color.Black;
+            this.btnLAN.Location = new System.Drawing.Point(158, 376);
+            this.btnLAN.Name = "btnLAN";
+            this.btnLAN.Size = new System.Drawing.Size(192, 60);
+            this.btnLAN.TabIndex = 17;
+            this.btnLAN.Text = "LAN Game";
+            this.btnLAN.TextColor = System.Drawing.Color.Black;
+            this.btnLAN.UseVisualStyleBackColor = false;
+            this.btnLAN.Click += new System.EventHandler(this.btnLAN_Click);
             // 
-            // btn_thongtin
+            // btnSingle
             // 
-            this.btn_thongtin.Location = new System.Drawing.Point(288, 75);
-            this.btn_thongtin.Name = "btn_thongtin";
-            this.btn_thongtin.Size = new System.Drawing.Size(132, 62);
-            this.btn_thongtin.TabIndex = 2;
-            this.btn_thongtin.Text = "Thông tin tài khoản";
-            this.btn_thongtin.UseVisualStyleBackColor = true;
-            this.btn_thongtin.Click += new System.EventHandler(this.btn_thongtin_Click);
+            this.btnSingle.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSingle.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSingle.BackgroundImage = global::Group9.Properties.Resources.btn;
+            this.btnSingle.BorderColor = System.Drawing.Color.Gold;
+            this.btnSingle.BorderRadius = 30;
+            this.btnSingle.BorderSize = 1;
+            this.btnSingle.FlatAppearance.BorderSize = 0;
+            this.btnSingle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSingle.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSingle.ForeColor = System.Drawing.Color.Black;
+            this.btnSingle.Location = new System.Drawing.Point(158, 282);
+            this.btnSingle.Name = "btnSingle";
+            this.btnSingle.Size = new System.Drawing.Size(192, 60);
+            this.btnSingle.TabIndex = 16;
+            this.btnSingle.Text = "Single Game";
+            this.btnSingle.TextColor = System.Drawing.Color.Black;
+            this.btnSingle.UseVisualStyleBackColor = false;
+            this.btnSingle.Click += new System.EventHandler(this.btnSingle_Click);
             // 
-            // btnLogout
+            // btnInfor
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.Red;
-            this.btnLogout.BackgroundColor = System.Drawing.Color.Red;
-            this.btnLogout.BorderColor = System.Drawing.Color.PaleTurquoise;
-            this.btnLogout.BorderRadius = 20;
-            this.btnLogout.BorderSize = 0;
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(288, 386);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(132, 57);
-            this.btnLogout.TabIndex = 14;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.TextColor = System.Drawing.Color.White;
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnInfor.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnInfor.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnInfor.BackgroundImage = global::Group9.Properties.Resources.btn;
+            this.btnInfor.BorderColor = System.Drawing.Color.Gold;
+            this.btnInfor.BorderRadius = 30;
+            this.btnInfor.BorderSize = 1;
+            this.btnInfor.FlatAppearance.BorderSize = 0;
+            this.btnInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfor.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfor.ForeColor = System.Drawing.Color.Black;
+            this.btnInfor.Location = new System.Drawing.Point(158, 191);
+            this.btnInfor.Name = "btnInfor";
+            this.btnInfor.Size = new System.Drawing.Size(192, 60);
+            this.btnInfor.TabIndex = 15;
+            this.btnInfor.Text = "User Information";
+            this.btnInfor.TextColor = System.Drawing.Color.Black;
+            this.btnInfor.UseVisualStyleBackColor = false;
+            this.btnInfor.Click += new System.EventHandler(this.btnInfor_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Group9.Properties.Resources.name1;
+            this.pictureBox1.Location = new System.Drawing.Point(72, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(820, 105);
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::Group9.Properties.Resources.logonhom11;
+            this.pictureBox2.Location = new System.Drawing.Point(426, 113);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 26);
+            this.pictureBox2.TabIndex = 21;
+            this.pictureBox2.TabStop = false;
             // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 501);
+            this.BackgroundImage = global::Group9.Properties.Resources.mainmenu1;
+            this.ClientSize = new System.Drawing.Size(959, 601);
             this.ControlBox = false;
-            this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.btn_thongtin);
-            this.Controls.Add(this.Connection_btn);
-            this.Controls.Add(this.Start_btn);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnLogOut1);
+            this.Controls.Add(this.btnLAN);
+            this.Controls.Add(this.btnSingle);
+            this.Controls.Add(this.btnInfor);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainMenu";
             this.Text = "MainMenu";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Start_btn;
-        private System.Windows.Forms.Button Connection_btn;
-        private System.Windows.Forms.Button btn_thongtin;
-        private Cocaro.CustomButton btnLogout;
+        private Cocaro.CustomButton btnInfor;
+        private Cocaro.CustomButton btnSingle;
+        private Cocaro.CustomButton btnLAN;
+        private Cocaro.CustomButton btnLogOut1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

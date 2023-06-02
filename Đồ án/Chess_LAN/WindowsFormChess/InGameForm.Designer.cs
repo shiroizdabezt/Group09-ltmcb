@@ -37,22 +37,22 @@ namespace Group9
             // lbName
             // 
             this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbName.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.White;
-            this.lbName.Location = new System.Drawing.Point(299, 747);
+            this.lbName.Location = new System.Drawing.Point(302, 738);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(42, 16);
+            this.lbName.Size = new System.Drawing.Size(50, 23);
             this.lbName.TabIndex = 17;
             this.lbName.Text = "You: ";
             // 
             // lbCompetitorName
             // 
             this.lbCompetitorName.AutoSize = true;
-            this.lbCompetitorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCompetitorName.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCompetitorName.ForeColor = System.Drawing.Color.White;
-            this.lbCompetitorName.Location = new System.Drawing.Point(299, 24);
+            this.lbCompetitorName.Location = new System.Drawing.Point(285, 19);
             this.lbCompetitorName.Name = "lbCompetitorName";
-            this.lbCompetitorName.Size = new System.Drawing.Size(90, 16);
+            this.lbCompetitorName.Size = new System.Drawing.Size(108, 23);
             this.lbCompetitorName.TabIndex = 18;
             this.lbCompetitorName.Text = "Competitor: ";
             // 
@@ -65,11 +65,11 @@ namespace Group9
             this.btnBack.BorderSize = 0;
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
             this.btnBack.Location = new System.Drawing.Point(12, 12);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(41, 40);
+            this.btnBack.Size = new System.Drawing.Size(40, 40);
             this.btnBack.TabIndex = 16;
             this.btnBack.Text = "<--";
             this.btnBack.TextColor = System.Drawing.Color.White;
@@ -88,6 +88,7 @@ namespace Group9
             this.Controls.Add(this.btnBack);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InGameForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InGameForm_FormClosing);
             this.ResumeLayout(false);

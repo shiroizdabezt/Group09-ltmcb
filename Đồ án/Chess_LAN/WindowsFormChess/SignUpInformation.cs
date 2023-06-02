@@ -29,7 +29,11 @@ namespace Group9
         {
             get; set;
         } = null;
-        private static string error = "Chưa tạo tk này mà đòi chơi cái con đĩ bò mày";
+        public int score
+        { 
+            get; set; 
+        }
+        private static string error = "Tài khoản này không tồn tại.";
         public static void ShowError()
         {
             System.Windows.Forms.MessageBox.Show(error);
@@ -39,7 +43,7 @@ namespace Group9
             if (user1 == null || user2 == null) return false;
             if (user1.password != user2.password)
             {
-                error = "Sai mk rồi con đĩ bò";
+                error = "Mật khẩu sai. Vui lòng thử lại.";
                 return false;
             }
             return true;

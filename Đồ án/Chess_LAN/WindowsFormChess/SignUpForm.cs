@@ -27,8 +27,7 @@ namespace Group9
             InitializeComponent();
         }
 
-
-        private void btnSignUp_Click(object sender, EventArgs e)
+        private void btnSignUp1_Click(object sender, EventArgs e)
         {
             if (txtPassword.Text != txtPassword2.Text)
                 MessageBox.Show("Mật khẩu xác nhận không trùng khớp !");
@@ -42,7 +41,8 @@ namespace Group9
                     phonenumber = txtPhoneNumber.Text,
                     password = txtPassword.Text,
                     securityquestion = cmbQuestion.Text,
-                    answer = txtAnswer.Text
+                    answer = txtAnswer.Text,
+                    score = 400
                 };
                 SetResponse data = client.Set("UserInformation/"+signup.phonenumber, signup);
                 //SetResponse set = client.Set("CountUsername/" + i, signup.phonenumber);
@@ -57,7 +57,7 @@ namespace Group9
                 this.Close();
                 Loging lg = new Loging();
                 lg.Show();
-            }     
+            }
         }
 
         private void SignUpForm_Load(object sender, EventArgs e)
@@ -68,16 +68,11 @@ namespace Group9
             else MessageBox.Show("Kết nối Firebase không thành công !!!");
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack1_Click(object sender, EventArgs e)
         {
             this.Close();
             Loging lg = new Loging();
             lg.Show();
-        }
-
-        private void SignUpForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
         }
     }
 }

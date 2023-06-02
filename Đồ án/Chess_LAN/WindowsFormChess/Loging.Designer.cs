@@ -65,19 +65,19 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(449, 255);
+            this.txtPassword.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(431, 255);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(100, 24);
+            this.txtPassword.Size = new System.Drawing.Size(119, 26);
             this.txtPassword.TabIndex = 2;
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(449, 229);
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(431, 229);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(100, 24);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(119, 26);
             this.txtPhoneNumber.TabIndex = 1;
             // 
             // label1
@@ -199,6 +199,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.customButton1);
             this.Name = "Loging";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loging";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Loging_FormClosing);
             this.Load += new System.EventHandler(this.Loging_Load);

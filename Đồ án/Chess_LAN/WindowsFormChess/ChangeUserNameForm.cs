@@ -32,7 +32,7 @@ namespace Group9
             else MessageBox.Show("Kết nối Firebase không thành công !!!");
         }
 
-        private void btn_Change_Click(object sender, EventArgs e)
+        private void btnChangeName_Click(object sender, EventArgs e)
         {
             /*FirebaseResponse newdata = client.Get("UserInformation/" + Loging.name);
 
@@ -45,6 +45,14 @@ namespace Group9
             data.name = curuser.name;
             SetResponse newdata2 = client.Set("UserInformation/" + Loging.name, data);
             MessageBox.Show("Thay đổi tên thành công.");*/
+        }
+
+        private void btnBack1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Close();
+            InformationForm form = new InformationForm();
+            form.ShowDialog();
         }
     }
 }

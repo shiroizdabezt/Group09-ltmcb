@@ -74,7 +74,7 @@ namespace Group9
         {
             nameCompetitor = Loging.name;
             byteName = Encoding.UTF8.GetBytes(nameCompetitor);
-            singleByteName = byteName[50];
+            singleByteName = byteName[100];
         }
 
         public InGameForm(bool SingleGame, bool isHost, string ip = null)

@@ -20,7 +20,9 @@ namespace Group9
     public partial class Loging : Form
     {
         public static string name;
-        
+        public static string phonenumber;
+        public static int score;
+
         IFirebaseConfig config = new FirebaseConfig
         {
             AuthSecret = "0LD4V9MeOsWxjFEQnVuVuzC6OwAHp1iy4aPrOaiR",
@@ -87,6 +89,8 @@ namespace Group9
                 if (SignUpInformation.IsEqual(data, curuser))
                 {
                     Loging.name = data.name;
+                    Loging.phonenumber = data.phonenumber;
+                    Loging.score = data.score;
                     MessageBox.Show("Đăng nhập thành công !!!");
                     MainMenu mainMenu = new MainMenu();
                     this.Hide();

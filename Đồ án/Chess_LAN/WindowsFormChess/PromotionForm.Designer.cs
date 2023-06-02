@@ -46,7 +46,7 @@ namespace Group9
             this.btn_BlackKnight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_BlackKnight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_BlackKnight.Location = new System.Drawing.Point(264, 23);
-            this.btn_BlackKnight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_BlackKnight.Margin = new System.Windows.Forms.Padding(2);
             this.btn_BlackKnight.Name = "btn_BlackKnight";
             this.btn_BlackKnight.Size = new System.Drawing.Size(40, 46);
             this.btn_BlackKnight.TabIndex = 3;
@@ -59,7 +59,7 @@ namespace Group9
             this.btn_BlackRook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_BlackRook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_BlackRook.Location = new System.Drawing.Point(122, 23);
-            this.btn_BlackRook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_BlackRook.Margin = new System.Windows.Forms.Padding(2);
             this.btn_BlackRook.Name = "btn_BlackRook";
             this.btn_BlackRook.Size = new System.Drawing.Size(40, 46);
             this.btn_BlackRook.TabIndex = 4;
@@ -72,7 +72,7 @@ namespace Group9
             this.btn_BlackQueen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_BlackQueen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_BlackQueen.Location = new System.Drawing.Point(50, 23);
-            this.btn_BlackQueen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_BlackQueen.Margin = new System.Windows.Forms.Padding(2);
             this.btn_BlackQueen.Name = "btn_BlackQueen";
             this.btn_BlackQueen.Size = new System.Drawing.Size(40, 46);
             this.btn_BlackQueen.TabIndex = 5;
@@ -85,7 +85,7 @@ namespace Group9
             this.btn_BlackBishop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_BlackBishop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_BlackBishop.Location = new System.Drawing.Point(193, 23);
-            this.btn_BlackBishop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_BlackBishop.Margin = new System.Windows.Forms.Padding(2);
             this.btn_BlackBishop.Name = "btn_BlackBishop";
             this.btn_BlackBishop.Size = new System.Drawing.Size(40, 46);
             this.btn_BlackBishop.TabIndex = 6;
@@ -98,7 +98,7 @@ namespace Group9
             this.btn_WhiteBishop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_WhiteBishop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_WhiteBishop.Location = new System.Drawing.Point(193, 73);
-            this.btn_WhiteBishop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_WhiteBishop.Margin = new System.Windows.Forms.Padding(2);
             this.btn_WhiteBishop.Name = "btn_WhiteBishop";
             this.btn_WhiteBishop.Size = new System.Drawing.Size(40, 46);
             this.btn_WhiteBishop.TabIndex = 10;
@@ -111,7 +111,7 @@ namespace Group9
             this.btn_WhiteQueen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_WhiteQueen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_WhiteQueen.Location = new System.Drawing.Point(50, 73);
-            this.btn_WhiteQueen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_WhiteQueen.Margin = new System.Windows.Forms.Padding(2);
             this.btn_WhiteQueen.Name = "btn_WhiteQueen";
             this.btn_WhiteQueen.Size = new System.Drawing.Size(40, 46);
             this.btn_WhiteQueen.TabIndex = 9;
@@ -124,7 +124,7 @@ namespace Group9
             this.btn_WhiteRook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_WhiteRook.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_WhiteRook.Location = new System.Drawing.Point(122, 73);
-            this.btn_WhiteRook.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_WhiteRook.Margin = new System.Windows.Forms.Padding(2);
             this.btn_WhiteRook.Name = "btn_WhiteRook";
             this.btn_WhiteRook.Size = new System.Drawing.Size(40, 46);
             this.btn_WhiteRook.TabIndex = 8;
@@ -137,7 +137,7 @@ namespace Group9
             this.btn_WhiteKnight.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btn_WhiteKnight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_WhiteKnight.Location = new System.Drawing.Point(264, 73);
-            this.btn_WhiteKnight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_WhiteKnight.Margin = new System.Windows.Forms.Padding(2);
             this.btn_WhiteKnight.Name = "btn_WhiteKnight";
             this.btn_WhiteKnight.Size = new System.Drawing.Size(40, 46);
             this.btn_WhiteKnight.TabIndex = 7;
@@ -157,8 +157,9 @@ namespace Group9
             this.Controls.Add(this.btn_BlackQueen);
             this.Controls.Add(this.btn_BlackRook);
             this.Controls.Add(this.btn_BlackKnight);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PromotionForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PromotionForm";
             this.ResumeLayout(false);
 

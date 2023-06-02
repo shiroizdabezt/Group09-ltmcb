@@ -27,14 +27,7 @@ namespace Group9
             InitializeComponent();
         }
 
-        private void btn_back_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Loging loging = new Loging();
-            loging.Show();
-        }
-
-        private void btnResetPassword_Click(object sender, EventArgs e)
+        private void btnReset_Click(object sender, EventArgs e)
         {
             client = new FireSharp.FirebaseClient(config);
 
@@ -49,6 +42,8 @@ namespace Group9
             };
             if (data == null)
                 MessageBox.Show("Tài khoản không tồn tại !!!");
+            else if (txtNewPassword.Text != txtPassWord1.Text)
+                MessageBox.Show("Mật khẩu xác nhận không trùng khớp !!!");
             else
             {
                 if (data.answer == curuser.answer && data.securityquestion == curuser.securityquestion)
@@ -62,6 +57,13 @@ namespace Group9
                     MessageBox.Show("Thông tin bảo mật không trùng khớp.");
                 }
             }
+        }
+
+        private void btnBack1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Loging loging = new Loging();
+            loging.Show();
         }
     }
 }

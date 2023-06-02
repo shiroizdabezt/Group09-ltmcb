@@ -27,7 +27,7 @@ namespace Group9
             InitializeComponent();
         }
 
-        private void btnChange_Click(object sender, EventArgs e)
+        private void btnChangePass_Click(object sender, EventArgs e)
         {
             client = new FireSharp.FirebaseClient(config);
 
@@ -40,8 +40,10 @@ namespace Group9
                 password = txtPassword.Text,
                 phonenumber = txtPhoneNumber.Text,
             };
-            if (data == null) 
+            if (data == null)
                 MessageBox.Show("Tài khoản không tồn tại");
+            else if (txtNewPassword.Text != txtPass1.Text)
+                MessageBox.Show("Mật khẩu xác nhận không trùng khớp");
             else
             {
                 if (data.phonenumber == curuser.phonenumber && data.password == curuser.password)
@@ -58,16 +60,11 @@ namespace Group9
             }
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack1_Click(object sender, EventArgs e)
         {
             this.Close();
             InformationForm inforform = new InformationForm();
             inforform.Show();
-        }
-
-        private void ChangePassForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
         }
     }
 }

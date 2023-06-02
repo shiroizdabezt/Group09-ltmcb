@@ -15,32 +15,36 @@ namespace Group9
         public InformationForm()
         {
             InitializeComponent();
-            txtUsername.Text = Loging.name;
-        }
-
-        private void btn_ChangePass_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            ChangePassForm change = new ChangePassForm();
-            change.ShowDialog();  
-            this.Close();
+            lbName.Text = Loging.name;
+            lbPhoneNumber.Text = Loging.phonenumber;
+            lbScore.Text = Loging.score.ToString();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            this.Hide();
             this.Close();
             MainMenu main = new MainMenu();
             main.ShowDialog();
         }
 
-        private void btn_Changename_Click(object sender, EventArgs e)
+        private void btn_Changename1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             ChangeUserNameForm change = new ChangeUserNameForm();
             change.ShowDialog();
             this.Close();
         }
 
-        private void btn_Refresh_Click(object sender, EventArgs e)
+        private void btn_ChangePass1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ChangePassForm change = new ChangePassForm();
+            change.ShowDialog();
+            this.Close();
+        }
+
+        private void btn_Refresh1_Click(object sender, EventArgs e)
         {
 
         }

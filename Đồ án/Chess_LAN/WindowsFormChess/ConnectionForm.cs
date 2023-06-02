@@ -17,31 +17,29 @@ namespace Group9
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBack1_Click(object sender, EventArgs e)
         {
-            InGameForm newGame = new InGameForm(false,false,textBox1.Text);
+            this.Hide();
+            MainMenu main = new MainMenu();
+            main.ShowDialog();
+        }
+
+        private void btnConnect_Click(object sender, EventArgs e)
+        {
+            InGameForm newGame = new InGameForm(false, false, textBox1.Text);
             Visible = false;
             if (!newGame.IsDisposed)
                 newGame.ShowDialog();
             Visible = true;
-
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnHost_Click(object sender, EventArgs e)
         {
             InGameForm newGame = new InGameForm(false, true);
             Visible = false;
             if (!newGame.IsDisposed)
                 newGame.ShowDialog();
             Visible = true;
-
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainMenu main = new MainMenu();
-            main.ShowDialog();
         }
     }
 }

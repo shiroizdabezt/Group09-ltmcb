@@ -9,26 +9,26 @@ namespace Group9
 {
     public class SignUpInformation
     {
-        public string? name
+        public string name
         {
             get; set;
-        } = null;
-        public string? phonenumber
+        } 
+        public string phonenumber
         {
             get; set;
-        } = null;
-        public string? password
+        } 
+        public string password
         {
             get; set;
-        } = null;
-        public string? securityquestion
+        } 
+        public string securityquestion
         {
             get; set;
-        } = null;
-        public string? answer
+        } 
+        public string answer
         {
             get; set;
-        } = null;
+        } 
         public int score
         { 
             get; set; 

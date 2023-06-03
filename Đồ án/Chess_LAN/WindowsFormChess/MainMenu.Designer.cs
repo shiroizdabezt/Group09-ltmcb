@@ -35,6 +35,7 @@ namespace Group9
             this.btnInfor = new Cocaro.CustomButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnRankBoard = new Cocaro.CustomButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +52,7 @@ namespace Group9
             this.btnLogOut1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut1.ForeColor = System.Drawing.Color.Black;
-            this.btnLogOut1.Location = new System.Drawing.Point(158, 472);
+            this.btnLogOut1.Location = new System.Drawing.Point(120, 507);
             this.btnLogOut1.Name = "btnLogOut1";
             this.btnLogOut1.Size = new System.Drawing.Size(192, 60);
             this.btnLogOut1.TabIndex = 18;
@@ -72,7 +73,7 @@ namespace Group9
             this.btnLAN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLAN.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLAN.ForeColor = System.Drawing.Color.Black;
-            this.btnLAN.Location = new System.Drawing.Point(158, 376);
+            this.btnLAN.Location = new System.Drawing.Point(120, 337);
             this.btnLAN.Name = "btnLAN";
             this.btnLAN.Size = new System.Drawing.Size(192, 60);
             this.btnLAN.TabIndex = 17;
@@ -93,7 +94,7 @@ namespace Group9
             this.btnSingle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSingle.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSingle.ForeColor = System.Drawing.Color.Black;
-            this.btnSingle.Location = new System.Drawing.Point(158, 282);
+            this.btnSingle.Location = new System.Drawing.Point(120, 243);
             this.btnSingle.Name = "btnSingle";
             this.btnSingle.Size = new System.Drawing.Size(192, 60);
             this.btnSingle.TabIndex = 16;
@@ -114,7 +115,7 @@ namespace Group9
             this.btnInfor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInfor.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInfor.ForeColor = System.Drawing.Color.Black;
-            this.btnInfor.Location = new System.Drawing.Point(158, 191);
+            this.btnInfor.Location = new System.Drawing.Point(120, 152);
             this.btnInfor.Name = "btnInfor";
             this.btnInfor.Size = new System.Drawing.Size(192, 60);
             this.btnInfor.TabIndex = 15;
@@ -143,6 +144,27 @@ namespace Group9
             this.pictureBox2.TabIndex = 21;
             this.pictureBox2.TabStop = false;
             // 
+            // btnRankBoard
+            // 
+            this.btnRankBoard.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnRankBoard.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnRankBoard.BackgroundImage = global::Group9.Properties.Resources.btn;
+            this.btnRankBoard.BorderColor = System.Drawing.Color.Gold;
+            this.btnRankBoard.BorderRadius = 30;
+            this.btnRankBoard.BorderSize = 1;
+            this.btnRankBoard.FlatAppearance.BorderSize = 0;
+            this.btnRankBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRankBoard.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRankBoard.ForeColor = System.Drawing.Color.Black;
+            this.btnRankBoard.Location = new System.Drawing.Point(120, 424);
+            this.btnRankBoard.Name = "btnRankBoard";
+            this.btnRankBoard.Size = new System.Drawing.Size(192, 60);
+            this.btnRankBoard.TabIndex = 22;
+            this.btnRankBoard.Text = "Leader Board";
+            this.btnRankBoard.TextColor = System.Drawing.Color.Black;
+            this.btnRankBoard.UseVisualStyleBackColor = false;
+            this.btnRankBoard.Click += new System.EventHandler(this.btnRankBoard_Click);
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,6 +172,7 @@ namespace Group9
             this.BackgroundImage = global::Group9.Properties.Resources.mainmenu1;
             this.ClientSize = new System.Drawing.Size(959, 601);
             this.ControlBox = false;
+            this.Controls.Add(this.btnRankBoard);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnLogOut1);
@@ -173,5 +196,6 @@ namespace Group9
         private Cocaro.CustomButton btnLogOut1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private Cocaro.CustomButton btnRankBoard;
     }
 }

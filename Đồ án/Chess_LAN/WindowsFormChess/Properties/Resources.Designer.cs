@@ -163,6 +163,26 @@ namespace Group9.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap leaderboard {
+            get {
+                object obj = ResourceManager.GetObject("leaderboard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap leaderboard1 {
+            get {
+                object obj = ResourceManager.GetObject("leaderboard1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loging1 {
             get {
                 object obj = ResourceManager.GetObject("loging1", resourceCulture);
@@ -256,6 +276,16 @@ namespace Group9.Properties {
         internal static System.Drawing.Bitmap WhiteRook {
             get {
                 object obj = ResourceManager.GetObject("WhiteRook", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zyro_image {
+            get {
+                object obj = ResourceManager.GetObject("zyro-image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

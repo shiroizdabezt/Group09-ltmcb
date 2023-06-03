@@ -34,12 +34,16 @@ namespace Group9
 
         private void btnChangeName_Click(object sender, EventArgs e)
         {
-            FirebaseResponse newdata = client.Get("UserInformation/" + Loging.phonenumber);
+            FirebaseResponse newdata = client.Get("UserInformation" + Loging.phonenumber);
             SignUpInformation data = newdata.ResultAs<SignUpInformation>();
             data.name = txt_NewUsername.Text;
-            SetResponse newdata2 = client.Set("UserInformation/" + Loging.phonenumber, data);
+            SetResponse newdata2 = client.Set("UserInformation" + Loging.phonenumber, data);
             MessageBox.Show("Thay đổi tên thành công.");
             Loging.name = txt_NewUsername.Text;
+            this.Hide();
+            this.Close();
+            InformationForm form = new InformationForm();
+            form.ShowDialog();
         }
 
         private void btnBack1_Click(object sender, EventArgs e)

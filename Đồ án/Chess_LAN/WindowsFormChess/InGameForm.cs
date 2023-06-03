@@ -740,10 +740,10 @@ namespace Group9
                 clientfirebase = new FireSharp.FirebaseClient(config);
 
                 if (clientfirebase != null) ;
-                FirebaseResponse user = clientfirebase.Get("UserInformation/" + Loging.phonenumber);
+                FirebaseResponse user = clientfirebase.Get("UserInformation" + Loging.phonenumber);
                 SignUpInformation data = user.ResultAs<SignUpInformation>();
                 data.score += 10;
-                SetResponse newdata = clientfirebase.Set("UserInformation/" + Loging.phonenumber, data);
+                SetResponse newdata = clientfirebase.Set("UserInformation" + Loging.phonenumber, data);
                 DialogResult Q = MessageBox.Show("Bạn có chắc muốn rời trận?", "Warning!", MessageBoxButtons.OKCancel);
                 if (Q == DialogResult.OK)
                 {
@@ -837,10 +837,10 @@ namespace Group9
                 clientfirebase = new FireSharp.FirebaseClient(config);
 
                 if (clientfirebase != null) ;
-                FirebaseResponse user = clientfirebase.Get("UserInformation/" + Loging.phonenumber);
+                FirebaseResponse user = clientfirebase.Get("UserInformation" + Loging.phonenumber);
                 SignUpInformation data = user.ResultAs<SignUpInformation>();
                 data.score -= 5;
-                SetResponse newdata = clientfirebase.Set("UserInformation/" + Loging.phonenumber, data);
+                SetResponse newdata = clientfirebase.Set("UserInformation" + Loging.phonenumber, data);
                 DialogResult Q = MessageBox.Show("Bạn có chắc muốn rời trận?", "Warning!", MessageBoxButtons.OKCancel);
                 if (Q == DialogResult.OK)
                 {

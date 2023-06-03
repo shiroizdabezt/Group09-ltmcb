@@ -62,5 +62,13 @@ namespace Group9
                 catch { }
             }
         }
+
+        private void btnRankBoard_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LeaderBoardForm leaderBoardForm = new LeaderBoardForm();
+            leaderBoardForm.ShowDialog();
+            this.Close();
+        }
     }
 }

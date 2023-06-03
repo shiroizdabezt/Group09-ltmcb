@@ -79,7 +79,7 @@ namespace Group9
             if (txtPhoneNumber.Text == string.Empty || txtPassword.Text == string.Empty) MessageBox.Show("Vui lòng điền đầy đủ thông tin");
             else
             {
-                FirebaseResponse a = client.Get("UserInformation/" + txtPhoneNumber.Text);
+                FirebaseResponse a = client.Get("UserInformation" + txtPhoneNumber.Text);
                 SignUpInformation data = a.ResultAs<SignUpInformation>();
                 SignUpInformation curuser = new SignUpInformation()
                 {

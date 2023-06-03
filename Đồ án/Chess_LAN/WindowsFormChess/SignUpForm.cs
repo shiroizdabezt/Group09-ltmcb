@@ -29,10 +29,10 @@ namespace Group9
 
         private void btnSignUp1_Click(object sender, EventArgs e)
         {
-            if (txtPassword.Text != txtPassword2.Text)
-                MessageBox.Show("Mật khẩu xác nhận không trùng khớp !");
-            else if (txtName.Text == string.Empty || txtPhoneNumber.Text == string.Empty || txtPassword.Text == string.Empty || txtPassword2.Text == string.Empty || cmbQuestion.Text == string.Empty || txtAnswer.Text == string.Empty)
+            if (txtName.Text == string.Empty || txtPhoneNumber.Text == string.Empty || txtPassword.Text == string.Empty || txtPassword2.Text == string.Empty || cmbQuestion.Text == string.Empty || txtAnswer.Text == string.Empty)
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin !");
+            else if (txtPassword.Text != txtPassword2.Text)
+                MessageBox.Show("Mật khẩu xác nhận không trùng khớp !");
             else
             {
                 var signup = new SignUpInformation
@@ -42,11 +42,9 @@ namespace Group9
                     password = txtPassword.Text,
                     securityquestion = cmbQuestion.Text,
                     answer = txtAnswer.Text,
-                    score = 400
+                    score = 440
                 };
-                SetResponse data = client.Set("UserInformation/"+signup.phonenumber, signup);
-                //SetResponse set = client.Set("CountUsername/" + i, signup.phonenumber);
-                //SetResponse setcount = client.Set("CountUser/", i);
+                SetResponse data = client.Set("UserInformation" + txtPhoneNumber.Text, signup);
                 MessageBox.Show("Đăng ký thành công !!!");
                 txtAnswer.Text = string.Empty;
                 txtName.Text = string.Empty;

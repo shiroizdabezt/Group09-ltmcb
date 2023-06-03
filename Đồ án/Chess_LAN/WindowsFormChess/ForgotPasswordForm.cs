@@ -33,7 +33,7 @@ namespace Group9
 
             if (client != null) ;
             else MessageBox.Show("Kết nối Firebase không thành công !!!");
-            FirebaseResponse a = client.Get("UserInformation/" + txtPhoneNumber.Text);
+            FirebaseResponse a = client.Get("UserInformation" + txtPhoneNumber.Text);
             SignUpInformation data = a.ResultAs<SignUpInformation>();
             SignUpInformation curuser = new SignUpInformation()
             {
@@ -49,7 +49,7 @@ namespace Group9
                 if (data.answer == curuser.answer && data.securityquestion == curuser.securityquestion)
                 {
                     data.password = txtNewPassword.Text;
-                    SetResponse newdata = client.Set("UserInformation/" + txtPhoneNumber.Text, data);
+                    SetResponse newdata = client.Set("UserInformation" + txtPhoneNumber.Text, data);
                     MessageBox.Show("Cập nhật mật khẩu mới thành công.");
                 }
                 else

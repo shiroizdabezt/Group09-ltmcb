@@ -61,7 +61,7 @@ namespace Group9
 
         private void btn_Refresh1_Click(object sender, EventArgs e)
         {
-            FirebaseResponse a = client.Get("UserInformation/" + Loging.phonenumber);
+            FirebaseResponse a = client.Get("UserInformation" + Loging.phonenumber);
             SignUpInformation data = a.ResultAs<SignUpInformation>();
             lbName.Text = data.name;
             lbScore.Text = data.score.ToString();

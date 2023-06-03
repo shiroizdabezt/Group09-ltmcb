@@ -831,24 +831,36 @@ namespace Group9
                 if (WhiteTurn)
                 {
                     MessageBox.Show("You Lost!\nScore -5");
+                    if (clientfirebase != null) ;
+                    FirebaseResponse user = clientfirebase.Get("UserInformation" + Loging.phonenumber);
+                    SignUpInformation data = user.ResultAs<SignUpInformation>();
+                    data.score -= 5;
+                    data.match += 1;
+                    SetResponse newdata = clientfirebase.Set("UserInformation" + Loging.phonenumber, data);
+                    DialogResult Q = MessageBox.Show("Bạn có chắc muốn rời trận?", "Warning!", MessageBoxButtons.OKCancel);
+                    if (Q == DialogResult.OK)
+                    {
+                        this.Close();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("You lost!\nScore -5");
+                    MessageBox.Show("You Win!\nScore -5");
+                    if (clientfirebase != null) ;
+                    FirebaseResponse user = clientfirebase.Get("UserInformation" + Loging.phonenumber);
+                    SignUpInformation data = user.ResultAs<SignUpInformation>();
+                    data.score += 10;
+                    data.match += 1;
+                    SetResponse newdata = clientfirebase.Set("UserInformation" + Loging.phonenumber, data);
+                    DialogResult Q = MessageBox.Show("Bạn có chắc muốn rời trận?", "Warning!", MessageBoxButtons.OKCancel);
+                    if (Q == DialogResult.OK)
+                    {
+                        this.Close();
+                    }
                 }
                 clientfirebase = new FireSharp.FirebaseClient(config);
 
-                if (clientfirebase != null) ;
-                FirebaseResponse user = clientfirebase.Get("UserInformation" + Loging.phonenumber);
-                SignUpInformation data = user.ResultAs<SignUpInformation>();
-                data.score -= 5;
-                data.match += 1;
-                SetResponse newdata = clientfirebase.Set("UserInformation" + Loging.phonenumber, data);
-                DialogResult Q = MessageBox.Show("Bạn có chắc muốn rời trận?", "Warning!", MessageBoxButtons.OKCancel);
-                if (Q == DialogResult.OK)
-                {
-                    this.Close();
-                }
+                
             }
         }
         //end connection
@@ -858,6 +870,7 @@ namespace Group9
             MessageReceiver.CancelAsync();
             if (server != null)
             {
+                btnBack_Click(sender, e);
                 server.Stop();
             }    
         }
@@ -877,14 +890,17 @@ namespace Group9
                 {
                     clientfirebase = new FireSharp.FirebaseClient(config);
 
-                    if (clientfirebase != null) ;
-                    FirebaseResponse user = clientfirebase.Get("UserInformation" + Loging.phonenumber);
-                    SignUpInformation data = user.ResultAs<SignUpInformation>();
-                    data.score -= 5;
-                    data.match += 1;
-                    Moves = 0;
-                    SendMove(0, 0);
-                    this.Close();
+                    if (clientfirebase != null)
+                    {
+                        FirebaseResponse user = clientfirebase.Get("UserInformation" + Loging.phonenumber);
+                        SignUpInformation data = user.ResultAs<SignUpInformation>();
+                        data.score -= 5;
+                        data.match += 1;
+                        Moves = 0;
+                        SendMove(0, 0);
+                        this.Close();
+                    }    
+                    
                 }
             }    
         }

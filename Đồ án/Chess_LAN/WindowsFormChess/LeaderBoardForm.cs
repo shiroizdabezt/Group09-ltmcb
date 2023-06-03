@@ -55,15 +55,14 @@ namespace Group9
                 listViewItem.SubItems.Add(dataList[i].score.ToString());
                 listViewItem.SubItems.Add(dataList[i].match.ToString());
                 double winrate = ((double)dataList[i].win_match / dataList[i].match) * 100;
-                listViewItem.SubItems.Add(winrate.ToString() + "%");
+                string winrate3 = winrate.ToString("F1");
+                listViewItem.SubItems.Add(winrate3 + "%");
                 listRank.Items.Add(listViewItem);
                 // Xử lý đồng hạng
                 if (dataList[i].score != dataList[i + 1].score)
                 {
                     top = i + 2;
                 }
-
-
             }
             // Xử lý vị trí thứ 10
             if (dataList[9].score != dataList[8].score)
@@ -73,7 +72,8 @@ namespace Group9
             lsv.SubItems.Add(dataList[9].score.ToString());
             lsv.SubItems.Add(dataList[9].match.ToString());
             double winrate1 = ((double)dataList[9].win_match / dataList[9].match) * 100;
-            lsv.SubItems.Add(winrate1.ToString() + "%");
+            string winrate2 = winrate1.ToString("F1");
+            lsv.SubItems.Add(winrate2 + "%");
             listRank.Items.Add(lsv);
         }
 
@@ -83,6 +83,13 @@ namespace Group9
             this.Close();
             MainMenu main = new MainMenu();
             main.ShowDialog();
+        }
+
+        private void listRank_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+            Console.Write("Column Resizing");
+            e.NewWidth = this.listRank.Columns[e.ColumnIndex].Width;
+            e.Cancel = true;
         }
     }
 }

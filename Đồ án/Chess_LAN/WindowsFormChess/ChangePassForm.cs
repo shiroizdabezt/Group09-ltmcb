@@ -7,6 +7,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,25 +38,30 @@ namespace Group9
             SignUpInformation data = a.ResultAs<SignUpInformation>();
             SignUpInformation curuser = new SignUpInformation()
             {
-                password = txtPassword.Text,
+                password = HashString(txtPassword.Text),
                 phonenumber = txtPhoneNumber.Text,
             };
-            if (data == null)
-                MessageBox.Show("Tài khoản không tồn tại");
-            else if (txtNewPassword.Text != txtPass1.Text)
-                MessageBox.Show("Mật khẩu xác nhận không trùng khớp");
+            if (txtPhoneNumber.Text == string.Empty || txtPassword.Text == string.Empty || txtPass1.Text == string.Empty || txtNewPassword.Text == string.Empty)
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin !!!");
             else
             {
-                if (data.phonenumber == curuser.phonenumber && data.password == curuser.password)
-                {
-                    data.password = txtNewPassword.Text;
-                    SetResponse newdata = client.Set("UserInformation" + txtPhoneNumber.Text, data);
-                    MessageBox.Show("Thay đổi mật khẩu mới thành công.");
-                }
+                if (data == null)
+                    MessageBox.Show("Tài khoản không tồn tại");
+                else if (txtNewPassword.Text != txtPass1.Text)
+                    MessageBox.Show("Mật khẩu xác nhận không trùng khớp");
                 else
                 {
-                    if (data.password != curuser.password)
-                        MessageBox.Show("Mật khẩu cũ không trùng khớp.");
+                    if (data.phonenumber == curuser.phonenumber && data.password == curuser.password)
+                    {
+                        data.password = HashString(txtNewPassword.Text);
+                        SetResponse newdata = client.Set("UserInformation" + txtPhoneNumber.Text, data);
+                        MessageBox.Show("Thay đổi mật khẩu mới thành công.");
+                    }
+                    else
+                    {
+                        if (data.password != curuser.password)
+                            MessageBox.Show("Mật khẩu cũ không trùng khớp.");
+                    }
                 }
             }
         }
@@ -65,6 +71,22 @@ namespace Group9
             this.Close();
             InformationForm inforform = new InformationForm();
             inforform.Show();
+        }
+
+        public string HashString(string input)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+                StringBuilder builder = new StringBuilder();
+
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+
+                return builder.ToString();
+            }
         }
     }
 }

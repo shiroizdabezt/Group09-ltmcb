@@ -32,9 +32,9 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack1 = new Cocaro.CustomButton();
             this.customButton1 = new Cocaro.CustomButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -42,7 +42,6 @@
             // 
             // listRank
             // 
-            this.listRank.AllowColumnReorder = true;
             this.listRank.BackColor = System.Drawing.Color.DodgerBlue;
             this.listRank.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listRank.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -59,6 +58,7 @@
             this.listRank.TabIndex = 0;
             this.listRank.UseCompatibleStateImageBehavior = false;
             this.listRank.View = System.Windows.Forms.View.Details;
+            this.listRank.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.listRank_ColumnWidthChanging);
             // 
             // columnHeader1
             // 
@@ -75,7 +75,19 @@
             // 
             this.columnHeader3.Text = "Score";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 76;
+            this.columnHeader3.Width = 55;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Played";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 55;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Winrate";
+            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader5.Width = 83;
             // 
             // pictureBox1
             // 
@@ -87,16 +99,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(514, 550);
             this.pictureBox1.TabIndex = 53;
             this.pictureBox1.TabStop = false;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Played";
-            this.columnHeader4.Width = 55;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Winrate";
-            this.columnHeader5.Width = 63;
             // 
             // btnBack1
             // 
@@ -125,6 +127,7 @@
             this.customButton1.BorderColor = System.Drawing.Color.Black;
             this.customButton1.BorderRadius = 10;
             this.customButton1.BorderSize = 2;
+            this.customButton1.Enabled = false;
             this.customButton1.FlatAppearance.BorderSize = 0;
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton1.ForeColor = System.Drawing.Color.White;
@@ -163,9 +166,9 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private Cocaro.CustomButton btnBack1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private Cocaro.CustomButton customButton1;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }

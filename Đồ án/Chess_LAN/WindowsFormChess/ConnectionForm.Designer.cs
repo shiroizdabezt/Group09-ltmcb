@@ -30,11 +30,11 @@ namespace Group9
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnConnect = new Cocaro.CustomButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack1 = new Cocaro.CustomButton();
             this.btnHost = new Cocaro.CustomButton();
-            this.btnConnect = new Cocaro.CustomButton();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,26 @@ namespace Group9
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Connect To Game";
+            // 
+            // btnConnect
+            // 
+            this.btnConnect.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnConnect.BackgroundColor = System.Drawing.Color.PaleGreen;
+            this.btnConnect.BorderColor = System.Drawing.Color.Black;
+            this.btnConnect.BorderRadius = 13;
+            this.btnConnect.BorderSize = 2;
+            this.btnConnect.FlatAppearance.BorderSize = 0;
+            this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConnect.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnect.ForeColor = System.Drawing.Color.Black;
+            this.btnConnect.Location = new System.Drawing.Point(208, 24);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(117, 36);
+            this.btnConnect.TabIndex = 51;
+            this.btnConnect.Text = "Connect";
+            this.btnConnect.TextColor = System.Drawing.Color.Black;
+            this.btnConnect.UseVisualStyleBackColor = false;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // textBox1
             // 
@@ -111,26 +131,6 @@ namespace Group9
             this.btnHost.UseVisualStyleBackColor = false;
             this.btnHost.Click += new System.EventHandler(this.btnHost_Click);
             // 
-            // btnConnect
-            // 
-            this.btnConnect.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnConnect.BackgroundColor = System.Drawing.Color.PaleGreen;
-            this.btnConnect.BorderColor = System.Drawing.Color.Black;
-            this.btnConnect.BorderRadius = 13;
-            this.btnConnect.BorderSize = 2;
-            this.btnConnect.FlatAppearance.BorderSize = 0;
-            this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConnect.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnect.ForeColor = System.Drawing.Color.Black;
-            this.btnConnect.Location = new System.Drawing.Point(208, 24);
-            this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(117, 36);
-            this.btnConnect.TabIndex = 51;
-            this.btnConnect.Text = "Connect";
-            this.btnConnect.TextColor = System.Drawing.Color.Black;
-            this.btnConnect.UseVisualStyleBackColor = false;
-            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
-            // 
             // ConnectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,6 +145,7 @@ namespace Group9
             this.Name = "ConnectionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConnectionForm";
+            this.Load += new System.EventHandler(this.ConnectionForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

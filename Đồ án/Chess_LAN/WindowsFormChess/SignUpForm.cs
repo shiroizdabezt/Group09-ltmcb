@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
+using System.Security.Cryptography;
 
 namespace Group9
 {
@@ -39,7 +40,7 @@ namespace Group9
                 {
                     name = txtName.Text,
                     phonenumber = txtPhoneNumber.Text,
-                    password = txtPassword.Text,
+                    password = HashString(txtPassword.Text),
                     securityquestion = cmbQuestion.Text,
                     answer = txtAnswer.Text,
                     score = 440,
@@ -73,6 +74,21 @@ namespace Group9
             this.Close();
             Loging lg = new Loging();
             lg.Show();
+        }
+        public string HashString(string input)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+                StringBuilder builder = new StringBuilder();
+
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+
+                return builder.ToString();
+            }
         }
     }
 }

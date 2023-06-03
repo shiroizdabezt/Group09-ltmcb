@@ -869,7 +869,9 @@ namespace Group9
             MessageReceiver.CancelAsync();
             if (server != null)
             {
-                this.Close();
+                this.Hide();
+                ConnectionForm connectionForm = new ConnectionForm();
+                connectionForm.ShowDialog();
                 server.Stop();
             }    
         }
@@ -888,7 +890,6 @@ namespace Group9
                 if (Q == DialogResult.OK)
                 {
                     clientfirebase = new FireSharp.FirebaseClient(config);
-
                     if (clientfirebase != null) ;
                     FirebaseResponse user = clientfirebase.Get("UserInformation" + Loging.phonenumber);
                     SignUpInformation data = user.ResultAs<SignUpInformation>();

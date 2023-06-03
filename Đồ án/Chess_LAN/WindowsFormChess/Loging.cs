@@ -14,6 +14,7 @@ using FireSharp.Interfaces;
 using FireSharp.Response;
 using Microsoft.Win32;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Security.Cryptography;
 
 namespace Group9
 {
@@ -84,7 +85,7 @@ namespace Group9
                 SignUpInformation curuser = new SignUpInformation()
                 {
                     phonenumber = txtPhoneNumber.Text,
-                    password = txtPassword.Text,
+                    password = HashString(txtPassword.Text),
                 };
                 if (SignUpInformation.IsEqual(data, curuser))
                 {
@@ -100,6 +101,21 @@ namespace Group9
                 {
                     SignUpInformation.ShowError();
                 }
+            }
+        }
+        public string HashString(string input)
+        {
+            using (SHA256 sha256Hash = SHA256.Create())
+            {
+                byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+                StringBuilder builder = new StringBuilder();
+
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+
+                return builder.ToString();
             }
         }
     }

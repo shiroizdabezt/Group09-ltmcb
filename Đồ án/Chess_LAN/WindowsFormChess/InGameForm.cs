@@ -831,6 +831,7 @@ namespace Group9
                 if (WhiteTurn)
                 {
                     MessageBox.Show("You Lost!\nScore -5");
+                    clientfirebase = new FireSharp.FirebaseClient(config);
                     if (clientfirebase != null) ;
                     FirebaseResponse user = clientfirebase.Get("UserInformation" + Loging.phonenumber);
                     SignUpInformation data = user.ResultAs<SignUpInformation>();
@@ -845,8 +846,9 @@ namespace Group9
                 }
                 else
                 {
-                    MessageBox.Show("You Win!\nScore -5");
+                    MessageBox.Show("You Win!\nScore +10");
                     if (clientfirebase != null) ;
+                    clientfirebase = new FireSharp.FirebaseClient(config);
                     FirebaseResponse user = clientfirebase.Get("UserInformation" + Loging.phonenumber);
                     SignUpInformation data = user.ResultAs<SignUpInformation>();
                     data.score += 10;
@@ -857,10 +859,7 @@ namespace Group9
                     {
                         this.Close();
                     }
-                }
-                clientfirebase = new FireSharp.FirebaseClient(config);
-
-                
+                }            
             }
         }
         //end connection
@@ -870,7 +869,7 @@ namespace Group9
             MessageReceiver.CancelAsync();
             if (server != null)
             {
-                btnBack_Click(sender, e);
+                this.Close();
                 server.Stop();
             }    
         }
@@ -890,17 +889,15 @@ namespace Group9
                 {
                     clientfirebase = new FireSharp.FirebaseClient(config);
 
-                    if (clientfirebase != null)
-                    {
-                        FirebaseResponse user = clientfirebase.Get("UserInformation" + Loging.phonenumber);
-                        SignUpInformation data = user.ResultAs<SignUpInformation>();
-                        data.score -= 5;
-                        data.match += 1;
-                        Moves = 0;
-                        SendMove(0, 0);
-                        this.Close();
-                    }    
-                    
+                    if (clientfirebase != null) ;
+                    FirebaseResponse user = clientfirebase.Get("UserInformation" + Loging.phonenumber);
+                    SignUpInformation data = user.ResultAs<SignUpInformation>();
+                    data.score -= 5;
+                    data.match += 1;
+                    SetResponse newdata = clientfirebase.Set("UserInformation" + Loging.phonenumber, data);
+                    Moves = 0;
+                    SendMove(4, 4);
+                    this.Close();
                 }
             }    
         }

@@ -42,7 +42,9 @@ namespace Group9
                     password = txtPassword.Text,
                     securityquestion = cmbQuestion.Text,
                     answer = txtAnswer.Text,
-                    score = 440
+                    score = 440,
+                    match = 0,
+                    win_match = 0
                 };
                 SetResponse data = client.Set("UserInformation" + txtPhoneNumber.Text, signup);
                 MessageBox.Show("Đăng ký thành công !!!");

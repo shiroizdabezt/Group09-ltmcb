@@ -33,6 +33,8 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnBack1 = new Cocaro.CustomButton();
             this.customButton1 = new Cocaro.CustomButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,12 +48,14 @@
             this.listRank.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3});
-            this.listRank.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5});
+            this.listRank.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listRank.HideSelection = false;
-            this.listRank.Location = new System.Drawing.Point(185, 274);
+            this.listRank.Location = new System.Drawing.Point(185, 284);
             this.listRank.Name = "listRank";
-            this.listRank.Size = new System.Drawing.Size(366, 271);
+            this.listRank.Size = new System.Drawing.Size(366, 254);
             this.listRank.TabIndex = 0;
             this.listRank.UseCompatibleStateImageBehavior = false;
             this.listRank.View = System.Windows.Forms.View.Details;
@@ -59,19 +63,19 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "STT";
-            this.columnHeader1.Width = 50;
+            this.columnHeader1.Width = 41;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Name";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 190;
+            this.columnHeader2.Width = 130;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Score";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 109;
+            this.columnHeader3.Width = 76;
             // 
             // pictureBox1
             // 
@@ -83,6 +87,16 @@
             this.pictureBox1.Size = new System.Drawing.Size(514, 550);
             this.pictureBox1.TabIndex = 53;
             this.pictureBox1.TabStop = false;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Played";
+            this.columnHeader4.Width = 55;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Winrate";
+            this.columnHeader5.Width = 63;
             // 
             // btnBack1
             // 
@@ -114,9 +128,9 @@
             this.customButton1.FlatAppearance.BorderSize = 0;
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(176, 264);
+            this.customButton1.Location = new System.Drawing.Point(176, 275);
             this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(385, 293);
+            this.customButton1.Size = new System.Drawing.Size(385, 274);
             this.customButton1.TabIndex = 54;
             this.customButton1.TextColor = System.Drawing.Color.White;
             this.customButton1.UseVisualStyleBackColor = false;
@@ -151,5 +165,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private Cocaro.CustomButton customButton1;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }

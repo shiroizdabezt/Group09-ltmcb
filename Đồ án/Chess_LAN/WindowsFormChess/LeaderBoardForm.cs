@@ -53,6 +53,9 @@ namespace Group9
                 ListViewItem listViewItem = new ListViewItem(top.ToString());
                 listViewItem.SubItems.Add(dataList[i].name);
                 listViewItem.SubItems.Add(dataList[i].score.ToString());
+                listViewItem.SubItems.Add(dataList[i].match.ToString());
+                double winrate = ((double)dataList[i].win_match / dataList[i].match) * 100;
+                listViewItem.SubItems.Add(winrate.ToString() + "%");
                 listRank.Items.Add(listViewItem);
                 // Xử lý đồng hạng
                 if (dataList[i].score != dataList[i + 1].score)
@@ -68,6 +71,9 @@ namespace Group9
             ListViewItem lsv = new ListViewItem(top.ToString());
             lsv.SubItems.Add(dataList[9].name);
             lsv.SubItems.Add(dataList[9].score.ToString());
+            lsv.SubItems.Add(dataList[9].match.ToString());
+            double winrate1 = ((double)dataList[9].win_match / dataList[9].match) * 100;
+            lsv.SubItems.Add(winrate1.ToString() + "%");
             listRank.Items.Add(lsv);
         }
 

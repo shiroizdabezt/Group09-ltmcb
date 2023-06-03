@@ -33,6 +33,14 @@ namespace Group9
         { 
             get; set; 
         }
+        public int match
+        {
+            get; set;
+        }
+        public int win_match
+        {
+            get; set;
+        }
         private static string error = "Tài khoản này không tồn tại.";
         public static void ShowError()
         {

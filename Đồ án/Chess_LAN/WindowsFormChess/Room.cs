@@ -76,12 +76,20 @@ namespace Group9
             TakeServerIP();
         }
 
-        private void Room_Click(object sender, EventArgs e)
+        private void btnStart_Click(object sender, EventArgs e)
         {
             InGameForm newGame = new InGameForm(false, true);
             Visible = false;
             if (!newGame.IsDisposed) newGame.ShowDialog();
             Visible = true;
+        }
+
+        private void btnBack1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Close();
+            ConnectionForm form = new ConnectionForm();
+            form.ShowDialog();
         }
     }
 }

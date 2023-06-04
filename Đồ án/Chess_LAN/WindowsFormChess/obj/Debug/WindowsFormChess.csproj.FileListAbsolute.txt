@@ -369,3 +369,4 @@ C:\Users\troil\OneDrive\Desktop\Chess_LAN\WindowsFormChess\obj\Debug\WindowsForm
 C:\Users\troil\OneDrive\Desktop\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.CopyComplete
 C:\Users\troil\OneDrive\Desktop\Chess_LAN\WindowsFormChess\obj\Debug\Group9.exe
 C:\Users\troil\OneDrive\Desktop\Chess_LAN\WindowsFormChess\obj\Debug\Group9.pdb
+D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.Room.resources

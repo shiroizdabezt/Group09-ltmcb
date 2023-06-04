@@ -29,29 +29,14 @@ namespace Group9
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnConnect = new Cocaro.CustomButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBack1 = new Cocaro.CustomButton();
             this.btnHost = new Cocaro.CustomButton();
-            this.groupBox1.SuspendLayout();
+            this.customButton1 = new Cocaro.CustomButton();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnConnect);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(49, 69);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(345, 87);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Connect To Game";
             // 
             // btnConnect
             // 
@@ -64,9 +49,9 @@ namespace Group9
             this.btnConnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConnect.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConnect.ForeColor = System.Drawing.Color.Black;
-            this.btnConnect.Location = new System.Drawing.Point(208, 24);
+            this.btnConnect.Location = new System.Drawing.Point(327, 190);
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(117, 36);
+            this.btnConnect.Size = new System.Drawing.Size(85, 36);
             this.btnConnect.TabIndex = 51;
             this.btnConnect.Text = "Connect";
             this.btnConnect.TextColor = System.Drawing.Color.Black;
@@ -75,21 +60,24 @@ namespace Group9
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(54, 27);
+            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(178, 196);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 30);
+            this.textBox1.Size = new System.Drawing.Size(139, 26);
             this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 31);
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(83, 199);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 23);
+            this.label1.Size = new System.Drawing.Size(91, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "IP:";
+            this.label1.Text = "Room Code";
             // 
             // btnBack1
             // 
@@ -122,7 +110,7 @@ namespace Group9
             this.btnHost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHost.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHost.ForeColor = System.Drawing.Color.Black;
-            this.btnHost.Location = new System.Drawing.Point(153, 176);
+            this.btnHost.Location = new System.Drawing.Point(180, 74);
             this.btnHost.Name = "btnHost";
             this.btnHost.Size = new System.Drawing.Size(137, 37);
             this.btnHost.TabIndex = 50;
@@ -131,33 +119,66 @@ namespace Group9
             this.btnHost.UseVisualStyleBackColor = false;
             this.btnHost.Click += new System.EventHandler(this.btnHost_Click);
             // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.customButton1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.customButton1.BorderColor = System.Drawing.Color.Black;
+            this.customButton1.BorderRadius = 20;
+            this.customButton1.BorderSize = 2;
+            this.customButton1.Enabled = false;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.ForeColor = System.Drawing.Color.White;
+            this.customButton1.Location = new System.Drawing.Point(69, 38);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(369, 222);
+            this.customButton1.TabIndex = 51;
+            this.customButton1.TextColor = System.Drawing.Color.White;
+            this.customButton1.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(224, 137);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 30);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "OR";
+            // 
             // ConnectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.ClientSize = new System.Drawing.Size(441, 225);
+            this.ClientSize = new System.Drawing.Size(507, 306);
             this.ControlBox = false;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.btnHost);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBack1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.customButton1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ConnectionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConnectionForm";
             this.Load += new System.EventHandler(this.ConnectionForm_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private Cocaro.CustomButton btnBack1;
         private Cocaro.CustomButton btnHost;
         private Cocaro.CustomButton btnConnect;
+        private Cocaro.CustomButton customButton1;
+        private System.Windows.Forms.Label label2;
     }
 }

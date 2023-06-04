@@ -43,7 +43,7 @@ namespace Group9
                     password = HashString(txtPassword.Text),
                     securityquestion = cmbQuestion.Text,
                     answer = txtAnswer.Text,
-                    score = 440,
+                    score = 400,
                     match = 0,
                     win_match = 0
                 };

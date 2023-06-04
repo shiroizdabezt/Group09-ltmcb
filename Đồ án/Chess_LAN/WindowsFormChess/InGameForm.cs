@@ -742,13 +742,22 @@ namespace Group9
                 if (clientfirebase != null) ;
                 FirebaseResponse user = clientfirebase.Get("UserInformation" + Loging.phonenumber);
                 SignUpInformation data = user.ResultAs<SignUpInformation>();
-                data.score += 10;
-                data.match += 1;
-                data.win_match += 1;
+                if (singleGame) ;
+                else
+                {
+                    data.score += 10;
+                    data.match += 1;
+                    data.win_match += 1;
+                }
                 SetResponse newdata = clientfirebase.Set("UserInformation" + Loging.phonenumber, data);
                 DialogResult Q = MessageBox.Show("Bạn có chắc muốn rời trận?", "Warning!", MessageBoxButtons.OKCancel);
                 if (Q == DialogResult.OK)
                 {
+                    if (singleGame)
+                    {
+                        MainMenu mainMenu = new MainMenu();
+                        mainMenu.Show();
+                    } 
                     this.Close();
                 }
             }
@@ -835,8 +844,12 @@ namespace Group9
                     if (clientfirebase != null) ;
                     FirebaseResponse user = clientfirebase.Get("UserInformation" + Loging.phonenumber);
                     SignUpInformation data = user.ResultAs<SignUpInformation>();
-                    data.score -= 5;
-                    data.match += 1;
+                    if (singleGame) ;
+                    else
+                    {
+                        data.score -= 5;
+                        data.match += 1;
+                    }
                     SetResponse newdata = clientfirebase.Set("UserInformation" + Loging.phonenumber, data);
                     DialogResult Q = MessageBox.Show("Bạn có chắc muốn rời trận?", "Warning!", MessageBoxButtons.OKCancel);
                     if (Q == DialogResult.OK)
@@ -851,8 +864,12 @@ namespace Group9
                     clientfirebase = new FireSharp.FirebaseClient(config);
                     FirebaseResponse user = clientfirebase.Get("UserInformation" + Loging.phonenumber);
                     SignUpInformation data = user.ResultAs<SignUpInformation>();
-                    data.score += 10;
-                    data.match += 1;
+                    if (singleGame) ;
+                    else
+                    {
+                        data.score += 10;
+                        data.match += 1;
+                    }    
                     SetResponse newdata = clientfirebase.Set("UserInformation" + Loging.phonenumber, data);
                     DialogResult Q = MessageBox.Show("Bạn có chắc muốn rời trận?", "Warning!", MessageBoxButtons.OKCancel);
                     if (Q == DialogResult.OK)
@@ -865,15 +882,22 @@ namespace Group9
         //end connection
         private void InGameForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MessageReceiver.WorkerSupportsCancellation = true;
-            MessageReceiver.CancelAsync();
-            if (server != null)
+            if (singleGame)
             {
                 this.Hide();
-                ConnectionForm connectionForm = new ConnectionForm();
-                connectionForm.ShowDialog();
-                server.Stop();
-            }    
+            } 
+            else
+            {
+                MessageReceiver.WorkerSupportsCancellation = true;
+                MessageReceiver.CancelAsync();
+                if (server != null)
+                {
+                    this.Hide();
+                    ConnectionForm connectionForm = new ConnectionForm();
+                    connectionForm.ShowDialog();
+                    server.Stop();
+                }
+            }     
         }
 
         public void btnBack_Click(object sender, EventArgs e)

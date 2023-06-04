@@ -41,7 +41,9 @@ namespace Group9
                 securityquestion = cmbQuestion.Text,
                 answer = txtAnswer.Text,
             };
-            if (data == null)
+            if (txtPhoneNumber.Text == string.Empty || txtAnswer.Text == string.Empty || txtPassWord1.Text == string.Empty || txtNewPassword.Text == string.Empty || cmbQuestion.Text == string.Empty)
+                MessageBox.Show("Vui lòng điền đủ thông tin !!!");
+            else if (data == null)
                 MessageBox.Show("Tài khoản không tồn tại !!!");
             else if (txtNewPassword.Text != txtPassWord1.Text)
                 MessageBox.Show("Mật khẩu xác nhận không trùng khớp !!!");

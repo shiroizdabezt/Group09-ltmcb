@@ -23,6 +23,8 @@ namespace Group9
         public static string name;
         public static string phonenumber;
         public static int score;
+        public static int match;
+        public static int winMatch;
 
         IFirebaseConfig config = new FirebaseConfig
         {
@@ -92,6 +94,8 @@ namespace Group9
                     Loging.name = data.name;
                     Loging.phonenumber = data.phonenumber;
                     Loging.score = data.score;
+                    Loging.match = data.match;
+                    Loging.winMatch = data.win_match;
                     MessageBox.Show("Đăng nhập thành công !!!");
                     MainMenu mainMenu = new MainMenu();
                     this.Hide();

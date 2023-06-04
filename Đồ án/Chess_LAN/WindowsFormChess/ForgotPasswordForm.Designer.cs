@@ -125,10 +125,8 @@
             "What is the name of the street you grew up on?",
             "What is the name of your best friend?",
             "What is the name of the school you graduated from?",
-            "What is the name of the first company you worked for?",
             "What is the name of the city you were born in?",
-            "What is your favorite subject?",
-            "What is the name of your favorite artist/musician/movie?"});
+            "What is your favorite subject?"});
             this.cmbQuestion.Location = new System.Drawing.Point(332, 204);
             this.cmbQuestion.Name = "cmbQuestion";
             this.cmbQuestion.Size = new System.Drawing.Size(360, 27);

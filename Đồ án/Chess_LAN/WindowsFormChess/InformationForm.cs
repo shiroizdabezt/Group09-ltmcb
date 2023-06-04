@@ -29,6 +29,11 @@ namespace Group9
             lbName.Text = Loging.name;
             lbPhoneNumber.Text = Loging.phonenumber;
             lbScore.Text = Loging.score.ToString();
+            lbNumMatch.Text = Loging.match.ToString();
+            lbWinMatch.Text = Loging.winMatch.ToString();
+            double winrate = ((double)Loging.winMatch/Loging.match)*100;
+            string winrate1 = winrate.ToString("F1");
+            lbWinRate.Text = winrate1 + "%";
             client = new FireSharp.FirebaseClient(config);
 
             if (client != null) ;
@@ -65,6 +70,16 @@ namespace Group9
             SignUpInformation data = a.ResultAs<SignUpInformation>();
             lbName.Text = data.name;
             lbScore.Text = data.score.ToString();
+            lbNumMatch.Text = data.match.ToString();
+            lbWinMatch.Text = data.win_match.ToString();
+            double winrate = ((double)data.win_match/data.match)*100;
+            string winrate1 = winrate.ToString("F1");
+            lbWinRate.Text = winrate1 + "%";
+        }
+
+        private void InformationForm_Load(object sender, EventArgs e)
+        {
+            btn_Refresh1_Click(sender, e);
         }
     }
 }

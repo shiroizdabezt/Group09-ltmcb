@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-06-05T13:51:44.871Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.0.0" etag="Hqwn0YIjxX9d7TSI8i-U" version="21.3.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-06-05T13:53:56.580Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36 Edg/115.0.0.0" etag="J-th6sUfqNKr4fs3eLyB" version="21.3.5" type="github" pages="4">
   <diagram name="Page-1" id="paGQzFl_TgacfaXUngNB">
     <mxGraphModel dx="906" dy="558" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -76,6 +76,9 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="1H_-SppWskFbrLNi7qur-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="130" width="720" height="470" as="geometry" />
+        </mxCell>
         <mxCell id="LmWn8QrTKek6M5Rs8ROm-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="YhAX1nRg8OLiJ6K9KQkO-1" target="LmWn8QrTKek6M5Rs8ROm-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -84,20 +87,20 @@
         </mxCell>
         <mxCell id="BTQIR7O9Z3_4OCxKt4MY-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="YhAX1nRg8OLiJ6K9KQkO-1" target="BTQIR7O9Z3_4OCxKt4MY-2" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="500" y="320" as="targetPoint" />
+            <mxPoint x="740" y="450" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="YhAX1nRg8OLiJ6K9KQkO-1" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;&lt;b&gt;Chức năng của Server&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="400" y="40" width="200" height="60" as="geometry" />
+          <mxGeometry x="640" y="170" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="LmWn8QrTKek6M5Rs8ROm-1" value="&lt;b&gt;Tạo kết nối TCP/IP với Client&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="190" y="210" width="160" height="60" as="geometry" />
+          <mxGeometry x="430" y="340" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="LmWn8QrTKek6M5Rs8ROm-3" value="&lt;b&gt;Kết nối với CSDL&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="670" y="210" width="160" height="60" as="geometry" />
+          <mxGeometry x="890" y="340" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="BTQIR7O9Z3_4OCxKt4MY-2" value="&lt;b&gt;Kết nối với Cờ Vua&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="390" y="330" width="220" height="110" as="geometry" />
+          <mxGeometry x="630" y="460" width="220" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

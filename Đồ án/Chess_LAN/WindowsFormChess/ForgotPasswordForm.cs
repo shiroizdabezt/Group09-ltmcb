@@ -54,6 +54,9 @@ namespace Group9
                     data.password = HashString(txtNewPassword.Text);
                     SetResponse newdata = client.Set("UserInformation" + txtPhoneNumber.Text, data);
                     MessageBox.Show("Cập nhật mật khẩu mới thành công.");
+                    this.Close();
+                    Loging loging = new Loging();
+                    loging.Show();
                 }
                 else
                 {

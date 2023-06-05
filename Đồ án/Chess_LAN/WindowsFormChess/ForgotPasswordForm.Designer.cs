@@ -111,6 +111,7 @@
             this.txtNewPassword.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPassword.Location = new System.Drawing.Point(332, 297);
             this.txtNewPassword.Name = "txtNewPassword";
+            this.txtNewPassword.PasswordChar = '*';
             this.txtNewPassword.Size = new System.Drawing.Size(360, 26);
             this.txtNewPassword.TabIndex = 7;
             // 
@@ -137,6 +138,7 @@
             this.txtPassWord1.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassWord1.Location = new System.Drawing.Point(332, 342);
             this.txtPassWord1.Name = "txtPassWord1";
+            this.txtPassWord1.PasswordChar = '*';
             this.txtPassWord1.Size = new System.Drawing.Size(360, 26);
             this.txtPassWord1.TabIndex = 12;
             // 

@@ -134,7 +134,6 @@ D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Group9.e
 D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Group9.exe
 D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Group9.pdb
 D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\FireSharp.dll
-D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\FireSharp.Serialization.JsonNet.dll
 D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Newtonsoft.Json.dll
 D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\RestSharp.dll
 D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Newtonsoft.Json.xml
@@ -205,7 +204,6 @@ D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsof
 D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
 D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Extensions.xml
 D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Primitives.xml
-D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.App.config
 D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.ChangeUserNameForm.resources
 D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.ChangeUserNameForm.resources
 D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.LeaderboardForm.resources
@@ -504,3 +502,32 @@ C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Windows
 C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.CopyComplete
 C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.exe
 C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.pdb
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Firebase.Database.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Buffers.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Memory.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Numerics.Vectors.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Core.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Interfaces.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Linq.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.PlatformServices.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Text.Encodings.Web.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Text.Json.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.ValueTuple.dll
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Buffers.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Memory.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Numerics.Vectors.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Core.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Interfaces.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Linq.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.PlatformServices.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Text.Encodings.Web.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Text.Json.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.ValueTuple.xml
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.LeaderBoardForm.resources
+D:\HOC\Code\ltmcb\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.Room.resources

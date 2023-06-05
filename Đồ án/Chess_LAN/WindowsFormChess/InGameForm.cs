@@ -760,7 +760,7 @@ namespace Group9
                         MainMenu mainMenu = new MainMenu();
                         mainMenu.Show();
                     }
-                    this.Close();
+                    thisclose();
                 }
             }
         }
@@ -786,6 +786,29 @@ namespace Group9
             OtherPlayerTurn = true;
         }
         //this is where the other player got datas
+        void show(string name)
+        {
+            if(InvokeRequired)
+            {
+                Invoke(new Action(() => show(name)));
+            }    
+            else
+            {
+                lbCompetitorName.Text = "Competitor: " + name;
+            }
+        }
+
+        void thisclose()
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => this.Close()));
+            }
+            else
+            {
+                this.Close();
+            }
+        }
         public void ReceiveMove()
         {
             byte[] buffer = new byte[8];
@@ -828,7 +851,7 @@ namespace Group9
             }
             /*string nameCompetitor = buffer[8].ToString();*/
             string nameCompetitor = System.Text.Encoding.UTF8.GetString(buffer2);
-            lbCompetitorName.Text = "Competitor: " + nameCompetitor;
+            show(nameCompetitor);
             //toggle turn
             WhiteTurn = !WhiteTurn;
             //i think we know this
@@ -856,7 +879,7 @@ namespace Group9
                     DialogResult Q = MessageBox.Show("Bạn có chắc muốn rời trận?", "Warning!", MessageBoxButtons.OKCancel);
                     if (Q == DialogResult.OK)
                     {
-                        this.Close();
+                        thisclose();
                     }
                 }
                 else
@@ -876,7 +899,7 @@ namespace Group9
                     DialogResult Q = MessageBox.Show("Bạn có chắc muốn rời trận?", "Warning!", MessageBoxButtons.OKCancel);
                     if (Q == DialogResult.OK)
                     {
-                        this.Close();
+                        thisclose();
                     }
                 }
             }
@@ -906,7 +929,7 @@ namespace Group9
         {
             if (singleGame)
             {
-                this.Close();
+                thisclose();
                 MainMenu main = new MainMenu();
                 main.Show();
             }
@@ -940,7 +963,7 @@ namespace Group9
                         if(!WhiteTurn)
                         {
                             GameOver = true;
-                            WhiteTurn = false;
+                            WhiteTurn = true;
                             Moves = 0;
                             SendMove(0,0);
                         }
@@ -952,7 +975,7 @@ namespace Group9
                             SendMove(0,0);
                         }
                         SetResponse newdata = clientfirebase.Set("UserInformation" + Loging.phonenumber, data);
-                        this.Close();
+                        thisclose();
                     }
                 }    
             }

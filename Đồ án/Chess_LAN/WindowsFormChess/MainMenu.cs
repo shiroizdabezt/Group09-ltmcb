@@ -42,6 +42,18 @@ namespace Group9
             this.Close();
         }
 
+        void thisclose()
+        {
+            if (InvokeRequired)
+            {
+                Invoke(new Action(() => this.Close()));
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
         private void btnLogOut1_Click(object sender, EventArgs e)
         {
             DialogResult res = MessageBox.Show("Bạn có thực sự muốn đăng xuất!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -53,11 +65,10 @@ namespace Group9
             {
                 try
                 {
-                    this.Hide();
-                    this.Close();
+                    thisclose();
                     MessageBox.Show("Đăng xuất thành công.");
                     Loging lg = new Loging();
-                    lg.ShowDialog();
+                    lg.Show();
                 }
                 catch { }
             }

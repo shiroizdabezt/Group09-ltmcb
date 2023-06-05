@@ -150,6 +150,7 @@
     <Compile Include="ChangeUserNameForm.Designer.cs">
       <DependentUpon>ChangeUserNameForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Port.cs" />
     <Compile Include="ConnectionForm.cs">
       <SubType>Form</SubType>
     </Compile>

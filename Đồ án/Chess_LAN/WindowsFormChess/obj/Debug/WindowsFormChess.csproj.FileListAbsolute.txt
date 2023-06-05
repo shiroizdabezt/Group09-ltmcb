@@ -370,3 +370,137 @@ C:\Users\troil\OneDrive\Desktop\Chess_LAN\WindowsFormChess\obj\Debug\WindowsForm
 C:\Users\troil\OneDrive\Desktop\Chess_LAN\WindowsFormChess\obj\Debug\Group9.exe
 C:\Users\troil\OneDrive\Desktop\Chess_LAN\WindowsFormChess\obj\Debug\Group9.pdb
 D:\LapTrinhMang\Group9\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.Room.resources
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Group9.exe.config
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Group9.exe
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Group9.pdb
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Firebase.Database.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\FireSharp.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\RestSharp.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Buffers.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Memory.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Core.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Linq.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Text.Json.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.ValueTuple.dll
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\RestSharp.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Buffers.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Memory.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Core.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Linq.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Text.Json.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\bin\Debug\System.ValueTuple.xml
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.AssemblyReference.cache
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.SuggestedBindingRedirects.cache
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.ChangePassForm.resources
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.ChangeUserNameForm.resources
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.ClickUserClass.resources
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.ConnectionForm.resources
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Cocaro.CustomButton.resources
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.ForgotPasswordForm.resources
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.InformationForm.resources
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.InGameForm.resources
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.LeaderBoardForm.resources
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.Loging.resources
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.MainMenu.resources
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.PromotionForm.resources
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.Properties.Resources.resources
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.Room.resources
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.SignUpForm.resources
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.GenerateResource.cache
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.CoreCompileInputs.cache
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.CopyComplete
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.exe
+C:\Users\Crystal\Downloads\Group09-ltmcb-main\Đồ án\Chess_LAN\WindowsFormChess\obj\Debug\Group9.pdb
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\Group9.exe.config
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\Group9.exe
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\Group9.pdb
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\Firebase.Database.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\FireSharp.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\Newtonsoft.Json.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\RestSharp.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Buffers.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Memory.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Extensions.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Primitives.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Core.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Linq.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Text.Json.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.ValueTuple.dll
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\Microsoft.Threading.Tasks.Extensions.Desktop.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\Newtonsoft.Json.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\RestSharp.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Buffers.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Memory.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Extensions.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Net.Http.Primitives.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Core.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.Linq.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Text.Json.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\bin\Debug\System.ValueTuple.xml
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.AssemblyReference.cache
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.SuggestedBindingRedirects.cache
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.ChangePassForm.resources
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.ChangeUserNameForm.resources
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.ClickUserClass.resources
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.ConnectionForm.resources
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Cocaro.CustomButton.resources
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.ForgotPasswordForm.resources
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.InformationForm.resources
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.InGameForm.resources
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.LeaderBoardForm.resources
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.Loging.resources
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.MainMenu.resources
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.PromotionForm.resources
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.Properties.Resources.resources
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.Room.resources
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.SignUpForm.resources
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.GenerateResource.cache
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.CoreCompileInputs.cache
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\WindowsFormChess.csproj.CopyComplete
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.exe
+C:\Users\codyk\Downloads\Compressed\Chess_LAN\WindowsFormChess\obj\Debug\Group9.pdb

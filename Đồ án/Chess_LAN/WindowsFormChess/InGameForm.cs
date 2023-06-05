@@ -49,11 +49,12 @@ namespace Group9
         public bool BlackRookMoved1 = true;
         public bool BlackRookMoved2 = true;
         public bool BlackKingMoved = true;
-        public bool WhiteRookMoved1=true;
-        public bool WhiteRookMoved2=true;
-        public bool WhiteKingMoved=true;
+        public bool WhiteRookMoved1 = true;
+        public bool WhiteRookMoved2 = true;
+        public bool WhiteKingMoved = true;
         public bool singleGame = false;
-        public bool WhiteTurn=true;
+        public bool IsHost = false;
+        public bool WhiteTurn = true;
         public bool NotAllowedMove = false;
         public bool OtherPlayerTurn = false;
         public bool GameOver = false;
@@ -89,20 +90,21 @@ namespace Group9
             singleByteName = byteName[100];
         }
 
-        public InGameForm(bool SingleGame, bool isHost, string ip = null)
+        public InGameForm(bool SingleGame, bool isHost, string ip = null, int Port = 0)
         {
             InitializeComponent();
             lbName.Text += Loging.name;
             singleGame = SingleGame;
+            IsHost = isHost;
 
             //its need for the Lan games
             if (!SingleGame)
             {
                 MessageReceiver.DoWork += MessageReceiver_DoWork;
 
-                if (isHost)
+                if (IsHost)
                 {
-                    server = new TcpListener(System.Net.IPAddress.Any, 5732);
+                    server = new TcpListener(System.Net.IPAddress.Any, Port);
                     server.Start();
                     sock = server.AcceptSocket();
                 }
@@ -110,7 +112,7 @@ namespace Group9
                 {
                     try
                     {
-                        client = new TcpClient(ip, 5732);
+                        client = new TcpClient(ip, Port);
                         sock = client.Client;
                         MessageReceiver.RunWorkerAsync();
                     }
@@ -259,7 +261,7 @@ namespace Group9
                 case 2:
                     Promotionvalue = 0;
                     Moves = 0;
-                    SuccesfulMove(i,j);
+                    SuccesfulMove(i, j);
                     break;
                 //this is that situation when the player reclick his piece and the board will be clean
                 case 3:
@@ -278,58 +280,58 @@ namespace Group9
             switch (x)
             {
                 case 1:
-                    tableClass.PossibleMoves = blackPawn.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                    tableClass.PossibleMoves = blackPawn.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                     break;
                 case 2:
                     tableClass.PossibleMoves = blackRook1.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                     break;
                 case 3:
-                    tableClass.PossibleMoves = blackKnight.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j,WhiteTurn,OtherPlayerTurn);
+                    tableClass.PossibleMoves = blackKnight.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                     break;
                 case 4:
-                    tableClass.PossibleMoves = blackBishop.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j,WhiteTurn,OtherPlayerTurn);
+                    tableClass.PossibleMoves = blackBishop.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                     break;
                 case 5:
-                    tableClass.PossibleMoves = blackQueen.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j,WhiteTurn,OtherPlayerTurn);
+                    tableClass.PossibleMoves = blackQueen.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                     break;
                 case 6:
-                    tableClass.PossibleMoves = blackKing.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j,WhiteTurn,BlackKingMoved,BlackRookMoved1,BlackRookMoved2,OtherPlayerTurn);
+                    tableClass.PossibleMoves = blackKing.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, BlackKingMoved, BlackRookMoved1, BlackRookMoved2, OtherPlayerTurn);
                     break;
                 case 7:
-                    tableClass.PossibleMoves = blackRook2.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j,WhiteTurn,OtherPlayerTurn);
+                    tableClass.PossibleMoves = blackRook2.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                     break;
                 case 8:
-                    tableClass.PossibleMoves = blackKnight.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j,WhiteTurn,OtherPlayerTurn);
+                    tableClass.PossibleMoves = blackKnight.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                     break;
                 case 9:
-                    tableClass.PossibleMoves = blackBishop.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j,WhiteTurn,OtherPlayerTurn);
+                    tableClass.PossibleMoves = blackBishop.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                     break;
                 case 11:
-                    tableClass.PossibleMoves = whitePawn.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                    tableClass.PossibleMoves = whitePawn.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                     break;
                 case 12:
                     tableClass.PossibleMoves = whiteRook1.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                     break;
                 case 13:
-                    tableClass.PossibleMoves = whiteKnight.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                    tableClass.PossibleMoves = whiteKnight.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                     break;
                 case 14:
-                    tableClass.PossibleMoves = whiteBishop.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                    tableClass.PossibleMoves = whiteBishop.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                     break;
                 case 15:
-                    tableClass.PossibleMoves = whiteQueen.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                    tableClass.PossibleMoves = whiteQueen.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                     break;
                 case 16:
-                    tableClass.PossibleMoves = whiteKing.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, WhiteKingMoved, WhiteRookMoved1, WhiteRookMoved2,OtherPlayerTurn);
+                    tableClass.PossibleMoves = whiteKing.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, WhiteKingMoved, WhiteRookMoved1, WhiteRookMoved2, OtherPlayerTurn);
                     break;
                 case 17:
-                    tableClass.PossibleMoves = whiteRook2.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                    tableClass.PossibleMoves = whiteRook2.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                     break;
                 case 18:
-                    tableClass.PossibleMoves = whiteKnight2.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                    tableClass.PossibleMoves = whiteKnight2.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                     break;
                 case 19:
-                    tableClass.PossibleMoves = whiteBishop.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                    tableClass.PossibleMoves = whiteBishop.GetPossibleMoves(tableClass.Table, tableClass.PossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                     break;
             }
             //the position of the selected piece will get value 3
@@ -341,7 +343,7 @@ namespace Group9
         }
         //in this method we will delete that moves that not enable in chess
         //x is the value of the piece, and now the a and the b is the position, because i was in autopilot and i use "i,j" in for cycles
-        public void RemoveMoveThatNotPossible(int x,int a,int b)
+        public void RemoveMoveThatNotPossible(int x, int a, int b)
         {
             for (int i = 0; i < 8; i++)
             {
@@ -363,7 +365,7 @@ namespace Group9
                         if (tableClass.NotValidMoveChecker(tableClass.Table, WhiteStaleArray, BlackStaleArray) == 1 && WhiteTurn)
                         {
                             tableClass.PossibleMoves[i, j] = 0;
-                            if (i == 7 && j == 3&&x==16)
+                            if (i == 7 && j == 3 && x == 16)
                             {
                                 tableClass.PossibleMoves[7, 2] = 0;
                             }
@@ -491,7 +493,7 @@ namespace Group9
                 //this is very important because we have to send this data as byte to the enemy with socket
                 for (int x = 0; x < 20; x++)
                 {
-                    if(tableClass.Table[BeforeMove_I, BeforeMove_J] == x)
+                    if (tableClass.Table[BeforeMove_I, BeforeMove_J] == x)
                     {
                         LastMovedPiece = x;
                     }
@@ -499,7 +501,7 @@ namespace Group9
             }
             //in our next method we will check that castling (king rook swap) is possible
             //and if one of the pawns went throught the board(promotion) we should do something as well
-            CastlingAndPawnPromotionChecker(i,j);
+            CastlingAndPawnPromotionChecker(i, j);
             //and this is the point where we give the moved piece to the new position
             tableClass.Table[i, j] = tableClass.Table[BeforeMove_I, BeforeMove_J];
             //these if-s is for the castling, and we will send the "Castling" integer to the enemy, if we play on Lan
@@ -540,7 +542,7 @@ namespace Group9
             //that will be important because if that array is null that means the player got checkmate that equals to the game is over
             EveryPossibleMoves();
             //after we got our array we will check that is there checkmate or not
-            CheckMateChecker(i,j);
+            CheckMateChecker(i, j);
             //if its Lan game, we call this method with the new position
             if (enablesocket && !singleGame && !GameOver)
             {
@@ -550,7 +552,7 @@ namespace Group9
             WhiteTurn = !WhiteTurn;
         }
         //several bools
-        public void CastlingAndPawnPromotionChecker(int i,int j)
+        public void CastlingAndPawnPromotionChecker(int i, int j)
         {
             //if one of the player moved with his rook or king then they can not make castling anymore
             //we check this in this switch
@@ -604,7 +606,7 @@ namespace Group9
             int i = 0;
             int j = 0;
             //we should reset the array after every move
-            tableClass.AllPossibleMoves = new int[8,8];
+            tableClass.AllPossibleMoves = new int[8, 8];
             //this need because we need that player who isn't turned yet
             WhiteTurn = !WhiteTurn;
             //pieces
@@ -621,58 +623,58 @@ namespace Group9
                             switch (x)
                             {
                                 case 1:
-                                    tableClass.AllPossibleMoves = blackPawn.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = blackPawn.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                                     break;
                                 case 2:
-                                    tableClass.AllPossibleMoves = blackRook1.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = blackRook1.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                                     break;
                                 case 3:
-                                    tableClass.AllPossibleMoves = blackKnight.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = blackKnight.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                                     break;
                                 case 4:
-                                    tableClass.AllPossibleMoves = blackBishop.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = blackBishop.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                                     break;
                                 case 5:
-                                    tableClass.AllPossibleMoves = blackQueen.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = blackQueen.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                                     break;
                                 case 6:
-                                    tableClass.AllPossibleMoves = blackKing.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, BlackKingMoved, BlackRookMoved1, BlackRookMoved2,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = blackKing.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, BlackKingMoved, BlackRookMoved1, BlackRookMoved2, OtherPlayerTurn);
                                     break;
                                 case 7:
-                                    tableClass.AllPossibleMoves = blackRook2.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = blackRook2.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                                     break;
                                 case 8:
-                                    tableClass.AllPossibleMoves = blackKnight.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = blackKnight.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                                     break;
                                 case 9:
-                                    tableClass.AllPossibleMoves = blackBishop2.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = blackBishop2.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                                     break;
                                 case 11:
-                                    tableClass.AllPossibleMoves = whitePawn.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = whitePawn.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                                     break;
                                 case 12:
-                                    tableClass.AllPossibleMoves = whiteRook1.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = whiteRook1.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                                     break;
                                 case 13:
-                                    tableClass.AllPossibleMoves = whiteKnight.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = whiteKnight.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                                     break;
                                 case 14:
-                                    tableClass.AllPossibleMoves = whiteBishop.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = whiteBishop.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                                     break;
                                 case 15:
-                                    tableClass.AllPossibleMoves = whiteQueen.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = whiteQueen.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                                     break;
                                 case 16:
                                     tableClass.AllPossibleMoves = whiteKing.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, WhiteKingMoved, WhiteRookMoved1, WhiteRookMoved2, OtherPlayerTurn);
                                     break;
                                 case 17:
-                                    tableClass.AllPossibleMoves = whiteRook2.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = whiteRook2.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                                     break;
                                 case 18:
-                                    tableClass.AllPossibleMoves = whiteKnight2.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = whiteKnight2.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                                     break;
                                 case 19:
-                                    tableClass.AllPossibleMoves = whiteBishop2.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn,OtherPlayerTurn);
+                                    tableClass.AllPossibleMoves = whiteBishop2.GetPossibleMoves(tableClass.Table, tableClass.AllPossibleMoves, i, j, WhiteTurn, OtherPlayerTurn);
                                     break;
                             }
                             //okay we got moves by pieces, now we should delete that are invalids
@@ -697,7 +699,7 @@ namespace Group9
                     {
                         //and this is very familiar than the "RemoveMoveThatNotPossible", lets simulate
                         int lastHitPiece = tableClass.Table[i, j];
-                        
+
                         tableClass.Table[i, j] = x;
                         tableClass.Table[a, b] = 0;
                         StaleArrays();
@@ -757,7 +759,7 @@ namespace Group9
                     {
                         MainMenu mainMenu = new MainMenu();
                         mainMenu.Show();
-                    } 
+                    }
                     this.Close();
                 }
             }
@@ -869,14 +871,14 @@ namespace Group9
                     {
                         data.score += 10;
                         data.match += 1;
-                    }    
+                    }
                     SetResponse newdata = clientfirebase.Set("UserInformation" + Loging.phonenumber, data);
                     DialogResult Q = MessageBox.Show("Bạn có chắc muốn rời trận?", "Warning!", MessageBoxButtons.OKCancel);
                     if (Q == DialogResult.OK)
                     {
                         this.Close();
                     }
-                }            
+                }
             }
         }
         //end connection
@@ -885,7 +887,7 @@ namespace Group9
             if (singleGame)
             {
                 this.Hide();
-            } 
+            }
             else
             {
                 MessageReceiver.WorkerSupportsCancellation = true;
@@ -896,8 +898,8 @@ namespace Group9
                     ConnectionForm connectionForm = new ConnectionForm();
                     connectionForm.ShowDialog();
                     server.Stop();
-                }
-            }     
+                }     
+            }
         }
 
         public void btnBack_Click(object sender, EventArgs e)
@@ -908,9 +910,9 @@ namespace Group9
                 MainMenu main = new MainMenu();
                 main.Show();
             }
-            else 
+            else
             {
-                DialogResult Q = MessageBox.Show("Bạn có chắc muốn rời trận?", "Warning!", MessageBoxButtons.OKCancel);
+                /*DialogResult Q = MessageBox.Show("Bạn có chắc muốn rời trận?", "Warning!", MessageBoxButtons.OKCancel);
                 if (Q == DialogResult.OK)
                 {
                     clientfirebase = new FireSharp.FirebaseClient(config);
@@ -921,10 +923,39 @@ namespace Group9
                     data.match += 1;
                     SetResponse newdata = clientfirebase.Set("UserInformation" + Loging.phonenumber, data);
                     Moves = 0;
-                    SendMove(4, 4);
+                    SendMove(0, 0);
                     this.Close();
-                }
-            }    
+                }*/
+                if (GameOver == false)
+                {
+                    DialogResult Q = MessageBox.Show("Bạn có chắc muốn rời trận?", "Warning!", MessageBoxButtons.OKCancel);
+                    if (Q == DialogResult.OK)
+                    {
+                        clientfirebase = new FireSharp.FirebaseClient(config);
+                        if (clientfirebase != null) ;
+                        FirebaseResponse user = clientfirebase.Get("UserInformation" + Loging.phonenumber);
+                        SignUpInformation data = user.ResultAs<SignUpInformation>();
+                        data.score -= 5;
+                        data.match += 1;
+                        if(!WhiteTurn)
+                        {
+                            GameOver = true;
+                            WhiteTurn = false;
+                            Moves = 0;
+                            SendMove(0,0);
+                        }
+                        else
+                        {
+                            GameOver = true;
+                            WhiteTurn = true;
+                            Moves = 0;
+                            SendMove(0,0);
+                        }
+                        SetResponse newdata = clientfirebase.Set("UserInformation" + Loging.phonenumber, data);
+                        this.Close();
+                    }
+                }    
+            }
         }
     }
 }

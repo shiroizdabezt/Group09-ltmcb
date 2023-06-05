@@ -29,6 +29,7 @@ namespace Group9
         IFirebaseClient client;
 
         public static string Roomcode;
+        public static int port;
         private static Random random = new Random();
         const string allowedChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         public string localIP;
@@ -40,6 +41,11 @@ namespace Group9
                 chars[i] = allowedChars[random.Next(allowedChars.Length)];
             }
             return new string(chars);
+        }
+        private static int GeneratePort()
+        {
+            Random rand = new Random();
+            return rand.Next(1024, 49152);
         }
         private void TakeServerIP()
         {
@@ -74,11 +80,17 @@ namespace Group9
             };
             SetResponse sr = client.Set("RoomCode/", rc);
             TakeServerIP();
+            port = GeneratePort();
+            var P = new Port
+            {
+                p = port
+            };
+            SetResponse sp = client.Set("Port/", P);
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            InGameForm newGame = new InGameForm(false, true);
+            InGameForm newGame = new InGameForm(false, true, null, port);
             Visible = false;
             if (!newGame.IsDisposed) newGame.ShowDialog();
             Visible = true;

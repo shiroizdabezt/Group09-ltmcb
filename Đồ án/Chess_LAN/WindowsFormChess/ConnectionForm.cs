@@ -33,7 +33,12 @@ namespace Group9
             ServerIP dt = svIPre.ResultAs<ServerIP>();
             dtString = dt.svIP;
         }
-
+        private int GetPort()
+        {
+            FirebaseResponse svPort = client.Get("Port/");
+            Port svP = svPort.ResultAs<Port>();
+            return svP.p;
+        }
         private void btnBack1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -53,7 +58,7 @@ namespace Group9
 
             if (RoomCode.IsEqual(data, currRoomCode))
             {
-                InGameForm newGame = new InGameForm(false, false, dtString);
+                InGameForm newGame = new InGameForm(false, false, dtString, GetPort());
                 Visible = false;
                 if (!newGame.IsDisposed)
                     newGame.ShowDialog();

@@ -1,0 +1,13 @@
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\ThucHanh\Lab5\bin\Debug\Lab5.exe.config
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\ThucHanh\Lab5\bin\Debug\Lab5.exe
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\ThucHanh\Lab5\bin\Debug\Lab5.pdb
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\ThucHanh\Lab5\obj\Debug\Lab5.csproj.AssemblyReference.cache
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\ThucHanh\Lab5\obj\Debug\Lab5.csproj.SuggestedBindingRedirects.cache
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\ThucHanh\Lab5\obj\Debug\Lab5.Form1.resources
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\ThucHanh\Lab5\obj\Debug\Lab5.Bai1.resources
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\ThucHanh\Lab5\obj\Debug\Lab5.Properties.Resources.resources
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\ThucHanh\Lab5\obj\Debug\Lab5.csproj.GenerateResource.cache
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\ThucHanh\Lab5\obj\Debug\Lab5.csproj.CoreCompileInputs.cache
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\ThucHanh\Lab5\obj\Debug\Lab5.exe
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\ThucHanh\Lab5\obj\Debug\Lab5.pdb
+C:\Users\MSIs\Documents\Hoc_Tap\LapTrinhMangCB\ThucHanh\Lab5\obj\Debug\Lab5.Bai2.resources

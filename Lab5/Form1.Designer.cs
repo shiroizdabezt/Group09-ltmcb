@@ -31,6 +31,7 @@
             this.btBai1 = new System.Windows.Forms.Button();
             this.btBai2 = new System.Windows.Forms.Button();
             this.btn_Bai4 = new System.Windows.Forms.Button();
+            this.btnBai3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btBai1
@@ -63,11 +64,22 @@
             this.btn_Bai4.UseVisualStyleBackColor = true;
             this.btn_Bai4.Click += new System.EventHandler(this.btn_Bai4_Click);
             // 
+            // btnBai3
+            // 
+            this.btnBai3.Location = new System.Drawing.Point(42, 140);
+            this.btnBai3.Name = "btnBai3";
+            this.btnBai3.Size = new System.Drawing.Size(124, 44);
+            this.btnBai3.TabIndex = 3;
+            this.btnBai3.Text = "Bài 3";
+            this.btnBai3.UseVisualStyleBackColor = true;
+            this.btnBai3.Click += new System.EventHandler(this.btnBai3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 223);
+            this.Controls.Add(this.btnBai3);
             this.Controls.Add(this.btn_Bai4);
             this.Controls.Add(this.btBai2);
             this.Controls.Add(this.btBai1);
@@ -82,6 +94,7 @@
         private System.Windows.Forms.Button btBai1;
         private System.Windows.Forms.Button btBai2;
         private System.Windows.Forms.Button btn_Bai4;
+        private System.Windows.Forms.Button btnBai3;
     }
 }
 

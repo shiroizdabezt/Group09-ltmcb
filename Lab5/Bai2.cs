@@ -27,6 +27,7 @@ namespace Lab5
 
         private void btLogin_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("IMAP is used to read these mails");
             try
             {
                 var client = new ImapClient();
@@ -40,7 +41,7 @@ namespace Lab5
                 {
                     var message = inbox.GetMessage(i);
                     var strmess = message.From.ToString();
-                    string[] row = { message.Subject, strmess, message.Date.ToString() };
+                    string[] row = { message.Subject, strmess, message.Date.ToString(), message.Body.ToString()};
 
                     var listViewItem = new ListViewItem(row);
                     listView1.Items.Add(listViewItem);

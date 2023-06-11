@@ -21,6 +21,7 @@ namespace Lab5
 
         private void btLogin_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("POP3 is used to read these mails");
             try
             {
                 var client = new Pop3Client();
@@ -34,7 +35,7 @@ namespace Lab5
                 {
                     var message = client.GetMessage(i);
                     var strmess = message.From.ToString();
-                    string[] row = { message.Subject, strmess, message.Date.ToString() };
+                    string[] row = { message.Subject, strmess, message.Date.ToString(), message.Body.ToString()};
 
                     var listViewItem = new ListViewItem(row);
                     listView1.Items.Add(listViewItem);
@@ -52,5 +53,6 @@ namespace Lab5
                 MessageBox.Show(ex.Message);
             }
         }
+
     }
 }

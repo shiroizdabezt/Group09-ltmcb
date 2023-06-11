@@ -17,7 +17,6 @@ namespace Lab5
         public Bai1()
         {
             InitializeComponent();
-            tbFrom.Text = "21522267@gm.uit.edu.vn";
         }
 
         SmtpClient smtpClient;
@@ -28,7 +27,6 @@ namespace Lab5
             smtpClient.EnableSsl = true;
             nc = new NetworkCredential("21522267@gm.uit.edu.vn", "ljziwmjfyilspuzo");
             smtpClient.Credentials = nc;
-
 
             MailMessage mm = new MailMessage();
             mm.From = new MailAddress("21522267@gm.uit.edu.vn");

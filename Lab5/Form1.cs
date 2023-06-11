@@ -28,5 +28,11 @@ namespace Lab5
             Bai2 bai2 = new Bai2();
             bai2.Show();
         }
+
+        private void btn_Bai4_Click(object sender, EventArgs e)
+        {
+            Bai4 bai4 = new Bai4(); 
+            bai4.Show();
+        }
     }
 }

@@ -15,6 +15,6 @@ namespace Lab5
         {
             InitializeComponent();
         }
-        var client = new ImapClient();
+        //var client = new ImapClient();
     }
 }

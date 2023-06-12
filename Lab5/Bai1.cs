@@ -17,6 +17,7 @@ namespace Lab5
         public Bai1()
         {
             InitializeComponent();
+            tbFrom.Text = "21522267@gm.uit.edu.vn";
         }
 
         SmtpClient smtpClient;

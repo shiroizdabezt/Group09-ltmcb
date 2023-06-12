@@ -112,6 +112,7 @@
             this.tbFrom.Location = new System.Drawing.Point(88, 50);
             this.tbFrom.Multiline = true;
             this.tbFrom.Name = "tbFrom";
+            this.tbFrom.ReadOnly = true;
             this.tbFrom.Size = new System.Drawing.Size(563, 33);
             this.tbFrom.TabIndex = 7;
             // 

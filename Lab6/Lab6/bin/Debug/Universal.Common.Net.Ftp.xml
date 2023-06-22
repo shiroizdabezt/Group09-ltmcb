@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Universal.Common.Net.Ftp</name>
+    </assembly>
+    <members>
+        <member name="T:Universal.Common.Net.Ftp.DirectoryItem">
+            <summary>
+            Represents an item in an FTP directory.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.DirectoryItem.IsDirectory">
+            <summary>
+            Gets or sets a value indicating if this <see cref="T:Universal.Common.Net.Ftp.DirectoryItem"/> is a folder or not.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.DirectoryItem.Name">
+            <summary>
+            Gets or sets the name of this <see cref="T:Universal.Common.Net.Ftp.DirectoryItem"/>.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.DirectoryItem.Permissions">
+            <summary>
+            Gets or sets the permissions string of this <see cref="T:Universal.Common.Net.Ftp.DirectoryItem"/>.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.DirectoryItem.LastModified">
+            <summary>
+            Gets or sets the last modified date of this <see cref="T:Universal.Common.Net.Ftp.DirectoryItem"/>.
+            </summary>
+        </member>
+        <member name="M:Universal.Common.Net.Ftp.DirectoryItem.Parse(System.String)">
+            <summary>
+            Instantiates a new <see cref="T:Universal.Common.Net.Ftp.DirectoryItem"/> from a single line output of the LIST command.
+            </summary>
+            <param name="listLine"></param>
+            <returns></returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="T:Universal.Common.Net.Ftp.FtpClient">
+            <summary>
+            Class that enables communication with an FTP server.
+            </summary>
+        </member>
+        <member name="E:Universal.Common.Net.Ftp.FtpClient.FtpResponseReceived">
+            <summary>
+            Raised when a <see cref="T:Universal.Common.Net.Ftp.FtpResponseMessage"/> is received.
+            </summary>
+        </member>
+        <member name="M:Universal.Common.Net.Ftp.FtpClient.DownloadFileAsync(System.Uri)">
+            <summary>
+            Downloads the file at the given uri asynchronously and returns a rewindable stream of its contents.
+            </summary>
+            <param name="uri"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal.Common.Net.Ftp.FtpClient.ListDirectoryAsync(System.Uri)">
+            <summary>
+            Asynchronously gets a short listing of the files in the given directory.
+            </summary>
+            <param name="uri"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal.Common.Net.Ftp.FtpClient.ListDirectoryDetailsAsync(System.Uri)">
+            <summary>
+            Asynchronouly gets a detailed listing of the files.
+            </summary>
+            <param name="uri"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal.Common.Net.Ftp.FtpClient.ListDirectoryItemsAsync(System.Uri)">
+            <summary>
+            Asynchronouly gets a detailed listing of the files and attempts to parse the output.
+            </summary>
+            <param name="uri"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Universal.Common.Net.Ftp.FtpClient.SendAsync(Universal.Common.Net.Ftp.FtpRequestMessage)">
+            <summary>
+            Asynchronously sends the request and retrieves the response.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Universal.Common.Net.Ftp.FtpMethod">
+            <summary>
+            Represents an FTP method.
+            </summary>
+        </member>
+        <member name="M:Universal.Common.Net.Ftp.FtpMethod.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Universal.Common.Net.Ftp.FtpMethod" /> class.
+            </summary>
+            <param name="method"></param>
+        </member>
+        <member name="T:Universal.Common.Net.Ftp.FtpRequestMessage">
+            <summary>
+            Represents an FTP request.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpRequestMessage.AuthenticationLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpRequestMessage.ContentOffset">
+            <summary>
+            Gets or sets a byte offset into the file downloaded by this <see cref="T:Universal.Common.Net.Ftp.FtpRequestMessage" />.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpRequestMessage.Credentials">
+            <summary>
+            Gets or sets the credentials used to communicate with the FTP server.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpRequestMessage.EnableSsl">
+            <summary>
+            Gets or sets a <see cref="T:System.Boolean" /> that specifies that an SSL connection should be used.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpRequestMessage.Headers">
+            <summary>
+            Gets an empty <see cref="T:System.Net.WebHeaderCollection" />
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpRequestMessage.ImpersonationLevel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpRequestMessage.Method">
+            <summary>
+            Gets or sets the command sent to the FTP server.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpRequestMessage.ReadWriteTimeout">
+            <summary>
+            Gets or sets a timeout when reading or writing to a stream.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpRequestMessage.RenameTo">
+            <summary>
+            Gets or sets the new name of the file being renamed.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpRequestMessage.RequestUri">
+            <summary>
+            Gets or sets the URI requested.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpRequestMessage.Timeout">
+            <summary>
+            Gets or sets the number of milliseconds to wait for a request.
+            </summary>
+        </member>
+        <member name="M:Universal.Common.Net.Ftp.FtpRequestMessage.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Universal.Common.Net.Ftp.FtpRequestMessage" /> class.
+            </summary>
+        </member>
+        <member name="M:Universal.Common.Net.Ftp.FtpRequestMessage.ToFtpWebRequest">
+            <summary>
+            Converts this <see cref="T:Universal.Common.Net.Ftp.FtpRequestMessage" /> to a <see cref="T:System.Net.FtpWebRequest" />.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Universal.Common.Net.Ftp.FtpResponseMessage">
+            <summary>
+            Represents an FTP response.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpResponseMessage.BannerMessage">
+            <summary>
+            Gets the message sent by the FTP server when a connection is established prior to logon.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpResponseMessage.ContentLength">
+            <summary>
+            Gets the length of the data received from the FTP server.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpResponseMessage.ExitMessage">
+            <summary>
+            Gets the message sent by the FTP server when the session is ending.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpResponseMessage.Headers">
+            <summary>
+            Gets an empty <see cref="T:System.Net.WebHeaderCollection" />.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpResponseMessage.IsErrorStatusCode">
+            <summary>
+            Returns if the status code returned indicates an error.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpResponseMessage.IsFromCache">
+            <summary>
+            Gets a <see cref="T:System.Boolean" /> that indicates if this response was retrieved from the cache.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpResponseMessage.IsMutuallyAuthenticated">
+            <summary>
+            Gets a <see cref="T:System.Boolean" /> value that indicates if mutual authentication occurred.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpResponseMessage.LastModified">
+            <summary>
+            Gets the date and time that a file on the FTP server was last modified.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpResponseMessage.ResponseStream">
+            <summary>
+            Retrieves the stream that contains the data sent from the FTP server.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpResponseMessage.ResponseUri">
+            <summary>
+            Gets the URI that sent the response to the request.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpResponseMessage.StatusCode">
+            <summary>
+            Gets the most recent status code from the FTP server.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpResponseMessage.StatusDescription">
+            <summary>
+            Gets text that describes the status code sent from the FTP server.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpResponseMessage.SupportsHeaders">
+            <summary>
+            Gets a <see cref="T:System.Boolean" /> value indicating if the <see cref="P:Universal.Common.Net.Ftp.FtpResponseMessage.Headers" /> property is supported.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpResponseMessage.WelcomeMessage">
+            <summary>
+            Gets the message sent by the FTP server when authentication is complete.
+            </summary>
+        </member>
+        <member name="M:Universal.Common.Net.Ftp.FtpResponseMessage.#ctor(System.Net.FtpWebResponse)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Universal.Common.Net.Ftp.FtpResponseMessage" /> class.
+            </summary>
+            <param name="ftpWebResponse"></param>
+        </member>
+        <member name="M:Universal.Common.Net.Ftp.FtpResponseMessage.ReadAsByteArrayAsync">
+            <summary>
+            Asynchronously reads the response stream as a byte array.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Universal.Common.Net.Ftp.FtpResponseMessage.ReadAsStringAsync">
+            <summary>
+            Asynchronously reads the response stream as a string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Universal.Common.Net.Ftp.FtpResponseReceivedEventArgs">
+            <summary>
+            Class that represents data from a <see cref="T:Universal.Common.Net.Ftp.FtpResponseMessage"/> received event.
+            </summary>
+        </member>
+        <member name="P:Universal.Common.Net.Ftp.FtpResponseReceivedEventArgs.Response">
+            <summary>
+            Gets the response generated by the request.
+            </summary>
+        </member>
+        <member name="M:Universal.Common.Net.Ftp.FtpResponseReceivedEventArgs.#ctor(Universal.Common.Net.Ftp.FtpResponseMessage)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Universal.Common.Net.Ftp.FtpResponseReceivedEventArgs"/> class.
+            </summary>
+            <param name="ftpResponseMessage"></param>
+        </member>
+    </members>
+</doc>

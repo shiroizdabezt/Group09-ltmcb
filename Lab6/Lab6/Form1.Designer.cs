@@ -35,6 +35,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tbPass = new System.Windows.Forms.TextBox();
             this.tbUsername = new System.Windows.Forms.TextBox();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.btnDownload = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -59,7 +64,7 @@
             // btnConnect
             // 
             this.btnConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnect.Location = new System.Drawing.Point(482, 34);
+            this.btnConnect.Location = new System.Drawing.Point(529, 41);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(109, 144);
             this.btnConnect.TabIndex = 2;
@@ -105,11 +110,47 @@
             this.tbUsername.Size = new System.Drawing.Size(311, 33);
             this.tbUsername.TabIndex = 9;
             // 
+            // btnUpload
+            // 
+            this.btnUpload.Location = new System.Drawing.Point(529, 318);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(109, 80);
+            this.btnUpload.TabIndex = 10;
+            this.btnUpload.Text = "Upload";
+            this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(32, 214);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(491, 322);
+            this.treeView1.TabIndex = 13;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            // 
+            // btnDownload
+            // 
+            this.btnDownload.Location = new System.Drawing.Point(529, 444);
+            this.btnDownload.Name = "btnDownload";
+            this.btnDownload.Size = new System.Drawing.Size(109, 80);
+            this.btnDownload.TabIndex = 14;
+            this.btnDownload.Text = "Download";
+            this.btnDownload.UseVisualStyleBackColor = true;
+            this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 209);
+            this.ClientSize = new System.Drawing.Size(650, 548);
+            this.Controls.Add(this.btnDownload);
+            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.tbPass);
             this.Controls.Add(this.label3);
@@ -133,6 +174,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbPass;
         private System.Windows.Forms.TextBox tbUsername;
+        private System.Windows.Forms.Button btnUpload;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.Button btnDownload;
     }
 }
 
